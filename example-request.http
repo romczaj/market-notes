@@ -1,0 +1,14 @@
+#Load companies
+POST http://localhost:8080/load-companies
+content-type: application/json
+
+{
+   "companies": [
+        {
+            "companyName": "Elektrotim S.A.",
+            "stockSymbol": "ELT",
+            "stockMarketSymbol": "WSE",
+            "stooqSymbol": "elt"
+        }
+    ]
+}

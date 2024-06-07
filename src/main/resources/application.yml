@@ -15,3 +15,4 @@ logging:
     #  orm.jdbc.bind: trace
 yahoo:
   api-url: https://query1.finance.yahoo.com
+## test

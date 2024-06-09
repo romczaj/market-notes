@@ -10,4 +10,4 @@ ARG JAR_FILE=target/*.jar
 
 ADD ${JAR_FILE} my-application.jar
 
-ENTRYPOINT ["java","-jar","/my-application.jar"]
+ENTRYPOINT ["java","-jar", "-Dspring.profiles.active=prod" ,"/my-application.jar"]

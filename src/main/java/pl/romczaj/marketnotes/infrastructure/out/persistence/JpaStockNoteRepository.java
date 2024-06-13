@@ -6,5 +6,5 @@ import java.util.List;
 
 public interface JpaStockNoteRepository extends JpaRepository<StockNoteEntity, Long>{
 
-    List<StockNoteEntity> findAllByCompanyId(Long companyId);
+    List<StockNoteEntity> findAllByStockCompanyId(Long companyId);
 }

@@ -1,14 +1,14 @@
-#Load companies
-POST http://localhost:8080/load-companies
+### Add note
+POST http://localhost:8080/add-note
 content-type: application/json
 
 {
-   "companies": [
-        {
-            "companyName": "Elektrotim S.A.",
-            "stockSymbol": "ELT",
-            "stockMarketSymbol": "WSE",
-            "stooqSymbol": "elt"
-        }
-    ]
+    "externalId": "ELT_WSE",
+    "noteContent": "This is a note35345345"
 }
+
+### test remote
+GET http://192.168.100.44:30080/actuator/health
+
+### get company
+GET http://localhost:8080/company/ELT_WSE

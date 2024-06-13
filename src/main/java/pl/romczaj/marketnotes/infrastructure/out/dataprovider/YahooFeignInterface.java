@@ -14,9 +14,9 @@ import java.util.List;
 
 public interface YahooFeignInterface {
 //https://query1.finance.yahoo.com/v7/finance/download/ELT.WA?period1=1686068941&period2=1717691341&interval=1d&events=history&includeAdjustedClose=true
-    @RequestLine(value = "GET /v7/finance/download/{companyShortcut}?period1={period1}&period2={period2}&interval={interval}&events=history&includeAdjustedClose=true")
+    @RequestLine(value = "GET /v7/finance/download/{dataProviderSymbol}?period1={period1}&period2={period2}&interval={interval}&events=history&includeAdjustedClose=true")
     List<HistoricDataFeignResponse> getCompanyHistoryData(
-            @Param("companyShortcut") String companyShortcut,
+            @Param("dataProviderSymbol") String companyShortcut,
             @Param("period1") long dateFrom,
             @Param("period2") long dateTo,
             @Param("interval") String interval);
@@ -26,12 +26,12 @@ public interface YahooFeignInterface {
     @Setter
     @Accessors(fluent = true)
     class HistoricDataFeignResponse {
-        @CsvBindByName(column = "Data")
+        @CsvBindByName(column = "Date")
         @CsvDate(value = "yyyy-MM-dd")
         private LocalDate date;
-        @CsvBindByName(column = "Otwarcie")
-        private double openPrice;
-        @CsvBindByName(column = "Zamkniecie")
-        private double closePrice;
+        @CsvBindByName(column = "Open")
+        private String openPrice;
+        @CsvBindByName(column = "Close")
+        private String closePrice;
     }
 }

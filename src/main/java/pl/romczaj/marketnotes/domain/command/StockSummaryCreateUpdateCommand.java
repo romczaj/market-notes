@@ -1,4 +1,4 @@
-package pl.romczaj.marketnotes.domain;
+package pl.romczaj.marketnotes.domain.command;
 
 public record StockSummaryCreateUpdateCommand(
         Long stockCompanyId,

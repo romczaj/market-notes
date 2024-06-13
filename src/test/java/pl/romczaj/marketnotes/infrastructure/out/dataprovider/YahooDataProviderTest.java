@@ -3,6 +3,11 @@ package pl.romczaj.marketnotes.infrastructure.out.dataprovider;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
+import pl.romczaj.marketnotes.common.HistoricData;
+import pl.romczaj.marketnotes.infrastructure.out.dataprovider.DataProviderPort.GetCompanyCurrentValueResult;
+import pl.romczaj.marketnotes.infrastructure.out.dataprovider.DataProviderPort.GetCompanyDataResult;
+
+import java.util.Objects;
 
 import static pl.romczaj.marketnotes.infrastructure.out.dataprovider.DataProviderPort.DataProviderInterval.DAILY;
 
@@ -16,15 +21,32 @@ class YahooDataProviderTest {
         //given
         String companyName = "ELT.WA";
         //when
-        DataProviderPort.GetCompanyDataResult result = dataProviderPort.getCompanyData(
+        GetCompanyDataResult getCompanyDataResult = dataProviderPort.getCompanyData(
                 new DataProviderPort.GetCompanyDataCommand(
                         companyName,
                         1000,
                         DAILY));
         //then
+
         Assertions.assertAll(
-                () -> Assertions.assertEquals(companyName, result.companyName()),
-                () -> Assertions.assertFalse(result.historicData().isEmpty())
+                () -> Assertions.assertEquals(companyName, getCompanyDataResult.companyName()),
+                () -> Assertions.assertFalse(getCompanyDataResult.historicData().isEmpty()),
+                () -> Assertions.assertTrue(getCompanyDataResult.historicData().stream().map(HistoricData::closePrice).noneMatch(Objects::isNull)),
+                () -> Assertions.assertTrue(getCompanyDataResult.historicData().stream().map(HistoricData::date).noneMatch(Objects::isNull))
+        );
+    }
+
+    @Test
+    void shouldReturnCurrentValueForCompany() {
+        //given
+        String companyName = "ELT.WA";
+        //when
+        GetCompanyCurrentValueResult result = dataProviderPort.getCompanyCurrentValue(
+                new DataProviderPort.GetCompanyCurrentValueCommand(companyName));
+        //then
+        Assertions.assertAll(
+                () -> Assertions.assertEquals(companyName, result.dataProviderSymbol()),
+                () -> Assertions.assertNotNull(result.lastHistoricData())
         );
     }
 

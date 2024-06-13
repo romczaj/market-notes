@@ -8,6 +8,6 @@ import org.springframework.validation.annotation.Validated;
 
 @ConfigurationProperties(prefix = "yahoo")
 @Validated
-public record YahooApiProperties(
+record YahooApiProperties(
         @NotBlank @URL String apiUrl) {
 }

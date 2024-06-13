@@ -5,8 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
-import pl.romczaj.marketnotes.domain.StockCompany;
-import pl.romczaj.marketnotes.domain.StockCompanyExternalId;
+import pl.romczaj.marketnotes.domain.model.StockCompany;
+import pl.romczaj.marketnotes.common.StockCompanyExternalId;
 
 @Entity
 @Setter
@@ -20,7 +20,8 @@ public class StockCompanyEntity {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Long id;
     @Column(nullable = false, unique = true)
-    private String externalId;
+    @Convert(converter = StockCompanyExternalIdConverter.class)
+    private StockCompanyExternalId externalId;
     @Column(nullable = false)
     private String companyName;
     @Column(nullable = false)
@@ -33,7 +34,7 @@ public class StockCompanyEntity {
     StockCompany toDomain() {
         return new StockCompany(
                 id,
-                new StockCompanyExternalId(stockSymbol, stockMarketSymbol),
+                externalId,
                 dataProviderSymbol,
                 companyName
         );
@@ -42,7 +43,7 @@ public class StockCompanyEntity {
     static StockCompanyEntity fromDomain(StockCompany stockCompany) {
         return new StockCompanyEntity(
                 stockCompany.id(),
-                stockCompany.stockCompanyExternalId().toDatabaseColumn(),
+                stockCompany.stockCompanyExternalId(),
                 stockCompany.companyName(),
                 stockCompany.stockCompanyExternalId().stockSymbol(),
                 stockCompany.stockCompanyExternalId().stockMarketSymbol(),

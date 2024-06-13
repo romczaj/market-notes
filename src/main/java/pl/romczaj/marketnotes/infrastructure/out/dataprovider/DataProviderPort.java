@@ -5,26 +5,18 @@ import lombok.RequiredArgsConstructor;
 import pl.romczaj.marketnotes.common.HistoricData;
 
 import java.util.List;
-import java.util.Optional;
-
-import static pl.romczaj.marketnotes.infrastructure.out.dataprovider.DataProviderPort.DataProviderInterval.DAILY;
 
 
 public interface DataProviderPort {
 
     GetCompanyDataResult getCompanyData(GetCompanyDataCommand getCompanyDataCommand);
+
     GetCompanyCurrentValueResult getCompanyCurrentValue(GetCompanyCurrentValueCommand getCompanyCurrentValueCommand);
 
     record GetCompanyDataCommand(
-            String companyShortcut,
+            String dataProviderSymbol,
             Integer fromDaysBefore,
             DataProviderInterval dataProviderInterval) {
-
-        public String dataProviderClientValue() {
-            return Optional.ofNullable(dataProviderInterval)
-                    .map(DataProviderInterval::getDataProviderClientValue)
-                    .orElse(DAILY.getDataProviderClientValue());
-        }
     }
 
     record GetCompanyDataResult(String companyName, List<HistoricData> historicData) {
@@ -43,7 +35,7 @@ public interface DataProviderPort {
     record GetCompanyCurrentValueCommand(String dataProviderSymbol) {
     }
 
-    record GetCompanyCurrentValueResult(Double currentValue) {
+    record GetCompanyCurrentValueResult(String dataProviderSymbol, HistoricData lastHistoricData) {
     }
 
 }

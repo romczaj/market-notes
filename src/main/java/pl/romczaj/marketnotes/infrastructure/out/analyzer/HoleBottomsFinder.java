@@ -19,8 +19,6 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class HoleBottomsFinder implements AnalyzerPort {
 
-    private final ApplicationClock applicationClock;
-
     @Override
     public CalculationResult findHoleBottoms(CalculationCommand command) {
         List<HistoricData> holeBottoms = findHoleBottoms(command.historicData());

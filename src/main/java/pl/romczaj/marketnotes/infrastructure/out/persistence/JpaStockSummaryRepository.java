@@ -4,6 +4,6 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
 
-public interface JpaStockSummaryRepository extends JpaRepository<StockSummaryEntity, Long> {
-    Optional<StockSummaryEntity> findByStockCompanyId(Long stockCompanyId);
+public interface JpaStockSummaryRepository extends JpaRepository<StockAnalyzeEntity, Long> {
+    Optional<StockAnalyzeEntity> findByStockCompanyId(Long stockCompanyId);
 }

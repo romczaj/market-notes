@@ -1,8 +1,9 @@
-package pl.romczaj.marketnotes.domain;
+package pl.romczaj.marketnotes.domain.model;
 
 import lombok.With;
+import pl.romczaj.marketnotes.domain.command.StockSummaryCreateUpdateCommand;
 
-public record StockSummary(
+public record StockAnalyze(
         Long id,
         @With Long stockCompanyId,
         @With Double dailyIncrease,
@@ -14,8 +15,8 @@ public record StockSummary(
         @With Double twoYearsIncrease
 ) {
 
-    public static StockSummary from(StockSummaryCreateUpdateCommand command) {
-        return new StockSummary(
+    public static StockAnalyze from(StockSummaryCreateUpdateCommand command) {
+        return new StockAnalyze(
                 null,
                 command.stockCompanyId(),
                 command.dailyIncrease(),
@@ -28,7 +29,7 @@ public record StockSummary(
         );
     }
 
-    public StockSummary updateFrom(StockSummaryCreateUpdateCommand command) {
+    public StockAnalyze updateFrom(StockSummaryCreateUpdateCommand command) {
         return withDailyIncrease(command.dailyIncrease())
                 .withWeeklyIncrease(command.weeklyIncrease())
                 .withMonthlyIncrease(command.monthlyIncrease())

@@ -1,0 +1,86 @@
+### Load companies
+POST http://localhost:8080/load-companies
+content-type: application/json
+
+{
+  "companies": [
+    {
+      "companyName": "Elektrotim S.A.",
+      "stockSymbol": "ELT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ELT.WA"
+    },
+    {
+      "companyName": "CD Projekt S.A.",
+      "stockSymbol": "CDR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CDR.WA"
+    },
+    {
+      "companyName": "KGHM Polska Miedź S.A.",
+      "stockSymbol": "KGH",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "KGH.WA"
+    },
+    {
+      "companyName": "PGE Polska Grupa Energetyczna S.A.",
+      "stockSymbol": "PGE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PGE.WA"
+    },
+    {
+      "companyName": "PKN Orlen S.A.",
+      "stockSymbol": "PKN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PKN.WA"
+    },
+    {
+      "companyName": "PKO Bank Polski S.A.",
+      "stockSymbol": "PKO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PKO.WA"
+    },
+    {
+      "companyName": "Alior Bank S.A.",
+      "stockSymbol": "ALR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ALR.WA"
+    },
+    {
+      "companyName": "Bank Millennium S.A.",
+      "stockSymbol": "MIL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MIL.WA"
+    },
+    {
+      "companyName": "mBank S.A.",
+      "stockSymbol": "MBK",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MBK.WA"
+    },
+    {
+      "companyName": "Orange Polska S.A.",
+      "stockSymbol": "OPL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "OPL.WA"
+    },
+    {
+      "companyName": "Cyfrowy Polsat S.A.",
+      "stockSymbol": "CPS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CPS.WA"
+    },
+    {
+      "companyName": "Grupa Lotos S.A.",
+      "stockSymbol": "LTS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "LTS.WA"
+    },
+    {
+      "companyName": "Allegro",
+      "stockSymbol": "ALEP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ALE.WA"
+    }
+  ]
+}

@@ -1,17 +1,21 @@
 package pl.romczaj.marketnotes.infrastructure.out.persistence;
 
+import pl.romczaj.marketnotes.common.StockCompanyExternalId;
 import pl.romczaj.marketnotes.domain.*;
+import pl.romczaj.marketnotes.domain.model.StockCompany;
+import pl.romczaj.marketnotes.domain.model.StockNote;
+import pl.romczaj.marketnotes.domain.model.StockAnalyze;
 
 import java.util.*;
 
 public class MockStockCompanyRepository implements StockCompanyRepository {
     private final Map<Long, StockCompanyEntity> DATABASE_STOCK_COMPANY = new HashMap<>();
-    private final Map<Long, StockSummaryEntity> DATABASE_STOCK_SUMMARY = new HashMap<>();
+    private final Map<Long, StockAnalyzeEntity> DATABASE_STOCK_SUMMARY = new HashMap<>();
     private final Map<Long, StockNoteEntity> DATABASE_STOCK_NOTE = new HashMap<>();
     private Long idCounter = 0L;
 
     @Override
-    public StockCompany saveSummary(StockCompany stockCompany) {
+    public StockCompany saveStockCompany(StockCompany stockCompany) {
         StockCompanyEntity stockCompanyEntity = StockCompanyEntity.fromDomain(stockCompany);
         if (stockCompany.id() == null) {
             stockCompanyEntity.setId(++idCounter);
@@ -38,26 +42,26 @@ public class MockStockCompanyRepository implements StockCompanyRepository {
     @Override
     public Optional<StockCompany> findByExternalId(StockCompanyExternalId stockCompanyExternalId) {
         return DATABASE_STOCK_COMPANY.values().stream()
-                .filter(c -> c.getExternalId().equalsIgnoreCase(stockCompanyExternalId.toDatabaseColumn()))
+                .filter(c -> c.getExternalId().equals(stockCompanyExternalId))
                 .map(StockCompanyEntity::toDomain)
                 .findFirst();
     }
 
     @Override
-    public StockSummary saveSummary(StockSummary stockSummary) {
-        StockSummaryEntity stockSummaryEntity = StockSummaryEntity.fromDomain(stockSummary);
-        if (stockSummary.id() == null) {
-            stockSummaryEntity.setId(++idCounter);
+    public StockAnalyze saveSummary(StockAnalyze stockAnalyze) {
+        StockAnalyzeEntity stockAnalyzeEntity = StockAnalyzeEntity.fromDomain(stockAnalyze);
+        if (stockAnalyze.id() == null) {
+            stockAnalyzeEntity.setId(++idCounter);
         }
-        DATABASE_STOCK_SUMMARY.put(stockSummaryEntity.getId(), stockSummaryEntity);
-        return stockSummaryEntity.toDomain();
+        DATABASE_STOCK_SUMMARY.put(stockAnalyzeEntity.getId(), stockAnalyzeEntity);
+        return stockAnalyzeEntity.toDomain();
     }
 
     @Override
-    public Optional<StockSummary> findSummaryByStockCompanyId(Long stockCompanyId) {
+    public Optional<StockAnalyze> findSummaryByStockCompanyId(Long stockCompanyId) {
         return DATABASE_STOCK_SUMMARY.values().stream()
                 .filter(s -> s.getStockCompanyId().equals(stockCompanyId))
-                .map(StockSummaryEntity::toDomain)
+                .map(StockAnalyzeEntity::toDomain)
                 .findFirst();
     }
 
@@ -74,7 +78,7 @@ public class MockStockCompanyRepository implements StockCompanyRepository {
     @Override
     public List<StockNote> findNotesByStockCompanyId(Long companyId) {
         return DATABASE_STOCK_NOTE.values().stream()
-                .filter(n -> n.getCompanyId().equals(companyId))
+                .filter(n -> n.getStockCompanyId().equals(companyId))
                 .map(StockNoteEntity::toDomain)
                 .toList();
     }

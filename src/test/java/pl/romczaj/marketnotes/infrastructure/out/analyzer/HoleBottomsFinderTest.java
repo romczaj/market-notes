@@ -18,9 +18,7 @@ import static pl.romczaj.marketnotes.common.ApplicationClock.fromLocalDateTime;
 @Slf4j
 class HoleBottomsFinderTest {
 
-    private final HoleBottomsFinder holeBottomsFinder = new HoleBottomsFinder(
-            fromLocalDateTime(of(2022, 1, 5).atStartOfDay()));
-
+    private final HoleBottomsFinder holeBottomsFinder = new HoleBottomsFinder();
     private final List<HistoricData> historicData = Arrays.asList(
             new HistoricData(of(2022, 1, 1), 100.0),
             new HistoricData(of(2022, 1, 2), 200.0),

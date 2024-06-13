@@ -18,6 +18,7 @@ class ApplicationArchitectureTest {
     static final String APPLICATION = "Application";
     static final String COMMON = "Common";
     static final String DOMAIN = "Domain";
+    static final String READ = "Read";
     final JavaClasses javaClasses = new ClassFileImporter().importPackages(BASE_PACKAGE);
 
     @Test
@@ -33,8 +34,10 @@ class ApplicationArchitectureTest {
                 .layer(APPLICATION).definedBy(packageForLayer("application"))
                 .layer(COMMON).definedBy(packageForLayer("common"))
                 .layer(DOMAIN).definedBy(packageForLayer("domain"))
+                .layer(READ).definedBy(packageForLayer("read"))
 
-                .whereLayer(COMMON).mayOnlyBeAccessedByLayers(ANALYZER_ADAPTER, DATA_PROVIDER_ADAPTER)
+                .whereLayer(COMMON).mayOnlyBeAccessedByLayers(ANALYZER_ADAPTER, JOB_ADAPTER, DATA_PROVIDER_ADAPTER,
+                        REST_ADAPTER, PERSISTENCE_ADAPTER, APPLICATION, DOMAIN, READ)
 
                 .whereLayer(ANALYZER_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION, DOMAIN)
 
@@ -42,13 +45,15 @@ class ApplicationArchitectureTest {
 
                 .whereLayer(DATA_PROVIDER_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION, DOMAIN)
 
-                .whereLayer(REST_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION, DOMAIN)
+                .whereLayer(REST_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION, DOMAIN, READ)
 
-                .whereLayer(PERSISTENCE_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION)
+                .whereLayer(PERSISTENCE_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION, READ)
 
                 .whereLayer(DOMAIN).mayOnlyBeAccessedByLayers(APPLICATION, PERSISTENCE_ADAPTER)
 
-                .whereLayer(APPLICATION).mayNotBeAccessedByAnyLayer();
+                .whereLayer(APPLICATION).mayNotBeAccessedByAnyLayer()
+
+                .whereLayer(READ).mayNotBeAccessedByAnyLayer();
 
         layeredArchitecture.check(javaClasses);
     }

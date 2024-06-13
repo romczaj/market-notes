@@ -2,4 +2,4 @@ spring:
   datasource:
     password: ${DB_PASSWORD}
     url: ${DB_URL}
-    username: ${DB_USER}
+    username: ${DB_USERNAME}

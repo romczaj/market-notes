@@ -15,5 +15,11 @@ logging:
     #  orm.jdbc.bind: trace
 yahoo:
   api-url: https://query1.finance.yahoo.com
-## test
-## should change
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+  endpoint:
+    health:
+      show-details: always

@@ -1,0 +1,10 @@
+spring:
+  main:
+    banner-mode: "off"
+  datasource:
+    password: ${DB_PASSWORD}
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+
+logging:
+  config: classpath:logback-prod.xml

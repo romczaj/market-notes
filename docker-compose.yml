@@ -1,7 +1,21 @@
 version: '3.7'
 services:
-  api-call-counter:
+  market-notes:
     container_name: market-notes
+    build: .
+    restart: always
+    environment:
+      - JAVA_OPTS=-Xms128m -Xmx1024m -Dspring.profiles.active=prod
+      - DB_URL=jdbc:postgresql://market-notes-db:5432/postgres
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+    ports:
+      - '8080:8080'
+    depends_on:
+      - market-notes-db
+
+  market-notes-db:
+    container_name: market-notes-db
     image: postgres:15.4
     restart: always
     environment:

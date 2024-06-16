@@ -1,5 +1,6 @@
 ### Load companies
-POST http://localhost:8080/load-companies
+#POST http://localhost:8080/load-companies
+POST http://192.168.100.44:30080/load-companies
 content-type: application/json
 
 {

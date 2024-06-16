@@ -8,7 +8,7 @@ content-type: application/json
 }
 
 ### test remote
-GET http://192.168.100.44:30080/actuator/health
+GET http://localhost:8080/actuator/health
 
 ### get company
 GET http://localhost:8080/company/ELT_WSE

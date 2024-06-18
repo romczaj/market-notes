@@ -2,10 +2,9 @@ package pl.romczaj.marketnotes.stockmarket.application.subtask;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.common.dto.HistoricData;
-import pl.romczaj.marketnotes.stockmarket.domain.StockCompanyRepository;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyRepository;
 import pl.romczaj.marketnotes.stockmarket.domain.command.StockSummaryCreateUpdateCommand;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockAnalyze;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
@@ -23,16 +22,20 @@ import static pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class RefreshCompanyTask {
+public class RefreshAnalyzedDataCompanyTask {
 
     private final StockCompanyRepository stockCompanyRepository;
 
     private final DataProviderPort dataProviderPort;
     private final AnalyzerPort analyzerPort;
 
-    @Async
+
     public void refreshCompanyStockData(StockCompany company) {
-        GetCompanyDataCommand getCompanyDataCommand = new GetCompanyDataCommand(company.dataProviderSymbol(), 1000, DAILY);
+        GetCompanyDataCommand getCompanyDataCommand = new GetCompanyDataCommand(
+                company.stockCompanyExternalId(),
+                company.dataProviderSymbol(),
+                1000,
+                DAILY);
         GetCompanyDataResult getCompanyDataResult = dataProviderPort.getCompanyData(getCompanyDataCommand);
 
         List<HistoricData> historicData = getCompanyDataResult.historicData();

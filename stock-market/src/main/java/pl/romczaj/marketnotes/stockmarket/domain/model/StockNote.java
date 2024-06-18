@@ -19,7 +19,7 @@ public record StockNote(
             command.companyId(),
             command.noteDate(),
             command.lastHistoricData().date(),
-            command.lastHistoricData().closePrice(),
+            command.lastHistoricData().closePrice().amount(),
             command.noteContent()
         );
     }

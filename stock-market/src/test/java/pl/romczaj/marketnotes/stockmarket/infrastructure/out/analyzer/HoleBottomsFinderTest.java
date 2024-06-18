@@ -12,6 +12,7 @@ import java.util.List;
 import java.util.Map;
 
 import static java.time.LocalDate.of;
+import static pl.romczaj.marketnotes.common.dto.Money.ofPln;
 
 
 @Slf4j
@@ -19,11 +20,11 @@ class HoleBottomsFinderTest {
 
     private final HoleBottomsFinder holeBottomsFinder = new HoleBottomsFinder();
     private final List<HistoricData> historicData = Arrays.asList(
-            new HistoricData(of(2022, 1, 1), 100.0),
-            new HistoricData(of(2022, 1, 2), 200.0),
-            new HistoricData(of(2022, 1, 3), 150.0),
-            new HistoricData(of(2022, 1, 4), 200.0),
-            new HistoricData(of(2022, 1, 5), 250.0)
+            new HistoricData(of(2022, 1, 1), ofPln(100.0)),
+            new HistoricData(of(2022, 1, 2), ofPln(200.0)),
+            new HistoricData(of(2022, 1, 3), ofPln(150.0)),
+            new HistoricData(of(2022, 1, 4), ofPln(200.0)),
+            new HistoricData(of(2022, 1, 5), ofPln(250.0))
     );
 
 
@@ -73,13 +74,13 @@ class HoleBottomsFinderTest {
 
         //then
         Assertions.assertAll(
-                () -> Assertions.assertEquals(new HistoricData(of(2022, 1, 3), 150.0), middleDate),
-                () -> Assertions.assertEquals(new HistoricData(of(2022, 1, 1), 100.0), lastDate),
+                () -> Assertions.assertEquals(new HistoricData(of(2022, 1, 3),  ofPln(150.0)), middleDate),
+                () -> Assertions.assertEquals(new HistoricData(of(2022, 1, 1),  ofPln(100.0)), lastDate),
                 () -> Assertions.assertNull(notExistDate)
         );
     }
 
     private void addValueInMap(Map<LocalDate, HistoricData> map, LocalDate localDate, double value) {
-        map.put(localDate, new HistoricData(localDate, value));
+        map.put(localDate, new HistoricData(localDate, ofPln(value)));
     }
 }

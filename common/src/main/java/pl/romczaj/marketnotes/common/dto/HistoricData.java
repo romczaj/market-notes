@@ -4,6 +4,6 @@ import java.time.LocalDate;
 
 public record HistoricData(
         LocalDate date,
-        Double closePrice
+        Money closePrice
 ) {
 }

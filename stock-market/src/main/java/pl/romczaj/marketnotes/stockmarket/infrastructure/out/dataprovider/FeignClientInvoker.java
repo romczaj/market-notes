@@ -3,6 +3,9 @@ package pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.common.dto.HistoricData;
+import pl.romczaj.marketnotes.common.dto.Money;
+import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort.DataProviderInterval;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.YahooFeignInterface.HistoricDataFeignResponse;
 
 import java.time.LocalDate;
@@ -27,15 +30,21 @@ class FeignClientInvoker {
 
         return response.stream()
                 .filter(r -> !r.closePrice().equals("null"))
-                .map(r -> new HistoricData(r.date(), Double.parseDouble(r.closePrice())))
+                .map(r -> new HistoricData(
+                        r.date(),
+                        new Money(
+                                Double.parseDouble(r.closePrice()),
+                                getHistoricalDataCommand.stockCompanyExternalId.stockMarketSymbol().getCurrency()
+                        )))
                 .toList();
     }
 
     record GetHistoricalDataCommand(
+            StockCompanyExternalId stockCompanyExternalId,
             String companyShortcut,
             LocalDate dateFrom,
             LocalDate dateTo,
-            DataProviderPort.DataProviderInterval interval) {
+            DataProviderInterval interval) {
     }
 
 

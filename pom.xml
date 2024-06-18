@@ -14,6 +14,7 @@
         <module>main</module>
         <module>common</module>
         <module>user-account</module>
+        <module>internal-api</module>
     </modules>
 
     <properties>
@@ -159,7 +160,7 @@
                 <artifactId>spring-boot-maven-plugin</artifactId>
                 <configuration>
                     <mainClass>
-                        pl.romczaj.marketnotes.main.Main
+                        pl.romczaj.marketnotes.main.MarketNotesApplication
                     </mainClass>
                     <classifier>exe</classifier>
                 </configuration>

@@ -1,10 +1,8 @@
 package pl.romczaj.marketnotes.stockmarket.application;
 
 
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
-import pl.romczaj.marketnotes.stockmarket.domain.StockCompanyRepository;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockNote;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.AddCompanyNoteRequest;
@@ -13,24 +11,17 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static pl.romczaj.marketnotes.common.dto.Money.ofPln;
+import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
 
-class CompanyRestManagementProcessTest {
+class CompanyRestManagementProcessTest extends BaseApplicationTest {
 
-    ApplicationTestConfiguration applicationTestConfiguration = new ApplicationTestConfiguration();
-    private StockCompanyRepository stockCompanyRepository;
-    private CompanyRestManagementProcess stockCompanyLoaderProcessor;
-
-    @BeforeEach
-    void setUp() {
-        stockCompanyRepository = applicationTestConfiguration.getStockCompanyRepository();
-        stockCompanyLoaderProcessor = applicationTestConfiguration.getCompanyRestManagementProcess();
-    }
 
     @Test
     void shouldAddNote() {
         //given
         StockCompany stockCompany = new StockCompany(1L,
-                new StockCompanyExternalId("aaa", "bbb"), "Market 1", "a.1");
+                new StockCompanyExternalId("aaa", WSE), "Market 1", "a.1", ofPln(100.0));
         stockCompanyRepository.saveStockCompany(stockCompany);
 
         //when

@@ -1,4 +1,4 @@
-package pl.romczaj.marketnotes.stockmarket.domain;
+package pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence;
 
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;

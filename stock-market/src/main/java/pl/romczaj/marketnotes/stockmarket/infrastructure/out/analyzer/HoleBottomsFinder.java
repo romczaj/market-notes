@@ -62,7 +62,7 @@ public class HoleBottomsFinder implements AnalyzerPort {
             HistoricData current = historicData.get(i);
             HistoricData next = historicData.get(i + 1);
 
-            if (current.closePrice() < previous.closePrice() && current.closePrice() < next.closePrice()) {
+            if (current.closePrice().lessThan(previous.closePrice()) && current.closePrice().lessThan(next.closePrice())) {
                 holeBottoms.add(current);
             }
         }
@@ -87,8 +87,8 @@ public class HoleBottomsFinder implements AnalyzerPort {
             return 0.0;
         }
 
-        BigDecimal firstValue = BigDecimal.valueOf(first.closePrice());
-        BigDecimal lastValue = BigDecimal.valueOf(last.closePrice());
+        BigDecimal firstValue = BigDecimal.valueOf(first.closePrice().amount());
+        BigDecimal lastValue = BigDecimal.valueOf(last.closePrice().amount());
 
         BigDecimal result = lastValue.subtract(firstValue)
                 .divide(firstValue, 2, RoundingMode.DOWN)

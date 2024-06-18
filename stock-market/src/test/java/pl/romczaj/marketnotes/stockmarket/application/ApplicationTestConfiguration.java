@@ -2,12 +2,11 @@ package pl.romczaj.marketnotes.stockmarket.application;
 
 import lombok.Builder;
 import lombok.Getter;
-
-import pl.romczaj.marketnotes.stockmarket.application.subtask.LoadCampaignTask;
-import pl.romczaj.marketnotes.stockmarket.application.subtask.RefreshCompanyTask;
 import pl.romczaj.marketnotes.common.clock.ApplicationClock;
 import pl.romczaj.marketnotes.common.dto.HistoricData;
-import pl.romczaj.marketnotes.stockmarket.domain.StockCompanyRepository;
+import pl.romczaj.marketnotes.stockmarket.application.subtask.LoadCampaignTask;
+import pl.romczaj.marketnotes.stockmarket.application.subtask.RefreshAnalyzedDataCompanyTask;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyRepository;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.analyzer.AnalyzerPort;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.MockStockCompanyRepository;
@@ -15,6 +14,8 @@ import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.MockSto
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.Optional;
+
+import static pl.romczaj.marketnotes.common.dto.Money.ofPln;
 
 @Getter
 public class ApplicationTestConfiguration {
@@ -24,7 +25,7 @@ public class ApplicationTestConfiguration {
     private final AnalyzerPort analyzerPort;
 
     private final StockCompanyRepository stockCompanyRepository;
-    private final RefreshCompanyTask refreshCompanyTask;
+    private final RefreshAnalyzedDataCompanyTask refreshAnalyzedDataCompanyTask;
     private final LoadCampaignTask loadCampaignTask;
     private final RefreshCompanyStockDataProcess refreshCompanyStockDataProcess;
     private final CompanyRestManagementProcess companyRestManagementProcess;
@@ -36,25 +37,16 @@ public class ApplicationTestConfiguration {
     public ApplicationTestConfiguration(WithMockObjects withMockObjects) {
         this.applicationClock = Optional.ofNullable(withMockObjects.applicationClock).orElse(ApplicationClock.fromLocalDateTime(LocalDateTime.now()));
 
-        this.dataProviderPort = Optional.ofNullable(withMockObjects.dataProviderPort).orElse(new DataProviderPort() {
-            @Override
-            public GetCompanyDataResult getCompanyData(GetCompanyDataCommand getCompanyDataCommand) {
-                return new GetCompanyDataResult(getCompanyDataCommand.dataProviderSymbol(),
-                        List.of(
-                                new HistoricData(applicationClock.today(), 100.0)
-                        ));
-            }
-
-            @Override
-            public GetCompanyCurrentValueResult getCompanyCurrentValue(GetCompanyCurrentValueCommand getCompanyCurrentValueCommand) {
-                return new GetCompanyCurrentValueResult(getCompanyCurrentValueCommand.dataProviderSymbol(),
-                        new HistoricData(applicationClock.today(), 100.0));
-            }
-        });
+        this.dataProviderPort = Optional.ofNullable(withMockObjects.dataProviderPort).orElse(
+                getCompanyDataCommand -> new DataProviderPort.GetCompanyDataResult(
+                getCompanyDataCommand.dataProviderSymbol(),
+                List.of(
+                        new HistoricData(applicationClock.today(), ofPln(100.0)))
+        ));
 
         this.analyzerPort = Optional.ofNullable(withMockObjects.analyzerPort)
                 .orElse(calculationCommand -> new AnalyzerPort.CalculationResult(
-                        List.of(new HistoricData(applicationClock.today(), 100.0)),
+                        List.of(new HistoricData(applicationClock.today(), ofPln(100.0))),
                         new AnalyzerPort.IncreaseResult(
                                 1.0,
                                 2.0,
@@ -65,9 +57,9 @@ public class ApplicationTestConfiguration {
                                 7.0)));
 
         this.stockCompanyRepository = new MockStockCompanyRepository();
-        this.refreshCompanyTask = new RefreshCompanyTask(stockCompanyRepository, dataProviderPort, analyzerPort);
-        this.loadCampaignTask = new LoadCampaignTask(refreshCompanyTask, stockCompanyRepository);
-        this.refreshCompanyStockDataProcess = new RefreshCompanyStockDataProcess(stockCompanyRepository, refreshCompanyTask);
+        this.refreshAnalyzedDataCompanyTask = new RefreshAnalyzedDataCompanyTask(stockCompanyRepository, dataProviderPort, analyzerPort);
+        this.loadCampaignTask = new LoadCampaignTask(stockCompanyRepository, dataProviderPort);
+        this.refreshCompanyStockDataProcess = new RefreshCompanyStockDataProcess(stockCompanyRepository, refreshAnalyzedDataCompanyTask);
         this.companyRestManagementProcess = new CompanyRestManagementProcess(stockCompanyRepository, applicationClock, dataProviderPort, loadCampaignTask);
     }
 

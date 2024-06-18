@@ -1,11 +1,11 @@
-package pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence;
+package pl.romczaj.marketnotes.common.persistance;
 
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 
 @Converter(autoApply = true)
-public class StockCompanyExternalIdConverter implements AttributeConverter<StockCompanyExternalId, String> {
+public class StockCompanyExternalIdDatabaseConverter implements AttributeConverter<StockCompanyExternalId, String> {
 
     @Override
     public String convertToDatabaseColumn(StockCompanyExternalId attribute) {

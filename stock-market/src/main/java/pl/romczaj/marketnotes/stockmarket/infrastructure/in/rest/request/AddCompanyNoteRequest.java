@@ -1,11 +1,11 @@
 package pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request;
 
 import jakarta.validation.constraints.NotBlank;
-import lombok.NonNull;
+import jakarta.validation.constraints.NotNull;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 
 public record AddCompanyNoteRequest(
-        @NonNull StockCompanyExternalId externalId,
+        @NotNull StockCompanyExternalId externalId,
         @NotBlank String noteContent
 ) {
 }

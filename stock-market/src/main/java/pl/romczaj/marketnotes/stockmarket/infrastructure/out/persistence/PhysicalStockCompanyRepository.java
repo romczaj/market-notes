@@ -3,7 +3,6 @@ package pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
-import pl.romczaj.marketnotes.stockmarket.domain.StockCompanyRepository;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockAnalyze;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockNote;

@@ -12,3 +12,13 @@ GET http://localhost:8080/actuator/health
 
 ### get company
 GET http://localhost:8080/company/ELT_WSE
+
+### add add account
+POST http://localhost:8080/add-account
+content-type: application/json
+
+{
+  "username": "jankowalski",
+  "email": "ajemromek@gmail.com"
+}
+

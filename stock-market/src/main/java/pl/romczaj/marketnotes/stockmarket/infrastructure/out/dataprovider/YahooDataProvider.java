@@ -9,7 +9,6 @@ import pl.romczaj.marketnotes.common.dto.HistoricData;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.FeignClientInvoker.GetHistoricalDataCommand;
 
 import java.time.LocalDate;
-import java.util.Comparator;
 import java.util.List;
 
 
@@ -31,34 +30,15 @@ public class YahooDataProvider implements DataProviderPort {
 
         List<HistoricData> historicDataList = feignClientInvoker.getHistoricalData(
                     new GetHistoricalDataCommand(
+                            getCompanyDataCommand.stockCompanyExternalId(),
                             getCompanyDataCommand.dataProviderSymbol(),
                             fromDate,
                             dateTo,
                             getCompanyDataCommand.dataProviderInterval()
                     ));
 
-        return new GetCompanyDataResult(
-                    getCompanyDataCommand.dataProviderSymbol(),
-                historicDataList);
-    }
-
-    @Override
-    public GetCompanyCurrentValueResult getCompanyCurrentValue(GetCompanyCurrentValueCommand getCompanyCurrentValueCommand) {
-
-        List<HistoricData> historicDataList = feignClientInvoker.getHistoricalData(
-                new GetHistoricalDataCommand(
-                        getCompanyCurrentValueCommand.dataProviderSymbol(),
-                        applicationClock.today().minusDays(6),
-                        applicationClock.today(),
-                        DataProviderInterval.DAILY
-                ));
-
-        HistoricData historicData = historicDataList
-                .stream().max(Comparator.comparing(HistoricData::date))
-                .orElseThrow(() -> new IllegalArgumentException("No data found for company " + getCompanyCurrentValueCommand.dataProviderSymbol()));
-
-        return new GetCompanyCurrentValueResult(
-                getCompanyCurrentValueCommand.dataProviderSymbol(),
-                historicData);
+        return new GetCompanyDataResult(getCompanyDataCommand.dataProviderSymbol(), historicDataList);
     }
 }
+
+

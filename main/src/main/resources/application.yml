@@ -4,9 +4,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/postgres
     username: postgres
   jpa:
-    generateDdl: true
     hibernate:
-      ddl-auto: update
+      ddl-auto: validate
+
   mail:
     host: smtp-relay.brevo.com
     username: ${SMTP_USERNAME}
@@ -19,8 +19,9 @@ spring:
           port: 587
           auth: true
 
+  liquibase:
+    change-log: 'classpath:db/master.xml'
 
-#logging:
 #  level:
 #    org.hibernate:
 #      SQL: debug

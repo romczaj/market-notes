@@ -18,6 +18,7 @@ public class MockUserAccountRepository implements UserAccountRepository {
     private static final Map<Long, BuySellHistoryEntity> OPERATION_HISTORY_DB = new HashMap<>();
     private static final Map<Long, UserAccountEntity> USER_ACCOUNT_DB = new HashMap<>();
     private static final Map<Long, CompanyInvestGoalEntity> COMPANY_INVEST_GOAL_DB = new HashMap<>();
+    private static final Map<Long, InvestReportEntity> INVEST_REPORT_ENTITY_GB = new HashMap<>();
     private Long idCounter = 0L;
 
     @Override
@@ -64,6 +65,16 @@ public class MockUserAccountRepository implements UserAccountRepository {
         }
         COMPANY_INVEST_GOAL_DB.put(companyInvestGoalEntity.getId(), companyInvestGoalEntity);
         return companyInvestGoalEntity.toDomain();
+    }
+
+    @Override
+    public InvestReport saveInvestReport(InvestReport investReport) {
+        InvestReportEntity investReportEntity = InvestReportEntity.fromDomain(investReport);
+        if (investReport.id() == null) {
+            investReportEntity.setId(++idCounter);
+        }
+        INVEST_REPORT_ENTITY_GB.put(investReportEntity.getId(), investReportEntity);
+        return investReportEntity.toDomain();
     }
 
     @Override
@@ -138,6 +149,14 @@ public class MockUserAccountRepository implements UserAccountRepository {
         return COMPANY_INVEST_GOAL_DB.values().stream()
                 .filter(c -> c.getUserAccountId().equals(userAccountId))
                 .map(CompanyInvestGoalEntity::toDomain)
+                .toList();
+    }
+
+    @Override
+    public List<InvestReport> findInvestReportByUserAccountId(Long userAccountId) {
+        return INVEST_REPORT_ENTITY_GB.values().stream()
+                .filter(i -> i.getUserAccountId().equals(userAccountId))
+                .map(InvestReportEntity::toDomain)
                 .toList();
     }
 

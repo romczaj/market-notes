@@ -2,14 +2,8 @@ package pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence;
 
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
-import pl.romczaj.marketnotes.useraccount.domain.model.BalanceHistory;
-import pl.romczaj.marketnotes.useraccount.domain.model.RechargeHistory;
-import pl.romczaj.marketnotes.useraccount.domain.model.BuySellHistory;
-import pl.romczaj.marketnotes.useraccount.domain.model.UserAccount;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.entity.BalanceHistoryEntity;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.entity.RechargeHistoryEntity;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.entity.BuySellHistoryEntity;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.entity.UserAccountEntity;
+import pl.romczaj.marketnotes.useraccount.domain.model.*;
+import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.entity.*;
 
 import java.time.LocalDate;
 import java.util.HashMap;
@@ -23,6 +17,7 @@ public class MockUserAccountRepository implements UserAccountRepository {
     private static final Map<Long, RechargeHistoryEntity> RECHARGE_HISTORY_DB = new HashMap<>();
     private static final Map<Long, BuySellHistoryEntity> OPERATION_HISTORY_DB = new HashMap<>();
     private static final Map<Long, UserAccountEntity> USER_ACCOUNT_DB = new HashMap<>();
+    private static final Map<Long, CompanyInvestGoalEntity> COMPANY_INVEST_GOAL_DB = new HashMap<>();
     private Long idCounter = 0L;
 
     @Override
@@ -59,6 +54,16 @@ public class MockUserAccountRepository implements UserAccountRepository {
             buySellHistoryEntity.setId(++idCounter);
         }
         OPERATION_HISTORY_DB.put(buySellHistoryEntity.getId(), buySellHistoryEntity);
+    }
+
+    @Override
+    public CompanyInvestGoal saveCompanyInvestGoal(CompanyInvestGoal companyInvestGoal) {
+        CompanyInvestGoalEntity companyInvestGoalEntity = CompanyInvestGoalEntity.fromDomain(companyInvestGoal);
+        if (companyInvestGoal.id() == null) {
+            companyInvestGoalEntity.setId(++idCounter);
+        }
+        COMPANY_INVEST_GOAL_DB.put(companyInvestGoalEntity.getId(), companyInvestGoalEntity);
+        return companyInvestGoalEntity.toDomain();
     }
 
     @Override
@@ -126,6 +131,22 @@ public class MockUserAccountRepository implements UserAccountRepository {
                 .filter(o -> o.getUserAccountId().equals(userAccountId))
                 .map(BuySellHistoryEntity::toDomain)
                 .toList();
+    }
+
+    @Override
+    public List<CompanyInvestGoal> findCompanyInvestGoalByUserAccountId(Long userAccountId) {
+        return COMPANY_INVEST_GOAL_DB.values().stream()
+                .filter(c -> c.getUserAccountId().equals(userAccountId))
+                .map(CompanyInvestGoalEntity::toDomain)
+                .toList();
+    }
+
+    @Override
+    public Optional<CompanyInvestGoal> findCompanyInvestGoal(Long userAccountId, StockCompanyExternalId stockCompanyExternalId) {
+        return COMPANY_INVEST_GOAL_DB.values().stream()
+                .filter(c -> c.getUserAccountId().equals(userAccountId) && c.getStockCompanyExternalId().equals(stockCompanyExternalId))
+                .map(CompanyInvestGoalEntity::toDomain)
+                .findFirst();
     }
 
 }

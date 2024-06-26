@@ -5,7 +5,7 @@ import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose.Analyze
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose.CompanyNoteResponse;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose.FullCompanyResponse;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose.StockCompanyBaseInfoResponse;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockAnalyzeEntity;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.CalculationResultHistoryEntity;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyEntity;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockNoteEntity;
 
@@ -20,7 +20,7 @@ class FullCompanyResponseMapper {
         }
 
         StockCompanyEntity companyEntity = tuples.get(0).get(0, StockCompanyEntity.class);
-        StockAnalyzeEntity analyzeEntity = tuples.get(0).get(1, StockAnalyzeEntity.class);
+        CalculationResultHistoryEntity analyzeEntity = tuples.get(0).get(1, CalculationResultHistoryEntity.class);
 
         StockCompanyBaseInfoResponse baseInfo = new StockCompanyBaseInfoResponse(
                 companyEntity.getId(),
@@ -30,14 +30,7 @@ class FullCompanyResponseMapper {
         );
 
         AnalyzeResponse analyze = new AnalyzeResponse(
-                analyzeEntity.getId(),
-                analyzeEntity.getDailyIncrease(),
-                analyzeEntity.getWeeklyIncrease(),
-                analyzeEntity.getMonthlyIncrease(),
-                analyzeEntity.getThreeMonthsIncrease(),
-                analyzeEntity.getSixMonthsIncrease(),
-                analyzeEntity.getYearlyIncrease(),
-                analyzeEntity.getTwoYearsIncrease()
+                analyzeEntity.getId()
         );
 
         List<CompanyNoteResponse> notes = tuples.stream()

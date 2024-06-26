@@ -3,15 +3,9 @@ package pl.romczaj.marketnotes.useraccount.application;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.internalapi.StockMarketInternalApi;
-import pl.romczaj.marketnotes.useraccount.domain.model.BalanceHistory;
-import pl.romczaj.marketnotes.useraccount.domain.model.UserAccount;
-import pl.romczaj.marketnotes.useraccount.domain.model.RechargeHistory;
-import pl.romczaj.marketnotes.useraccount.domain.model.BuySellHistory;
+import pl.romczaj.marketnotes.useraccount.domain.model.*;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.UserAccountRestManagement;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.AddAccountRequest;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.NoteBalanceRequest;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.NoteAccountRechargeRequest;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.NoteBuySellRequest;
+import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.*;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.respose.AddAccountResponse;
 import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.UserAccountRepository;
 
@@ -71,5 +65,19 @@ public class UserAccountRestManagementProcess implements UserAccountRestManageme
                 .orElseGet(() -> BalanceHistory.create(userAccount.id(), noteBalanceRequest));
 
         userAccountRepository.saveBalanceHistory(balanceHistory);
+    }
+
+    @Override
+    public void noteCompanyInvestGoal(NoteCompanyInvestGoalRequest noteCompanyInvestGoalRequest) {
+        stockMarketInternalApi.validateStockCompanyExists(noteCompanyInvestGoalRequest.stockCompanyExternalId());
+        UserAccount userAccount = userAccountRepository.getByExternalId(noteCompanyInvestGoalRequest.userAccountExternalId());
+
+        CompanyInvestGoal companyInvestGoal = userAccountRepository
+                .findCompanyInvestGoal(userAccount.id(), noteCompanyInvestGoalRequest.stockCompanyExternalId())
+                .map(g -> g.updatePrices(noteCompanyInvestGoalRequest))
+                .orElse(CompanyInvestGoal.create(userAccount.id(), noteCompanyInvestGoalRequest));
+
+        userAccountRepository.saveCompanyInvestGoal(companyInvestGoal);
+
     }
 }

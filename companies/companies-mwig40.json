@@ -1,0 +1,244 @@
+{
+  "companies": [
+    {
+      "companyName": "11 bit studios",
+      "stockSymbol": "11B",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "11B.WA"
+    },
+    {
+      "companyName": "AB",
+      "stockSymbol": "ABP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ABE.WA"
+    },
+    {
+      "companyName": "ASBISc Enterprises plc.",
+      "stockSymbol": "ASB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ASB.WA"
+    },
+    {
+      "companyName": "AmRest Holdings SE",
+      "stockSymbol": "EAT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "EAT.WA"
+    },
+    {
+      "companyName": "Arctic Paper",
+      "stockSymbol": "ATC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ATC.WA"
+    },
+    {
+      "companyName": "Asseco Poland",
+      "stockSymbol": "ACP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ACP.WA"
+    },
+    {
+      "companyName": "Auto Partner",
+      "stockSymbol": "ATP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ATP.WA"
+    },
+    {
+      "companyName": "Bank Handlowy w Warszawie",
+      "stockSymbol": "BHW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BHW.WA"
+    },
+    {
+      "companyName": "Bank Millennium",
+      "stockSymbol": "MIL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MIL.WA"
+    },
+    {
+      "companyName": "Benefit Systems",
+      "stockSymbol": "BFT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BFT.WA"
+    },
+    {
+      "companyName": "CCC",
+      "stockSymbol": "CCC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CCC.WA"
+    },
+    {
+      "companyName": "CI Games SE",
+      "stockSymbol": "CIG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CIG.WA"
+    },
+    {
+      "companyName": "Cognor Holding",
+      "stockSymbol": "COG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "COG.WA"
+    },
+    {
+      "companyName": "Comarch",
+      "stockSymbol": "CMR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CMR.WA"
+    },
+    {
+      "companyName": "Develia",
+      "stockSymbol": "DVL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "DVL.WA"
+    },
+    {
+      "companyName": "Dom Development",
+      "stockSymbol": "DOM",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "DOM.WA"
+    },
+    {
+      "companyName": "Enea",
+      "stockSymbol": "ENA",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ENA.WA"
+    },
+    {
+      "companyName": "Eurocash",
+      "stockSymbol": "EUR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "EUR.WA"
+    },
+    {
+      "companyName": "GPW",
+      "stockSymbol": "GPW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "GPW.WA"
+    },
+    {
+      "companyName": "GreenX Metals Ltd.",
+      "stockSymbol": "GNX",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "GRX.WA"
+    },
+    {
+      "companyName": "Grenevia",
+      "stockSymbol": "GRV",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "GEA.WA"
+    },
+    {
+      "companyName": "Grupa Azoty",
+      "stockSymbol": "ATT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ATT.WA"
+    },
+    {
+      "companyName": "Grupa Pracuj",
+      "stockSymbol": "PRC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "GPP.WA"
+    },
+    {
+      "companyName": "Huuuge, Inc.",
+      "stockSymbol": "HUGE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "HUG.WA"
+    },
+    {
+      "companyName": "ING Bank Śląski",
+      "stockSymbol": "ING",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ING.WA"
+    },
+    {
+      "companyName": "Inter Cars",
+      "stockSymbol": "CAR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CAR.WA"
+    },
+    {
+      "companyName": "LW Bogdanka",
+      "stockSymbol": "LWB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "LWB.WA"
+    },
+    {
+      "companyName": "Mo-Bruk",
+      "stockSymbol": "MBR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MBR.WA"
+    },
+    {
+      "companyName": "Neuca",
+      "stockSymbol": "NEU",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "NEU.WA"
+    },
+    {
+      "companyName": "PKP Cargo",
+      "stockSymbol": "PKP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PKP.WA"
+    },
+    {
+      "companyName": "Polimex Mostostal",
+      "stockSymbol": "PXM",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PXM.WA"
+    },
+    {
+      "companyName": "Rainbow Tours",
+      "stockSymbol": "RBW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "RBW.WA"
+    },
+    {
+      "companyName": "Ryvu Therapeutics",
+      "stockSymbol": "RVU",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "RVU.WA"
+    },
+    {
+      "companyName": "Selvita",
+      "stockSymbol": "SLV",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SLV.WA"
+    },
+    {
+      "companyName": "Synektik",
+      "stockSymbol": "SNT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SNT.WA"
+    },
+    {
+      "companyName": "Tauron PE",
+      "stockSymbol": "TPE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "TPE.WA"
+    },
+    {
+      "companyName": "Ten Square Games",
+      "stockSymbol": "TEN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "TEN.WA"
+    },
+    {
+      "companyName": "Text",
+      "stockSymbol": "TXT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "TXT.WA"
+    },
+    {
+      "companyName": "WP Holding",
+      "stockSymbol": "WPL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "WPL.WA"
+    },
+    {
+      "companyName": "XTB",
+      "stockSymbol": "XTB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "XTB.WA"
+    }
+  ]
+}

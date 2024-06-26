@@ -10,7 +10,6 @@ import static com.tngtech.archunit.library.Architectures.layeredArchitecture;
 class ApplicationArchitectureTest {
 
     static final String BASE_PACKAGE = "pl.romczaj.marketnotes.stockmarket";
-    static final String ANALYZER_ADAPTER = "AnalyzerAdapter";
     static final String DATA_PROVIDER_ADAPTER = "DataProviderAdapter";
     static final String REST_ADAPTER = "RestAdapter";
     static final String PERSISTENCE_ADAPTER = "PersistenceAdapter";
@@ -25,7 +24,6 @@ class ApplicationArchitectureTest {
 
         Architectures.LayeredArchitecture layeredArchitecture = layeredArchitecture()
                 .consideringAllDependencies()
-                .layer(ANALYZER_ADAPTER).definedBy(packageForLayer("infrastructure.out.analyzer"))
                 .layer(JOB_ADAPTER).definedBy(packageForLayer("infrastructure.in.job"))
                 .layer(DATA_PROVIDER_ADAPTER).definedBy(packageForLayer("infrastructure.out.dataprovider"))
                 .layer(REST_ADAPTER).definedBy(packageForLayer("infrastructure.in.rest"))
@@ -33,8 +31,6 @@ class ApplicationArchitectureTest {
                 .layer(APPLICATION).definedBy(packageForLayer("application"))
                 .layer(DOMAIN).definedBy(packageForLayer("domain"))
                 .layer(READ).definedBy(packageForLayer("read"))
-
-                .whereLayer(ANALYZER_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION, DOMAIN)
 
                 .whereLayer(JOB_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION, DOMAIN)
 

@@ -4,12 +4,12 @@ import lombok.Builder;
 import lombok.Getter;
 import pl.romczaj.marketnotes.common.clock.ApplicationClock;
 import pl.romczaj.marketnotes.common.dto.HistoricData;
+import pl.romczaj.marketnotes.stockmarket.application.counter.StockCompanyCounter;
 import pl.romczaj.marketnotes.stockmarket.application.subtask.LoadCampaignTask;
 import pl.romczaj.marketnotes.stockmarket.application.subtask.RefreshAnalyzedDataCompanyTask;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyRepository;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.out.analyzer.AnalyzerPort;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.MockStockCompanyRepository;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyRepository;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -22,7 +22,6 @@ public class ApplicationTestConfiguration {
 
     private final ApplicationClock applicationClock;
     private final DataProviderPort dataProviderPort;
-    private final AnalyzerPort analyzerPort;
 
     private final StockCompanyRepository stockCompanyRepository;
     private final RefreshAnalyzedDataCompanyTask refreshAnalyzedDataCompanyTask;
@@ -44,20 +43,9 @@ public class ApplicationTestConfiguration {
                         new HistoricData(applicationClock.today(), ofPln(100.0)))
         ));
 
-        this.analyzerPort = Optional.ofNullable(withMockObjects.analyzerPort)
-                .orElse(calculationCommand -> new AnalyzerPort.CalculationResult(
-                        List.of(new HistoricData(applicationClock.today(), ofPln(100.0))),
-                        new AnalyzerPort.IncreaseResult(
-                                1.0,
-                                2.0,
-                                3.0,
-                                4.0,
-                                5.0,
-                                6.0,
-                                7.0)));
-
+      //  this.stockCompanyCounter = new StockCompanyCounter(applicationClock);
         this.stockCompanyRepository = new MockStockCompanyRepository();
-        this.refreshAnalyzedDataCompanyTask = new RefreshAnalyzedDataCompanyTask(stockCompanyRepository, dataProviderPort, analyzerPort);
+        this.refreshAnalyzedDataCompanyTask = new RefreshAnalyzedDataCompanyTask(applicationClock, stockCompanyRepository, dataProviderPort);
         this.loadCampaignTask = new LoadCampaignTask(stockCompanyRepository, dataProviderPort);
         this.refreshCompanyStockDataProcess = new RefreshCompanyStockDataProcess(stockCompanyRepository, refreshAnalyzedDataCompanyTask);
         this.companyRestManagementProcess = new CompanyRestManagementProcess(stockCompanyRepository, applicationClock, dataProviderPort, loadCampaignTask);
@@ -66,8 +54,7 @@ public class ApplicationTestConfiguration {
     @Builder
     public record WithMockObjects(
             ApplicationClock applicationClock,
-            DataProviderPort dataProviderPort,
-            AnalyzerPort analyzerPort
+            DataProviderPort dataProviderPort
     ) {
     }
 }

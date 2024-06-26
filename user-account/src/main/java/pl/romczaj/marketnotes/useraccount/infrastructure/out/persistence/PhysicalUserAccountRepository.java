@@ -4,18 +4,9 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
-import pl.romczaj.marketnotes.useraccount.domain.model.BalanceHistory;
-import pl.romczaj.marketnotes.useraccount.domain.model.BuySellHistory;
-import pl.romczaj.marketnotes.useraccount.domain.model.RechargeHistory;
-import pl.romczaj.marketnotes.useraccount.domain.model.UserAccount;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.entity.BalanceHistoryEntity;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.entity.BuySellHistoryEntity;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.entity.RechargeHistoryEntity;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.entity.UserAccountEntity;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.jpa.BalanceHistoryJpaRepository;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.jpa.BuySellHistoryJpaRepository;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.jpa.RechargeHistoryJpaRepository;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.jpa.UserAccountJpaRepository;
+import pl.romczaj.marketnotes.useraccount.domain.model.*;
+import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.entity.*;
+import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.jpa.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -29,6 +20,9 @@ public class PhysicalUserAccountRepository implements UserAccountRepository {
     private final BuySellHistoryJpaRepository buySellHistoryJpaRepository;
     private final RechargeHistoryJpaRepository rechargeHistoryJpaRepository;
     private final UserAccountJpaRepository userAccountJpaRepository;
+    private final CompanyInvestGoalJpaRepository companyInvestGoalJpaRepository;
+    private final InvestReportJpaRepository investReportJpaRepository;
+
 
     @Override
     public UserAccount saveUserAccount(UserAccount userAccount) {
@@ -51,6 +45,17 @@ public class PhysicalUserAccountRepository implements UserAccountRepository {
     public void saveBuySellHistory(BuySellHistory buySellHistory) {
         BuySellHistoryEntity entity = BuySellHistoryEntity.fromDomain(buySellHistory);
         buySellHistoryJpaRepository.save(entity);
+    }
+
+    @Override
+    public CompanyInvestGoal saveCompanyInvestGoal(CompanyInvestGoal companyInvestGoal) {
+        CompanyInvestGoalEntity entity = CompanyInvestGoalEntity.fromDomain(companyInvestGoal);
+        return companyInvestGoalJpaRepository.save(entity).toDomain();
+    }
+
+    @Override
+    public InvestReport saveInvestReport(InvestReport investReport) {
+        return investReportJpaRepository.save(InvestReportEntity.fromDomain(investReport)).toDomain();
     }
 
     @Override
@@ -100,5 +105,23 @@ public class PhysicalUserAccountRepository implements UserAccountRepository {
     public List<BuySellHistory> findBuySellHistoryByUserAccountId(Long userAccountId) {
         return buySellHistoryJpaRepository.findAllByUserAccountId(userAccountId)
                 .stream().map(BuySellHistoryEntity::toDomain).toList();
+    }
+
+    @Override
+    public List<CompanyInvestGoal> findCompanyInvestGoalByUserAccountId(Long userAccountId) {
+        return companyInvestGoalJpaRepository.findAllByUserAccountId(userAccountId)
+                .stream().map(CompanyInvestGoalEntity::toDomain).toList();
+    }
+
+    @Override
+    public List<InvestReport> findInvestReportByUserAccountId(Long userAccountId) {
+        return investReportJpaRepository.findAllByUserAccountId(userAccountId)
+                .stream().map(InvestReportEntity::toDomain).toList();
+    }
+
+    @Override
+    public Optional<CompanyInvestGoal> findCompanyInvestGoal(Long userAccountId, StockCompanyExternalId stockCompanyExternalId) {
+        return companyInvestGoalJpaRepository.findByUserAccountIdAndStockCompanyExternalId(userAccountId, stockCompanyExternalId)
+                .map(CompanyInvestGoalEntity::toDomain);
     }
 }

@@ -5,10 +5,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.AddAccountRequest;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.NoteBalanceRequest;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.NoteBuySellRequest;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.NoteAccountRechargeRequest;
+import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.*;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.respose.AddAccountResponse;
 
 @RestController
@@ -37,5 +34,9 @@ public class UserAccountController {
         userAccountRestManagement.noteBalance(noteBalanceRequest);
     }
 
+    @PostMapping("/company-invest-goal")
+    public void companyInvestGoal(@RequestBody @Valid NoteCompanyInvestGoalRequest noteCompanyInvestGoalRequest) {
+        userAccountRestManagement.noteCompanyInvestGoal(noteCompanyInvestGoalRequest);
+    }
 
 }

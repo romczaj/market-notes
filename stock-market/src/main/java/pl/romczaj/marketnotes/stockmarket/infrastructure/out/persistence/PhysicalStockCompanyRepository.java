@@ -3,7 +3,7 @@ package pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
-import pl.romczaj.marketnotes.stockmarket.domain.model.StockAnalyze;
+import pl.romczaj.marketnotes.stockmarket.domain.model.CalculationResultHistory;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockNote;
 import java.util.List;
@@ -41,13 +41,13 @@ public class PhysicalStockCompanyRepository implements StockCompanyRepository {
     }
 
     @Override
-    public StockAnalyze saveSummary(StockAnalyze stockAnalyze) {
-        return jpaStockSummaryRepository.save(StockAnalyzeEntity.fromDomain(stockAnalyze)).toDomain();
+    public CalculationResultHistory saveSummary(CalculationResultHistory calculationResultHistory) {
+        return jpaStockSummaryRepository.save(CalculationResultHistoryEntity.fromDomain(calculationResultHistory)).toDomain();
     }
 
     @Override
-    public Optional<StockAnalyze> findSummaryByStockCompanyId(Long stockCompanyId) {
-        return jpaStockSummaryRepository.findByStockCompanyId(stockCompanyId).map(StockAnalyzeEntity::toDomain);
+    public Optional<CalculationResultHistory> findNewestCalculationResult(Long stockCompanyId) {
+        return jpaStockSummaryRepository.findTopByStockCompanyIdOrderById(stockCompanyId).map(CalculationResultHistoryEntity::toDomain);
     }
 
     @Override

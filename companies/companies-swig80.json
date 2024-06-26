@@ -1,0 +1,484 @@
+{
+  "companies": [
+    {
+      "companyName": "Action",
+      "stockSymbol": "ACT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ACT.WA"
+    },
+    {
+      "companyName": "Agora",
+      "stockSymbol": "AGO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "AGO.WA"
+    },
+    {
+      "companyName": "Ailleron",
+      "stockSymbol": "ALL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ALL.WA"
+    },
+    {
+      "companyName": "Ambra",
+      "stockSymbol": "AMB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "AMB.WA"
+    },
+    {
+      "companyName": "Amica",
+      "stockSymbol": "AMC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "AMC.WA"
+    },
+    {
+      "companyName": "Apator",
+      "stockSymbol": "APT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "APT.WA"
+    },
+    {
+      "companyName": "Archicom",
+      "stockSymbol": "ARC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ARH.WA"
+    },
+    {
+      "companyName": "Asseco BS",
+      "stockSymbol": "ABS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ABS.WA"
+    },
+    {
+      "companyName": "Asseco SEE",
+      "stockSymbol": "ASE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ASE.WA"
+    },
+    {
+      "companyName": "Astarta Holding PLC",
+      "stockSymbol": "AST",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "AST.WA"
+    },
+    {
+      "companyName": "Atal",
+      "stockSymbol": "ATA",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "1AT.WA"
+    },
+    {
+      "companyName": "BNP Paribas Bank Polska",
+      "stockSymbol": "BNP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BNP.WA"
+    },
+    {
+      "companyName": "BOŚ",
+      "stockSymbol": "BOS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BOS.WA"
+    },
+    {
+      "companyName": "Bioceltix",
+      "stockSymbol": "BCX",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BCX.WA"
+    },
+    {
+      "companyName": "Bioton",
+      "stockSymbol": "BIO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BIO.WA"
+    },
+    {
+      "companyName": "Boryszew",
+      "stockSymbol": "BRS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BRS.WA"
+    },
+    {
+      "companyName": "Bumech",
+      "stockSymbol": "BUM",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BMC.WA"
+    },
+    {
+      "companyName": "Captor Therapeutics",
+      "stockSymbol": "CAP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CAP.WA"
+    },
+    {
+      "companyName": "Celon Pharma",
+      "stockSymbol": "CLN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CLN.WA"
+    },
+    {
+      "companyName": "Comp",
+      "stockSymbol": "CMP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CMP.WA"
+    },
+    {
+      "companyName": "Creepy Jar",
+      "stockSymbol": "CJP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CRJ.WA"
+    },
+    {
+      "companyName": "Creotech Instruments",
+      "stockSymbol": "CRI",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CRI.WA"
+    },
+    {
+      "companyName": "Cyber_Folks",
+      "stockSymbol": "CFK",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CBF.WA"
+    },
+    {
+      "companyName": "DataWalk",
+      "stockSymbol": "DAT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "DAT.WA"
+    },
+    {
+      "companyName": "Decora",
+      "stockSymbol": "DCR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "DCR.WA"
+    },
+    {
+      "companyName": "Echo Investment",
+      "stockSymbol": "EIN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ECH.WA"
+    },
+    {
+      "companyName": "Elektrotim",
+      "stockSymbol": "ELT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ELT.WA"
+    },
+    {
+      "companyName": "Enter Air",
+      "stockSymbol": "ENT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ENT.WA"
+    },
+    {
+      "companyName": "Erbud",
+      "stockSymbol": "ERB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ERB.WA"
+    },
+    {
+      "companyName": "Fabryki Mebli Forte",
+      "stockSymbol": "FMF",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "FTE.WA"
+    },
+    {
+      "companyName": "Ferro",
+      "stockSymbol": "FER",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "FER.WA"
+    },
+    {
+      "companyName": "Instal Kraków",
+      "stockSymbol": "INK",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "INK.WA"
+    },
+    {
+      "companyName": "Kogeneracja",
+      "stockSymbol": "KGN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "KGN.WA"
+    },
+    {
+      "companyName": "Lubawa",
+      "stockSymbol": "LBW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "LBW.WA"
+    },
+    {
+      "companyName": "MCI Capital ASI",
+      "stockSymbol": "MCI",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MCI.WA"
+    },
+    {
+      "companyName": "ML System",
+      "stockSymbol": "MLS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MLS.WA"
+    },
+    {
+      "companyName": "Mabion",
+      "stockSymbol": "MAB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MAB.WA"
+    },
+    {
+      "companyName": "Mangata Holding",
+      "stockSymbol": "MNG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MGT.WA"
+    },
+    {
+      "companyName": "Medicalgorithmics",
+      "stockSymbol": "MDG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MDG.WA"
+    },
+    {
+      "companyName": "Mercator Medical",
+      "stockSymbol": "MRC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MRC.WA"
+    },
+    {
+      "companyName": "Mirbud",
+      "stockSymbol": "MRB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MRB.WA"
+    },
+    {
+      "companyName": "Molecure",
+      "stockSymbol": "MLC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MOC.WA"
+    },
+    {
+      "companyName": "Mostostal Zabrze",
+      "stockSymbol": "MOS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MSZ.WA"
+    },
+    {
+      "companyName": "Murapol",
+      "stockSymbol": "MUR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MUR.WA"
+    },
+    {
+      "companyName": "Newag",
+      "stockSymbol": "NWG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "NWG.WA"
+    },
+    {
+      "companyName": "OT Logistics",
+      "stockSymbol": "OTL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "OTS.WA"
+    },
+    {
+      "companyName": "Onde",
+      "stockSymbol": "OND",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "OND.WA"
+    },
+    {
+      "companyName": "Oponeo.pl",
+      "stockSymbol": "OPO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "OPN.WA"
+    },
+    {
+      "companyName": "PCC Rokita",
+      "stockSymbol": "PCC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PCR.WA"
+    },
+    {
+      "companyName": "PCF Group",
+      "stockSymbol": "PCF",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PCF.WA"
+    },
+    {
+      "companyName": "Pekabex",
+      "stockSymbol": "PBX",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PBX.WA"
+    },
+    {
+      "companyName": "Photon Energy NV",
+      "stockSymbol": "PEN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PEN.WA"
+    },
+    {
+      "companyName": "PlayWay",
+      "stockSymbol": "PLW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PLW.WA"
+    },
+    {
+      "companyName": "Polenergia",
+      "stockSymbol": "PEL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PEP.WA"
+    },
+    {
+      "companyName": "Police",
+      "stockSymbol": "POL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PCE.WA"
+    },
+    {
+      "companyName": "Rafako",
+      "stockSymbol": "RAF",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "RAF.WA"
+    },
+    {
+      "companyName": "Sanok Rubber Company",
+      "stockSymbol": "SRC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SNK.WA"
+    },
+    {
+      "companyName": "Scope Fluidics",
+      "stockSymbol": "SCP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SCP.WA"
+    },
+    {
+      "companyName": "Selena FM",
+      "stockSymbol": "SEL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SEL.WA"
+    },
+    {
+      "companyName": "Shoper",
+      "stockSymbol": "SHP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SHO.WA"
+    },
+    {
+      "companyName": "SpyroSoft",
+      "stockSymbol": "SPY",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SPR.WA"
+    },
+    {
+      "companyName": "Stalexport Autostrady",
+      "stockSymbol": "STA",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "STX.WA"
+    },
+    {
+      "companyName": "Stalprodukt",
+      "stockSymbol": "STP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "STP.WA"
+    },
+    {
+      "companyName": "Sunex",
+      "stockSymbol": "SUN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SNX.WA"
+    },
+    {
+      "companyName": "Sygnity",
+      "stockSymbol": "SGN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SGN.WA"
+    },
+    {
+      "companyName": "Synthaverse",
+      "stockSymbol": "SYN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SVE.WA"
+    },
+    {
+      "companyName": "Torpol",
+      "stockSymbol": "TOR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "TOR.WA"
+    },
+    {
+      "companyName": "Toya",
+      "stockSymbol": "TOY",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "TOA.WA"
+    },
+    {
+      "companyName": "Unimot",
+      "stockSymbol": "UNI",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "UNI.WA"
+    },
+    {
+      "companyName": "VRG",
+      "stockSymbol": "VRG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "VRG.WA"
+    },
+    {
+      "companyName": "Vercom",
+      "stockSymbol": "VRC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "VRC.WA"
+    },
+    {
+      "companyName": "Vigo Photonics",
+      "stockSymbol": "VGO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "VGO.WA"
+    },
+    {
+      "companyName": "Votum",
+      "stockSymbol": "VOT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "VOT.WA"
+    },
+    {
+      "companyName": "Voxel",
+      "stockSymbol": "VOX",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "VOX.WA"
+    },
+    {
+      "companyName": "Wawel",
+      "stockSymbol": "WAW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "WWL.WA"
+    },
+    {
+      "companyName": "Wielton",
+      "stockSymbol": "WLT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "WLT.WA"
+    },
+    {
+      "companyName": "Wittchen",
+      "stockSymbol": "WTC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "WTN.WA"
+    },
+    {
+      "companyName": "XTPL",
+      "stockSymbol": "XTP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "XTP.WA"
+    },
+    {
+      "companyName": "ZE PAK",
+      "stockSymbol": "ZEP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ZEP.WA"
+    },
+    {
+      "companyName": "Śnieżka",
+      "stockSymbol": "SNI",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SKA.WA"
+    }
+  ]
+}

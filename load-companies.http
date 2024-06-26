@@ -6,82 +6,124 @@ content-type: application/json
 {
   "companies": [
     {
-      "companyName": "Elektrotim S.A.",
-      "stockSymbol": "ELT",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "ELT.WA"
-    },
-    {
-      "companyName": "CD Projekt S.A.",
-      "stockSymbol": "CDR",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "CDR.WA"
-    },
-    {
-      "companyName": "KGHM Polska Miedź S.A.",
-      "stockSymbol": "KGH",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "KGH.WA"
-    },
-    {
-      "companyName": "PGE Polska Grupa Energetyczna S.A.",
-      "stockSymbol": "PGE",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "PGE.WA"
-    },
-    {
-      "companyName": "PKN Orlen S.A.",
-      "stockSymbol": "PKN",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "PKN.WA"
-    },
-    {
-      "companyName": "PKO Bank Polski S.A.",
-      "stockSymbol": "PKO",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "PKO.WA"
-    },
-    {
-      "companyName": "Alior Bank S.A.",
+      "companyName": "Alior Bank",
       "stockSymbol": "ALR",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "ALR.WA"
     },
     {
-      "companyName": "Bank Millennium S.A.",
-      "stockSymbol": "MIL",
+      "companyName": "Allegro.eu S.A.",
+      "stockSymbol": "ALE",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "MIL.WA"
+      "dataProviderSymbol": "ALE.WA"
     },
     {
-      "companyName": "mBank S.A.",
-      "stockSymbol": "MBK",
+      "companyName": "Bank Pekao",
+      "stockSymbol": "PEO",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "MBK.WA"
+      "dataProviderSymbol": "PEO.WA"
     },
     {
-      "companyName": "Orange Polska S.A.",
-      "stockSymbol": "OPL",
+      "companyName": "Budimex",
+      "stockSymbol": "BDX",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "OPL.WA"
+      "dataProviderSymbol": "BDX.WA"
     },
     {
-      "companyName": "Cyfrowy Polsat S.A.",
+      "companyName": "CD Projekt",
+      "stockSymbol": "CDR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CDR.WA"
+    },
+    {
+      "companyName": "Cyfrowy Polsat",
       "stockSymbol": "CPS",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "CPS.WA"
     },
     {
-      "companyName": "Grupa Lotos S.A.",
-      "stockSymbol": "LTS",
+      "companyName": "Dino Polska",
+      "stockSymbol": "DNP",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "LTS.WA"
+      "dataProviderSymbol": "DNP.WA"
     },
     {
-      "companyName": "Allegro",
-      "stockSymbol": "ALEP",
+      "companyName": "Grupa Kęty",
+      "stockSymbol": "KTY",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "ALE.WA"
+      "dataProviderSymbol": "KTY.WA"
+    },
+    {
+      "companyName": "JSW",
+      "stockSymbol": "JSW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "JSW.WA"
+    },
+    {
+      "companyName": "KGHM Polska Miedź",
+      "stockSymbol": "KGH",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "KGH.WA"
+    },
+    {
+      "companyName": "Kruk",
+      "stockSymbol": "KRU",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "KRU.WA"
+    },
+    {
+      "companyName": "LPP",
+      "stockSymbol": "LPP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "LPP.WA"
+    },
+    {
+      "companyName": "Orange Polska",
+      "stockSymbol": "OPL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "OPL.WA"
+    },
+    {
+      "companyName": "Orlen",
+      "stockSymbol": "PKN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PKN.WA"
+    },
+    {
+      "companyName": "PGE",
+      "stockSymbol": "PGE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PGE.WA"
+    },
+    {
+      "companyName": "PKO BP",
+      "stockSymbol": "PKO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PKO.WA"
+    },
+    {
+      "companyName": "PZU",
+      "stockSymbol": "PZU",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PZU.WA"
+    },
+    {
+      "companyName": "Pepco Group NV",
+      "stockSymbol": "PCO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PCO.WA"
+    },
+    {
+      "companyName": "Santander Bank Polska",
+      "stockSymbol": "SAN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SAN.WA"
+    },
+    {
+      "companyName": "mBank",
+      "stockSymbol": "MBK",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MBK.WA"
     }
   ]
 }

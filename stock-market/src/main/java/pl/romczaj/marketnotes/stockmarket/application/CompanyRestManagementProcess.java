@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.common.clock.ApplicationClock;
 import pl.romczaj.marketnotes.stockmarket.application.subtask.LoadCampaignTask;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyRepository;
 import pl.romczaj.marketnotes.stockmarket.domain.command.CreateStockCompanyNoteCommand;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockNote;
@@ -12,7 +11,9 @@ import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.CompanyRestMana
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.AddCompanyNoteRequest;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCompanyRequest;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort.GetCompanyDataCommand;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort.GetCompanyDataResult;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyRepository;
 
 import static pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort.DataProviderInterval.DAILY;
 
@@ -35,7 +36,11 @@ public class CompanyRestManagementProcess implements CompanyRestManagement {
         StockCompany stockCompany = stockCompanyRepository.findByExternalId(addNoteRequest.externalId())
                 .orElseThrow(() -> new IllegalArgumentException("Company not found"));
 
-        GetCompanyDataResult getCompanyDataResult = dataProviderPort.getCompanyData(new DataProviderPort.GetCompanyDataCommand(stockCompany.stockCompanyExternalId(), stockCompany.dataProviderSymbol(), 7, DAILY));
+        GetCompanyDataResult getCompanyDataResult = dataProviderPort.getCompanyData(new GetCompanyDataCommand(
+                stockCompany.stockCompanyExternalId(),
+                stockCompany.dataProviderSymbol(),
+                7,
+                DAILY));
 
         StockNote stockNote = StockNote.createFrom(
                 new CreateStockCompanyNoteCommand(

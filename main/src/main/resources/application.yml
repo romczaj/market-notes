@@ -7,11 +7,23 @@ spring:
     generateDdl: true
     hibernate:
       ddl-auto: update
+  mail:
+    host: smtp-relay.brevo.com
+    username: ${SMTP_USERNAME}
+    password: ${SMTP_PASSWORD}
+    properties:
+      mail:
+        transport:
+          protocol: smtp
+        smtp:
+          port: 587
+          auth: true
 
-logging:
-  level:
-    org.hibernate:
-      SQL: debug
+
+#logging:
+#  level:
+#    org.hibernate:
+#      SQL: debug
 
 yahoo:
   api-url: https://query1.finance.yahoo.com

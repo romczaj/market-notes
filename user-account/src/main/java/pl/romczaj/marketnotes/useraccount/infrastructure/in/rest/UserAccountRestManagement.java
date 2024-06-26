@@ -8,5 +8,6 @@ public interface UserAccountRestManagement {
     void noteAccountRecharge(NoteAccountRechargeRequest addAccountRequest);
     void noteBuySell(NoteBuySellRequest noteBuySellRequest);
     void noteBalance(NoteBalanceRequest noteBalanceRequest);
+    void noteCompanyInvestGoal(NoteCompanyInvestGoalRequest noteCompanyInvestGoalRequest);
 
 }

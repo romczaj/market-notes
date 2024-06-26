@@ -3,7 +3,7 @@ package pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence;
 
 
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
-import pl.romczaj.marketnotes.stockmarket.domain.model.StockAnalyze;
+import pl.romczaj.marketnotes.stockmarket.domain.model.CalculationResultHistory;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockNote;
 
@@ -11,7 +11,7 @@ import java.util.*;
 
 public class MockStockCompanyRepository implements StockCompanyRepository {
     private final Map<Long, StockCompanyEntity> DATABASE_STOCK_COMPANY = new HashMap<>();
-    private final Map<Long, StockAnalyzeEntity> DATABASE_STOCK_SUMMARY = new HashMap<>();
+    private final Map<Long, CalculationResultHistoryEntity> DATABASE_STOCK_SUMMARY = new HashMap<>();
     private final Map<Long, StockNoteEntity> DATABASE_STOCK_NOTE = new HashMap<>();
     private Long idCounter = 0L;
 
@@ -49,20 +49,20 @@ public class MockStockCompanyRepository implements StockCompanyRepository {
     }
 
     @Override
-    public StockAnalyze saveSummary(StockAnalyze stockAnalyze) {
-        StockAnalyzeEntity stockAnalyzeEntity = StockAnalyzeEntity.fromDomain(stockAnalyze);
-        if (stockAnalyze.id() == null) {
-            stockAnalyzeEntity.setId(++idCounter);
+    public CalculationResultHistory saveSummary(CalculationResultHistory calculationResultHistory) {
+        CalculationResultHistoryEntity calculationResultHistoryEntity = CalculationResultHistoryEntity.fromDomain(calculationResultHistory);
+        if (calculationResultHistory.id() == null) {
+            calculationResultHistoryEntity.setId(++idCounter);
         }
-        DATABASE_STOCK_SUMMARY.put(stockAnalyzeEntity.getId(), stockAnalyzeEntity);
-        return stockAnalyzeEntity.toDomain();
+        DATABASE_STOCK_SUMMARY.put(calculationResultHistoryEntity.getId(), calculationResultHistoryEntity);
+        return calculationResultHistoryEntity.toDomain();
     }
 
     @Override
-    public Optional<StockAnalyze> findSummaryByStockCompanyId(Long stockCompanyId) {
+    public Optional<CalculationResultHistory> findNewestCalculationResult(Long stockCompanyId) {
         return DATABASE_STOCK_SUMMARY.values().stream()
                 .filter(s -> s.getStockCompanyId().equals(stockCompanyId))
-                .map(StockAnalyzeEntity::toDomain)
+                .map(CalculationResultHistoryEntity::toDomain)
                 .findFirst();
     }
 

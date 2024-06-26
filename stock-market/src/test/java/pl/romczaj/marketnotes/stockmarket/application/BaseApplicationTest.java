@@ -1,6 +1,7 @@
 package pl.romczaj.marketnotes.stockmarket.application;
 
 import org.junit.jupiter.api.BeforeEach;
+import pl.romczaj.marketnotes.stockmarket.application.counter.StockCompanyCounter;
 import pl.romczaj.marketnotes.stockmarket.application.subtask.LoadCampaignTask;
 import pl.romczaj.marketnotes.stockmarket.application.subtask.RefreshAnalyzedDataCompanyTask;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyRepository;

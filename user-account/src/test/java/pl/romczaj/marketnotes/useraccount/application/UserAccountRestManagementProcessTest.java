@@ -5,14 +5,8 @@ import pl.romczaj.marketnotes.common.dto.Money;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 import pl.romczaj.marketnotes.useraccount.common.StockOperation;
-import pl.romczaj.marketnotes.useraccount.domain.model.BalanceHistory;
-import pl.romczaj.marketnotes.useraccount.domain.model.RechargeHistory;
-import pl.romczaj.marketnotes.useraccount.domain.model.BuySellHistory;
-import pl.romczaj.marketnotes.useraccount.domain.model.UserAccount;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.AddAccountRequest;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.NoteAccountRechargeRequest;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.NoteBalanceRequest;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.NoteBuySellRequest;
+import pl.romczaj.marketnotes.useraccount.domain.model.*;
+import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.*;
 
 import java.time.LocalDate;
 import java.util.List;
@@ -106,6 +100,29 @@ class UserAccountRestManagementProcessTest extends BaseApplicationTest {
                 () -> assertEquals(1, balanceHistories.size()),
                 () -> assertEquals(request.accountBalance(), balanceHistories.get(0).balance()),
                 () -> assertEquals(request.accountBalanceDate(), balanceHistories.get(0).balanceDate())
+        );
+    }
+
+    @Test
+    void shouldNoteCompanyInvestGoal() {
+        //given
+        UserAccount userAccount = getDefault();
+        NoteCompanyInvestGoalRequest request = new NoteCompanyInvestGoalRequest(
+                userAccount.externalId(),
+                new StockCompanyExternalId("ASS", WSE),
+                100.0,
+                50.0
+        );
+
+        //when
+        userAccountRestManagement.noteCompanyInvestGoal(request);
+
+        //then
+        List<CompanyInvestGoal> companyInvestGoals = userAccountRepository.findCompanyInvestGoalByUserAccountId(userAccount.id());
+        assertAll(
+                () -> assertEquals(1, companyInvestGoals.size()),
+                () -> assertEquals(request.buyPrice(), companyInvestGoals.get(0).buyPrice()),
+                () -> assertEquals(request.sellPrice(), companyInvestGoals.get(0).sellPrice())
         );
     }
 

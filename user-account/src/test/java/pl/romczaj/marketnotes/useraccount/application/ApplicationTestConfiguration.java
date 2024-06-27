@@ -5,7 +5,6 @@ import lombok.Getter;
 import pl.romczaj.marketnotes.common.clock.ApplicationClock;
 import pl.romczaj.marketnotes.common.dto.CalculationResult;
 import pl.romczaj.marketnotes.common.dto.Money;
-import pl.romczaj.marketnotes.common.dto.StockMarketSymbol;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.internalapi.StockMarketInternalApi;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.UserAccountRestManagement;
@@ -45,7 +44,10 @@ public class ApplicationTestConfiguration {
             @Override
             public StockCompanyResponse getCompanyBySymbol(StockCompanyExternalId companyExternalId) {
                 return new StockCompanyResponse(
-                        companyExternalId, Money.ofPln(100.0), CalculationResult.empty());
+                        "Super comp",
+                        companyExternalId,
+                        Money.ofPln(100.0),
+                        CalculationResult.empty());
             }
         };
 

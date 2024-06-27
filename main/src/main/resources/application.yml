@@ -36,3 +36,9 @@ management:
   endpoint:
     health:
       show-details: always
+
+refresh-companies:
+  cron: '0 0 17 ? * MON-FRI'
+
+user-report:
+  cron: '0 10 17 ? * MON-FRI'

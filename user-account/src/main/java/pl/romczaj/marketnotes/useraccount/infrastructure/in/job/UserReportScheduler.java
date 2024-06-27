@@ -11,7 +11,7 @@ public class UserReportScheduler {
     private final UserReportPort userReportPort;
 
 
-    @Scheduled(cron = "0 * * * * *")
+    @Scheduled(cron = "${user-report.cron}")
     public void prepareReports() {
         userReportPort.sendInvestReports();
     }

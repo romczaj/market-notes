@@ -8,13 +8,13 @@ import org.springframework.stereotype.Component;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class RefreshCompaniesScheduler {
+class RefreshCompaniesScheduler {
 
     private final RefreshCompaniesPort refreshCompaniesPort;
 
 
-    //@Scheduled(cron = "0 * * * * *")
-    public void refreshCompanies() {
+    @Scheduled(cron = "${refresh-companies.cron}")
+    void refreshCompanies() {
         log.info("Run refreshCompanies");
         refreshCompaniesPort.refreshCompanyStockData();
     }

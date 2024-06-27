@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21
+FROM amazoncorretto:21
 
 LABEL maintainer="ajemromek@gmail.com"
 

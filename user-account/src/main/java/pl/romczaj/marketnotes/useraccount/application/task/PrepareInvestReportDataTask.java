@@ -41,6 +41,7 @@ public class PrepareInvestReportDataTask {
         CalculationResult calculationResult = stockCompanyResponse.companyCounts();
         Optional<CompanyInvestGoal> maybeCompanyInvestGoal = Optional.ofNullable(companyInvestGoal);
         return new CompanyUserNotification(
+                stockCompanyResponse.companyName(),
                 stockCompanyResponse.stockCompanyExternalId(),
                 maybeCompanyInvestGoal.map(g -> g.archivedBuyPrice(calculationResult.yesterdayPrice(), calculationResult.todayPrice())).orElse(false),
                 maybeCompanyInvestGoal.map(g -> g.archivedSellPrice(calculationResult.yesterdayPrice(), calculationResult.todayPrice())).orElse(false),

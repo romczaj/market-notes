@@ -12,6 +12,7 @@ public interface StockMarketInternalApi {
     StockCompanyResponse getCompanyBySymbol(StockCompanyExternalId companyExternalId);
 
     record StockCompanyResponse(
+            String companyName,
             StockCompanyExternalId stockCompanyExternalId,
             Money actualPrice,
             CalculationResult companyCounts

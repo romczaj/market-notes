@@ -8,3 +8,14 @@ spring:
 
 logging:
   config: classpath:logback-prod.xml
+
+refresh-companies:
+  cron: ${REFRESH_COMPANIES_CRON}
+
+user-report:
+  cron: ${USER_REPORT_CRON}
+
+management:
+  health:
+    mail:
+      enabled: false

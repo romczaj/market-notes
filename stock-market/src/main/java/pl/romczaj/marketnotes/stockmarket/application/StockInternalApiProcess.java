@@ -36,6 +36,7 @@ public class StockInternalApiProcess implements StockMarketInternalApi {
                 .orElse(CalculationResult.empty());
 
         return new StockCompanyResponse(
+                stockCompany.companyName(),
                 stockCompany.stockCompanyExternalId(),
                 stockCompany.actualPrice(),
                 calculationResult

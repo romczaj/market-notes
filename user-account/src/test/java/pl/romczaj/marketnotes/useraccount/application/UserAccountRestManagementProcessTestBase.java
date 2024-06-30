@@ -4,7 +4,7 @@ import org.junit.jupiter.api.Test;
 import pl.romczaj.marketnotes.common.dto.Money;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
-import pl.romczaj.marketnotes.useraccount.common.StockOperation;
+import pl.romczaj.marketnotes.common.dto.StockOperation;
 import pl.romczaj.marketnotes.useraccount.domain.model.*;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.*;
 
@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
 
-class UserAccountRestManagementProcessTest extends BaseApplicationTest {
+class UserAccountRestManagementProcessTestBase extends BaseApplicationTest {
 
     @Test
     void shouldAddAccount() {
@@ -111,7 +111,9 @@ class UserAccountRestManagementProcessTest extends BaseApplicationTest {
                 userAccount.externalId(),
                 new StockCompanyExternalId("ASS", WSE),
                 100.0,
-                50.0
+                50.0,
+                40.0,
+                20.0
         );
 
         //when
@@ -119,10 +121,35 @@ class UserAccountRestManagementProcessTest extends BaseApplicationTest {
 
         //then
         List<CompanyInvestGoal> companyInvestGoals = userAccountRepository.findCompanyInvestGoalByUserAccountId(userAccount.id());
+        CompanyInvestGoal companyInvestGoal = companyInvestGoals.get(0);
         assertAll(
                 () -> assertEquals(1, companyInvestGoals.size()),
-                () -> assertEquals(request.buyPrice(), companyInvestGoals.get(0).buyPrice()),
-                () -> assertEquals(request.sellPrice(), companyInvestGoals.get(0).sellPrice())
+                () -> assertEquals(request.buyStopPrice(), companyInvestGoal.buyStopPrice()),
+                () -> assertEquals(request.sellStopPrice(), companyInvestGoal.sellStopPrice()),
+                () -> assertEquals(request.buyLimitPrice(), companyInvestGoal.buyLimitPrice()),
+                () -> assertEquals(request.sellLimitPrice(), companyInvestGoal.sellLimitPrice())
+        );
+    }
+
+    @Test
+    void shouldAddCompanyNote(){
+        //given
+        UserAccount userAccount = getDefault();
+        NoteCompanyComment noteCompanyComment = new NoteCompanyComment(
+            userAccount.externalId(),
+                new StockCompanyExternalId("ASS", WSE),
+                "good company"
+        );
+
+        //when
+        userAccountRestManagement.noteCompanyComment(noteCompanyComment);
+
+        //then
+        List<CompanyComment> companyComments = userAccountRepository.findCompanyCommentByUserAccountId(userAccount.id());
+        assertAll(
+                () -> assertEquals(1, companyComments.size()),
+                () -> assertEquals(noteCompanyComment.noteContent(), companyComments.get(0).noteContent()),
+                () -> assertEquals(noteCompanyComment.stockCompanyExternalId(), companyComments.get(0).stockCompanyExternalId())
         );
     }
 

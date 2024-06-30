@@ -14,11 +14,26 @@ GET http://localhost:8080/actuator/health
 GET http://localhost:8080/company/ELT_WSE
 
 ### add add account
-POST http://localhost:8080/add-account
+POST http://localhost:8080/user-account/register
 content-type: application/json
 
 {
   "username": "jankowalski",
   "email": "ajemromek@gmail.com"
 }
+
+### add company comment
+POST http://localhost:8080/user-account/company-comment
+content-type: application/json
+
+{
+  "userAccountExternalId": "c9ee6d8c-7229-481f-a106-412a8e0eabe7",
+  "stockCompanyExternalId": "VOT_WSE",
+  "noteContent": "good company"
+}
+
+### refresh companies
+GET http://192.168.100.44:30080/refresh-companies-scheduler/invoke
+
+
 

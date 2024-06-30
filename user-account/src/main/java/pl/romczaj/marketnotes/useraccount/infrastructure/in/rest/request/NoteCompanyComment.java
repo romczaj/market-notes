@@ -1,14 +1,14 @@
 package pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request;
 
+import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import pl.romczaj.marketnotes.common.dto.Money;
+import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 
-import java.time.LocalDate;
-
-public record NoteBalanceRequest(
+public record NoteCompanyComment(
         @NotNull UserAccountExternalId userAccountExternalId,
-        @NotNull LocalDate accountBalanceDate,
-        @NotNull Money accountBalance
+        @NotNull StockCompanyExternalId stockCompanyExternalId,
+        @NotBlank String noteContent
+
 ) implements UserAccountOperationRequest {
 }

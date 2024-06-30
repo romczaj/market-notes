@@ -38,7 +38,7 @@
     },
     {
       "companyName": "Archicom",
-      "stockSymbol": "ARC",
+      "stockSymbol": "ARH",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "ARH.WA"
     },
@@ -62,7 +62,7 @@
     },
     {
       "companyName": "Atal",
-      "stockSymbol": "ATA",
+      "stockSymbol": "1AT",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "1AT.WA"
     },
@@ -98,7 +98,7 @@
     },
     {
       "companyName": "Bumech",
-      "stockSymbol": "BUM",
+      "stockSymbol": "BMC",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "BMC.WA"
     },
@@ -122,7 +122,7 @@
     },
     {
       "companyName": "Creepy Jar",
-      "stockSymbol": "CJP",
+      "stockSymbol": "CRJ",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "CRJ.WA"
     },
@@ -134,7 +134,7 @@
     },
     {
       "companyName": "Cyber_Folks",
-      "stockSymbol": "CFK",
+      "stockSymbol": "CBF",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "CBF.WA"
     },
@@ -152,7 +152,7 @@
     },
     {
       "companyName": "Echo Investment",
-      "stockSymbol": "EIN",
+      "stockSymbol": "ECH",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "ECH.WA"
     },
@@ -176,7 +176,7 @@
     },
     {
       "companyName": "Fabryki Mebli Forte",
-      "stockSymbol": "FMF",
+      "stockSymbol": "FTE",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "FTE.WA"
     },
@@ -224,7 +224,7 @@
     },
     {
       "companyName": "Mangata Holding",
-      "stockSymbol": "MNG",
+      "stockSymbol": "MGT",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "MGT.WA"
     },
@@ -248,13 +248,13 @@
     },
     {
       "companyName": "Molecure",
-      "stockSymbol": "MLC",
+      "stockSymbol": "MOC",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "MOC.WA"
     },
     {
       "companyName": "Mostostal Zabrze",
-      "stockSymbol": "MOS",
+      "stockSymbol": "MSZ",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "MSZ.WA"
     },
@@ -272,7 +272,7 @@
     },
     {
       "companyName": "OT Logistics",
-      "stockSymbol": "OTL",
+      "stockSymbol": "OTS",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "OTS.WA"
     },
@@ -284,13 +284,13 @@
     },
     {
       "companyName": "Oponeo.pl",
-      "stockSymbol": "OPO",
+      "stockSymbol": "OPN",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "OPN.WA"
     },
     {
       "companyName": "PCC Rokita",
-      "stockSymbol": "PCC",
+      "stockSymbol": "PCR",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "PCR.WA"
     },
@@ -320,13 +320,13 @@
     },
     {
       "companyName": "Polenergia",
-      "stockSymbol": "PEL",
+      "stockSymbol": "PEP",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "PEP.WA"
     },
     {
       "companyName": "Police",
-      "stockSymbol": "POL",
+      "stockSymbol": "PCE",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "PCE.WA"
     },
@@ -338,7 +338,7 @@
     },
     {
       "companyName": "Sanok Rubber Company",
-      "stockSymbol": "SRC",
+      "stockSymbol": "SNK",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "SNK.WA"
     },
@@ -362,13 +362,13 @@
     },
     {
       "companyName": "SpyroSoft",
-      "stockSymbol": "SPY",
+      "stockSymbol": "SPR",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "SPR.WA"
     },
     {
       "companyName": "Stalexport Autostrady",
-      "stockSymbol": "STA",
+      "stockSymbol": "STX",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "STX.WA"
     },
@@ -380,7 +380,7 @@
     },
     {
       "companyName": "Sunex",
-      "stockSymbol": "SUN",
+      "stockSymbol": "SNX",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "SNX.WA"
     },
@@ -404,7 +404,7 @@
     },
     {
       "companyName": "Toya",
-      "stockSymbol": "TOY",
+      "stockSymbol": "TOA",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "TOA.WA"
     },
@@ -446,7 +446,7 @@
     },
     {
       "companyName": "Wawel",
-      "stockSymbol": "WAW",
+      "stockSymbol": "WWL",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "WWL.WA"
     },
@@ -476,7 +476,7 @@
     },
     {
       "companyName": "Śnieżka",
-      "stockSymbol": "SNI",
+      "stockSymbol": "SKA",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "SKA.WA"
     }

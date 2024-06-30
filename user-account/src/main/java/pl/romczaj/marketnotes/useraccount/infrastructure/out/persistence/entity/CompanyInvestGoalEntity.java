@@ -23,8 +23,10 @@ public class CompanyInvestGoalEntity {
     private Long userAccountId;
     @Convert(converter = StockCompanyExternalIdDatabaseConverter.class)
     private StockCompanyExternalId stockCompanyExternalId;
-    private Double buyPrice;
-    private Double sellPrice;
+    private Double buyStopPrice;
+    private Double sellStopPrice;
+    private Double buyLimitPrice;
+    private Double sellLimitPrice;
 
 
     public static CompanyInvestGoalEntity fromDomain(CompanyInvestGoal domain) {
@@ -32,8 +34,10 @@ public class CompanyInvestGoalEntity {
                 domain.id(),
                 domain.userAccountId(),
                 domain.stockCompanyExternalId(),
-                domain.buyPrice(),
-                domain.sellPrice()
+                domain.buyStopPrice(),
+                domain.sellStopPrice(),
+                domain.buyLimitPrice(),
+                domain.sellLimitPrice()
         );
     }
 
@@ -42,8 +46,10 @@ public class CompanyInvestGoalEntity {
                 id,
                 userAccountId,
                 stockCompanyExternalId,
-                buyPrice,
-                sellPrice
+                buyStopPrice,
+                sellStopPrice,
+                buyLimitPrice,
+                sellLimitPrice
         );
     }
 

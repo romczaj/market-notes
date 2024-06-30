@@ -9,7 +9,7 @@ import pl.romczaj.marketnotes.common.dto.Money;
 import pl.romczaj.marketnotes.common.dto.Money.Currency;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.persistance.StockCompanyExternalIdDatabaseConverter;
-import pl.romczaj.marketnotes.useraccount.common.StockOperation;
+import pl.romczaj.marketnotes.common.dto.StockOperation;
 import pl.romczaj.marketnotes.useraccount.domain.model.BuySellHistory;
 
 import java.time.LocalDate;

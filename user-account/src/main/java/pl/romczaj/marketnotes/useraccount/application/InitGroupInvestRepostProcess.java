@@ -8,7 +8,7 @@ import pl.romczaj.marketnotes.useraccount.application.task.FilterInvestNotificat
 import pl.romczaj.marketnotes.useraccount.application.task.PrepareInvestReportDataTask;
 import pl.romczaj.marketnotes.useraccount.application.task.SendInvestReportTask;
 import pl.romczaj.marketnotes.useraccount.domain.model.UserAccount;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.job.UserReportPort;
+import pl.romczaj.marketnotes.useraccount.infrastructure.in.job.UserReportSchedulePort;
 import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.UserAccountRepository;
 
 import java.util.List;
@@ -16,13 +16,13 @@ import java.util.List;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class InvestReportProcess implements UserReportPort {
+public class InitGroupInvestRepostProcess implements UserReportSchedulePort {
 
     private final PrepareInvestReportDataTask prepareInvestReportDataTask;
     private final UserAccountRepository userAccountRepository;
     private final SendInvestReportTask sendInvestReportTask;
     @Override
-    public void sendInvestReports() {
+    public void prepareAndSend() {
         userAccountRepository.findAll().forEach(this::sendInvestReportForUser);
     }
 

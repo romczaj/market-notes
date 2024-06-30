@@ -7,10 +7,16 @@ import pl.romczaj.marketnotes.common.dto.StockMarketSymbol;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
+
 public record StockCompanyExternalId(
         @NonNull String stockSymbol,
         @NonNull StockMarketSymbol stockMarketSymbol
 ) {
+
+    public static StockCompanyExternalId wse(String stockSymbol){
+        return new StockCompanyExternalId(stockSymbol, WSE);
+    }
 
     @Override
     public String toString() {

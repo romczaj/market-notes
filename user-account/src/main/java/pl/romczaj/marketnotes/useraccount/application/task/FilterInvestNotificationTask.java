@@ -9,8 +9,7 @@ public class FilterInvestNotificationTask {
     public static List<CompanyUserNotification> filterSignificant(List<CompanyUserNotification> notifications) {
         return notifications
                 .stream().filter(n ->
-                        n.archivedSellPrice()
-                        || n.archivedBuyPrice()
+                        !n.archivePrices().isEmpty()
                         || n.archivedAtLeastTwoWeekBottom())
                 .toList();
     }

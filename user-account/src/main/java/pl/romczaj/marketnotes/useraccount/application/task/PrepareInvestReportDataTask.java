@@ -39,14 +39,20 @@ public class PrepareInvestReportDataTask {
 
     private CompanyUserNotification processSingleCompany(StockCompanyResponse stockCompanyResponse, CompanyInvestGoal companyInvestGoal) {
         CalculationResult calculationResult = stockCompanyResponse.companyCounts();
-        Optional<CompanyInvestGoal> maybeCompanyInvestGoal = Optional.ofNullable(companyInvestGoal);
-        return new CompanyUserNotification(
-                stockCompanyResponse.companyName(),
-                stockCompanyResponse.stockCompanyExternalId(),
-                maybeCompanyInvestGoal.map(g -> g.archivedBuyPrice(calculationResult.yesterdayPrice(), calculationResult.todayPrice())).orElse(false),
-                maybeCompanyInvestGoal.map(g -> g.archivedSellPrice(calculationResult.yesterdayPrice(), calculationResult.todayPrice())).orElse(false),
-                twoWeeksIncreasePeriod(calculationResult)
-        );
+        boolean archivedAtLeastTwoWeekBottom = twoWeeksIncreasePeriod(calculationResult);
+        return Optional.ofNullable(companyInvestGoal)
+                .map(i -> new CompanyUserNotification(
+                        stockCompanyResponse.companyName(),
+                        stockCompanyResponse.stockCompanyExternalId(),
+                        i.archivePrices(calculationResult.yesterdayPrice(), calculationResult.todayPrice()),
+                        archivedAtLeastTwoWeekBottom)
+                ).orElse(new CompanyUserNotification(
+                        stockCompanyResponse.companyName(),
+                        stockCompanyResponse.stockCompanyExternalId(),
+                        List.of(),
+                        archivedAtLeastTwoWeekBottom));
+
+
     }
 
     private boolean twoWeeksIncreasePeriod(CalculationResult calculationResult) {

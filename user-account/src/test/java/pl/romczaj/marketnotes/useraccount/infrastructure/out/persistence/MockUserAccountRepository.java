@@ -19,6 +19,7 @@ public class MockUserAccountRepository implements UserAccountRepository {
     private static final Map<Long, UserAccountEntity> USER_ACCOUNT_DB = new HashMap<>();
     private static final Map<Long, CompanyInvestGoalEntity> COMPANY_INVEST_GOAL_DB = new HashMap<>();
     private static final Map<Long, InvestReportEntity> INVEST_REPORT_ENTITY_GB = new HashMap<>();
+    private static final Map<Long, CompanyCommentEntity> COMPANY_NOTE_DB = new HashMap<>();
     private Long idCounter = 0L;
 
     @Override
@@ -166,6 +167,23 @@ public class MockUserAccountRepository implements UserAccountRepository {
                 .filter(c -> c.getUserAccountId().equals(userAccountId) && c.getStockCompanyExternalId().equals(stockCompanyExternalId))
                 .map(CompanyInvestGoalEntity::toDomain)
                 .findFirst();
+    }
+
+    @Override
+    public void saveCompanyComment(CompanyComment companyComment) {
+        CompanyCommentEntity companyCommentEntity = CompanyCommentEntity.fromDomain(companyComment);
+        if (companyComment.id() == null) {
+            companyCommentEntity.setId(++idCounter);
+        }
+        COMPANY_NOTE_DB.put(companyCommentEntity.getId(), companyCommentEntity);
+    }
+
+    @Override
+    public List<CompanyComment> findCompanyCommentByUserAccountId(Long userAccountId) {
+        return COMPANY_NOTE_DB.values().stream()
+                .filter(c -> c.getUserAccountId().equals(userAccountId))
+                .map(CompanyCommentEntity::toDomain)
+                .toList();
     }
 
 }

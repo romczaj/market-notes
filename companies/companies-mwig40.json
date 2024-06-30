@@ -8,7 +8,7 @@
     },
     {
       "companyName": "AB",
-      "stockSymbol": "ABP",
+      "stockSymbol": "ABE",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "ABE.WA"
     },
@@ -116,13 +116,13 @@
     },
     {
       "companyName": "GreenX Metals Ltd.",
-      "stockSymbol": "GNX",
+      "stockSymbol": "GRX",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "GRX.WA"
     },
     {
       "companyName": "Grenevia",
-      "stockSymbol": "GRV",
+      "stockSymbol": "GEA",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "GEA.WA"
     },
@@ -134,13 +134,13 @@
     },
     {
       "companyName": "Grupa Pracuj",
-      "stockSymbol": "PRC",
+      "stockSymbol": "GPP",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "GPP.WA"
     },
     {
       "companyName": "Huuuge, Inc.",
-      "stockSymbol": "HUGE",
+      "stockSymbol": "HUG",
       "stockMarketSymbol": "WSE",
       "dataProviderSymbol": "HUG.WA"
     },

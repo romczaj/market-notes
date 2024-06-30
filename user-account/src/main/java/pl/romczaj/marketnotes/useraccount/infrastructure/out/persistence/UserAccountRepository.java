@@ -47,5 +47,6 @@ public interface UserAccountRepository {
     List<CompanyInvestGoal> findCompanyInvestGoalByUserAccountId(Long userAccountId);
     List<InvestReport> findInvestReportByUserAccountId(Long userAccountId);
     Optional<CompanyInvestGoal> findCompanyInvestGoal(Long userAccountId, StockCompanyExternalId stockCompanyExternalId);
-
+    void saveCompanyComment(CompanyComment companyComment);
+    List<CompanyComment> findCompanyCommentByUserAccountId(Long userAccountId);
 }

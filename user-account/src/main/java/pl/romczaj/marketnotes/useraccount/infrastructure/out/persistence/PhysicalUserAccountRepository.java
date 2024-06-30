@@ -22,6 +22,7 @@ public class PhysicalUserAccountRepository implements UserAccountRepository {
     private final UserAccountJpaRepository userAccountJpaRepository;
     private final CompanyInvestGoalJpaRepository companyInvestGoalJpaRepository;
     private final InvestReportJpaRepository investReportJpaRepository;
+    private final CompanyNoteJpaRepository companyNoteJpaRepository;
 
 
     @Override
@@ -123,5 +124,17 @@ public class PhysicalUserAccountRepository implements UserAccountRepository {
     public Optional<CompanyInvestGoal> findCompanyInvestGoal(Long userAccountId, StockCompanyExternalId stockCompanyExternalId) {
         return companyInvestGoalJpaRepository.findByUserAccountIdAndStockCompanyExternalId(userAccountId, stockCompanyExternalId)
                 .map(CompanyInvestGoalEntity::toDomain);
+    }
+
+    @Override
+    public void saveCompanyComment(CompanyComment companyComment) {
+        CompanyCommentEntity companyCommentEntity = CompanyCommentEntity.fromDomain(companyComment);
+        companyNoteJpaRepository.save(companyCommentEntity);
+    }
+
+    @Override
+    public List<CompanyComment> findCompanyCommentByUserAccountId(Long userAccountId) {
+        return companyNoteJpaRepository.findAlLByUserAccountId(userAccountId)
+                .stream().map(CompanyCommentEntity::toDomain).toList();
     }
 }

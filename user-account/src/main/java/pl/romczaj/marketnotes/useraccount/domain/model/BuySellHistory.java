@@ -3,7 +3,7 @@ package pl.romczaj.marketnotes.useraccount.domain.model;
 import lombok.With;
 import pl.romczaj.marketnotes.common.dto.Money;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
-import pl.romczaj.marketnotes.useraccount.common.StockOperation;
+import pl.romczaj.marketnotes.common.dto.StockOperation;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.NoteBuySellRequest;
 
 import java.time.LocalDate;

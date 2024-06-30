@@ -65,11 +65,13 @@ CREATE TABLE user_account_buy_sell_history
 
 CREATE TABLE user_account_company_invest_goal
 (
-    id                        bigint NOT NULL,
-    buy_price                 float8 NULL,
-    sell_price                float8 NULL,
-    stock_company_external_id varchar(255) NULL,
-    user_account_id           bigint NULL,
+    id                        BIGINT NOT NULL,
+    user_account_id           BIGINT,
+    stock_company_external_id VARCHAR(255),
+    buy_stop_price            float8,
+    sell_stop_price           float8,
+    buy_limit_price           float8,
+    sell_limit_price          float8,
     CONSTRAINT user_account_company_invest_goal_pkey PRIMARY KEY (id)
 );
 
@@ -94,6 +96,22 @@ CREATE TABLE user_account_recharge_history
     user_account_id bigint NULL,
     CONSTRAINT user_account_recharge_history_pkey PRIMARY KEY (id)
 );
+
+CREATE TABLE user_account_company_comment
+(
+    id                        BIGINT NOT NULL,
+    user_account_id           BIGINT,
+    stock_company_external_id VARCHAR(255),
+    note_date                 TIMESTAMP WITHOUT TIME ZONE,
+    company_price             float8,
+    note_content              VARCHAR(255),
+    CONSTRAINT user_account_company_comment_pkey PRIMARY KEY (id)
+);
+
+CREATE SEQUENCE user_account_company_comment_seq
+    INCREMENT BY 50
+    MINVALUE 1
+    START 1;
 
 CREATE SEQUENCE stock_company_calculation_result_history_seq
     INCREMENT BY 50

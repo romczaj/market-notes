@@ -8,11 +8,11 @@ import org.springframework.stereotype.Component;
 @RequiredArgsConstructor
 public class UserReportScheduler {
 
-    private final UserReportPort userReportPort;
+    private final UserReportSchedulePort userReportSchedulePort;
 
 
     @Scheduled(cron = "${user-report.cron}")
     public void prepareReports() {
-        userReportPort.sendInvestReports();
+        userReportSchedulePort.prepareAndSend();
     }
 }

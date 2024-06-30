@@ -2,7 +2,10 @@ package pl.romczaj.marketnotes.useraccount.application;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
+import pl.romczaj.marketnotes.common.clock.ApplicationClock;
 import pl.romczaj.marketnotes.internalapi.StockMarketInternalApi;
+import pl.romczaj.marketnotes.internalapi.StockMarketInternalApi.StockCompanyResponse;
+import pl.romczaj.marketnotes.useraccount.domain.command.CreateCompanyNoteCommand;
 import pl.romczaj.marketnotes.useraccount.domain.model.*;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.UserAccountRestManagement;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.*;
@@ -15,6 +18,7 @@ public class UserAccountRestManagementProcess implements UserAccountRestManageme
 
     private final StockMarketInternalApi stockMarketInternalApi;
     private final UserAccountRepository userAccountRepository;
+    private final ApplicationClock applicationClock;
 
     @Override
     public AddAccountResponse addAccount(AddAccountRequest addAccountRequest) {
@@ -78,6 +82,26 @@ public class UserAccountRestManagementProcess implements UserAccountRestManageme
                 .orElse(CompanyInvestGoal.create(userAccount.id(), noteCompanyInvestGoalRequest));
 
         userAccountRepository.saveCompanyInvestGoal(companyInvestGoal);
+
+    }
+
+    @Override
+    public void noteCompanyComment(NoteCompanyComment noteCompanyComment) {
+        StockCompanyResponse stockCompanyResponse = stockMarketInternalApi.getCompanyBySymbol(noteCompanyComment.stockCompanyExternalId());
+        UserAccount userAccount = userAccountRepository.getByExternalId(noteCompanyComment.userAccountExternalId());
+
+        CompanyComment companyComment = CompanyComment.createFrom(
+                new CreateCompanyNoteCommand(
+                        userAccount.id(),
+                        noteCompanyComment.stockCompanyExternalId(),
+                        applicationClock.instant(),
+                        stockCompanyResponse.actualPrice().amount(),
+                        noteCompanyComment.noteContent()
+                )
+        );
+
+        userAccountRepository.saveCompanyComment(companyComment);
+
 
     }
 }

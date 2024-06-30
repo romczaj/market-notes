@@ -4,7 +4,7 @@ import jakarta.validation.constraints.NotNull;
 import pl.romczaj.marketnotes.common.dto.Money;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
-import pl.romczaj.marketnotes.useraccount.common.StockOperation;
+import pl.romczaj.marketnotes.common.dto.StockOperation;
 
 import java.time.LocalDate;
 

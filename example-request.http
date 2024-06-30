@@ -14,7 +14,7 @@ GET http://localhost:8080/actuator/health
 GET http://localhost:8080/company/ELT_WSE
 
 ### add add account
-POST http://localhost:8080/user-account/register
+POST http://192.168.100.44:30080/user-account/register
 content-type: application/json
 
 {
@@ -34,6 +34,11 @@ content-type: application/json
 
 ### refresh companies
 GET http://192.168.100.44:30080/refresh-companies-scheduler/invoke
+
+### user report
+GET http://localhost:8080/user-report-scheduler/invoke
+
+
 
 
 

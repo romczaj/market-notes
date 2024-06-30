@@ -2,6 +2,7 @@ package pl.romczaj.marketnotes.useraccount.application;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.common.dto.CompanyUserNotification;
 import pl.romczaj.marketnotes.useraccount.application.task.FilterInvestNotificationTask;
@@ -21,7 +22,9 @@ public class InitGroupInvestRepostProcess implements UserReportSchedulePort {
     private final PrepareInvestReportDataTask prepareInvestReportDataTask;
     private final UserAccountRepository userAccountRepository;
     private final SendInvestReportTask sendInvestReportTask;
+
     @Override
+    @Async
     public void prepareAndSend() {
         userAccountRepository.findAll().forEach(this::sendInvestReportForUser);
     }

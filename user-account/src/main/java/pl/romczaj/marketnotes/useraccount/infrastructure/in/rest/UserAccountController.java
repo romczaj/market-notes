@@ -2,12 +2,8 @@ package pl.romczaj.marketnotes.useraccount.infrastructure.in.rest;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.*;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.respose.AddAccountResponse;
 
 @RestController
 @RequiredArgsConstructor
@@ -17,8 +13,8 @@ public class UserAccountController {
     private final UserAccountRestManagement userAccountRestManagement;
 
     @PostMapping("/register")
-    public AddAccountResponse addAccount(@RequestBody @Valid AddAccountRequest addAccountRequest) {
-      return userAccountRestManagement.addAccount(addAccountRequest);
+    public void addAccount() {
+        userAccountRestManagement.addAccount();
     }
 
     @PostMapping("/note-account-recharge")
@@ -43,6 +39,11 @@ public class UserAccountController {
     @PostMapping("/company-comment")
     public void addCompanyNote(@RequestBody @Valid NoteCompanyComment noteCompanyComment) {
         userAccountRestManagement.noteCompanyComment(noteCompanyComment);
+    }
+
+    @GetMapping("/test")
+    public String test(){
+        return "Adsad";
     }
 
 }

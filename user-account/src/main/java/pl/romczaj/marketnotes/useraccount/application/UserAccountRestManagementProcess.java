@@ -3,13 +3,13 @@ package pl.romczaj.marketnotes.useraccount.application;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.common.clock.ApplicationClock;
+import pl.romczaj.marketnotes.internalapi.AuthenticationRetriever;
 import pl.romczaj.marketnotes.internalapi.StockMarketInternalApi;
 import pl.romczaj.marketnotes.internalapi.StockMarketInternalApi.StockCompanyResponse;
 import pl.romczaj.marketnotes.useraccount.domain.command.CreateCompanyNoteCommand;
 import pl.romczaj.marketnotes.useraccount.domain.model.*;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.UserAccountRestManagement;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.*;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.respose.AddAccountResponse;
 import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.UserAccountRepository;
 
 @Component
@@ -19,23 +19,21 @@ public class UserAccountRestManagementProcess implements UserAccountRestManageme
     private final StockMarketInternalApi stockMarketInternalApi;
     private final UserAccountRepository userAccountRepository;
     private final ApplicationClock applicationClock;
+    private final AuthenticationRetriever authenticationRetriever;
 
     @Override
-    public AddAccountResponse addAccount(AddAccountRequest addAccountRequest) {
+    public void addAccount() {
+        if (userAccountRepository.existsByExternalId(authenticationRetriever.userAccountExternalId())) {
+          throw new RuntimeException("Account already exists");
+        }
 
-        UserAccount userAccount = UserAccount.createFrom(addAccountRequest);
-        UserAccount saveUserAccount = userAccountRepository.saveUserAccount(userAccount);
-
-        return new AddAccountResponse(
-                saveUserAccount.username(),
-                saveUserAccount.externalId()
-        );
+        UserAccount userAccount = UserAccount.createFrom(authenticationRetriever.loggedUser());
+        userAccountRepository.saveUserAccount(userAccount);
     }
 
     @Override
     public void noteAccountRecharge(NoteAccountRechargeRequest addAccountRequest) {
-        UserAccount userAccount = userAccountRepository.getByExternalId(addAccountRequest.userAccountExternalId());
-
+        UserAccount userAccount = retrieveUserAccount();
         RechargeHistory rechargeHistory = userAccountRepository
                 .findRechargeHistory(userAccount.id(), addAccountRequest.rechargeDate())
                 .map(u -> u.updateChargedMoney(addAccountRequest.rechargeAmount()))
@@ -48,7 +46,7 @@ public class UserAccountRestManagementProcess implements UserAccountRestManageme
     @Override
     public void noteBuySell(NoteBuySellRequest noteBuySellRequest) {
         stockMarketInternalApi.validateStockCompanyExists(noteBuySellRequest.stockCompanyExternalId());
-        UserAccount userAccount = userAccountRepository.getByExternalId(noteBuySellRequest.userAccountExternalId());
+        UserAccount userAccount = retrieveUserAccount();
 
         BuySellHistory buySellHistory = userAccountRepository.findBuySellHistory(
                         userAccount.id(), noteBuySellRequest.operationDate(), noteBuySellRequest.stockCompanyExternalId())
@@ -61,7 +59,7 @@ public class UserAccountRestManagementProcess implements UserAccountRestManageme
 
     @Override
     public void noteBalance(NoteBalanceRequest noteBalanceRequest) {
-        UserAccount userAccount = userAccountRepository.getByExternalId(noteBalanceRequest.userAccountExternalId());
+        UserAccount userAccount = retrieveUserAccount();
 
         BalanceHistory balanceHistory = userAccountRepository
                 .findBalanceHistory(userAccount.id(), noteBalanceRequest.accountBalanceDate())
@@ -74,7 +72,7 @@ public class UserAccountRestManagementProcess implements UserAccountRestManageme
     @Override
     public void noteCompanyInvestGoal(NoteCompanyInvestGoalRequest noteCompanyInvestGoalRequest) {
         stockMarketInternalApi.validateStockCompanyExists(noteCompanyInvestGoalRequest.stockCompanyExternalId());
-        UserAccount userAccount = userAccountRepository.getByExternalId(noteCompanyInvestGoalRequest.userAccountExternalId());
+        UserAccount userAccount = retrieveUserAccount();
 
         CompanyInvestGoal companyInvestGoal = userAccountRepository
                 .findCompanyInvestGoal(userAccount.id(), noteCompanyInvestGoalRequest.stockCompanyExternalId())
@@ -88,7 +86,7 @@ public class UserAccountRestManagementProcess implements UserAccountRestManageme
     @Override
     public void noteCompanyComment(NoteCompanyComment noteCompanyComment) {
         StockCompanyResponse stockCompanyResponse = stockMarketInternalApi.getCompanyBySymbol(noteCompanyComment.stockCompanyExternalId());
-        UserAccount userAccount = userAccountRepository.getByExternalId(noteCompanyComment.userAccountExternalId());
+        UserAccount userAccount = retrieveUserAccount();
 
         CompanyComment companyComment = CompanyComment.createFrom(
                 new CreateCompanyNoteCommand(
@@ -101,7 +99,9 @@ public class UserAccountRestManagementProcess implements UserAccountRestManageme
         );
 
         userAccountRepository.saveCompanyComment(companyComment);
+    }
 
-
+    private UserAccount retrieveUserAccount() {
+        return userAccountRepository.getByExternalId(authenticationRetriever.userAccountExternalId());
     }
 }

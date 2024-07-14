@@ -1,47 +1,45 @@
 package pl.romczaj.marketnotes.useraccount.application;
 
+import lombok.extern.slf4j.Slf4j;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import pl.romczaj.marketnotes.common.dto.Money;
-import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
-import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 import pl.romczaj.marketnotes.common.dto.StockOperation;
+import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
+import pl.romczaj.marketnotes.useraccount.application.config.BaseApplicationTest;
 import pl.romczaj.marketnotes.useraccount.domain.model.*;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.*;
 
 import java.time.LocalDate;
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.assertAll;
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
+import static pl.romczaj.marketnotes.useraccount.application.config.DefaultValues.*;
 
-class UserAccountRestManagementProcessTestBase extends BaseApplicationTest {
+@Slf4j
+class UserAccountRestManagementProcessTest extends BaseApplicationTest {
 
     @Test
     void shouldAddAccount() {
-        // given
-        AddAccountRequest addAccountRequest = new AddAccountRequest(
-                "jankowalski",
-                "jankowalski@market-notes.pl"
-        );
-
         // when
-        userAccountRestManagement.addAccount(addAccountRequest);
+        userAccountRestManagement.addAccount();
 
         // then
         List<UserAccount> userAccounts = userAccountRepository.findAll();
         assertAll(
                 () -> assertEquals(1, userAccounts.size()),
-                () -> assertEquals(addAccountRequest.username(), userAccounts.get(0).username()),
-                () -> assertEquals(addAccountRequest.email(), userAccounts.get(0).email()));
+                () -> assertTrue(userAccountRepository.existsByExternalId(DEFAULT_LOGGED_ACCOUNT_EXTERNAL_ID)),
+                () -> assertEquals(DEFAULT_LOGGED_NAME, userAccounts.get(0).username()),
+                () -> assertEquals(DEFAULT_LOGGED_EMAIL, userAccounts.get(0).email()));
     }
 
     @Test
     void shouldNoteBrokerAccountCharge() {
         // given
-        UserAccount userAccount = getDefault();
+        UserAccount userAccount = createDefault();
         NoteAccountRechargeRequest noteAccountRechargeRequest = new NoteAccountRechargeRequest(
-                userAccount.externalId(),
                 Money.ofPln(1000.0),
                 LocalDate.now()
         );
@@ -60,10 +58,9 @@ class UserAccountRestManagementProcessTestBase extends BaseApplicationTest {
     @Test
     void shouldNoteStockOperation() {
         //given
-        UserAccount userAccount = getDefault();
+        UserAccount userAccount = createDefault();
         NoteBuySellRequest request = new NoteBuySellRequest(
                 StockOperation.BUY,
-                userAccount.externalId(),
                 new StockCompanyExternalId("ELK", WSE),
                 Money.ofPln(100.0),
                 LocalDate.now()
@@ -84,9 +81,8 @@ class UserAccountRestManagementProcessTestBase extends BaseApplicationTest {
     @Test
     void shouldNoteBrokerAccountInfo() {
         //given
-        UserAccount userAccount = getDefault();
+        UserAccount userAccount = createDefault();
         NoteBalanceRequest request = new NoteBalanceRequest(
-                userAccount.externalId(),
                 LocalDate.now(),
                 Money.ofPln(100.0)
         );
@@ -106,9 +102,8 @@ class UserAccountRestManagementProcessTestBase extends BaseApplicationTest {
     @Test
     void shouldNoteCompanyInvestGoal() {
         //given
-        UserAccount userAccount = getDefault();
+        UserAccount userAccount = createDefault();
         NoteCompanyInvestGoalRequest request = new NoteCompanyInvestGoalRequest(
-                userAccount.externalId(),
                 new StockCompanyExternalId("ASS", WSE),
                 100.0,
                 50.0,
@@ -134,9 +129,8 @@ class UserAccountRestManagementProcessTestBase extends BaseApplicationTest {
     @Test
     void shouldAddCompanyNote(){
         //given
-        UserAccount userAccount = getDefault();
+        UserAccount userAccount = createDefault();
         NoteCompanyComment noteCompanyComment = new NoteCompanyComment(
-            userAccount.externalId(),
                 new StockCompanyExternalId("ASS", WSE),
                 "good company"
         );
@@ -153,16 +147,13 @@ class UserAccountRestManagementProcessTestBase extends BaseApplicationTest {
         );
     }
 
-
-
-
-    private UserAccount getDefault() {
+    private UserAccount createDefault() {
         return userAccountRepository.saveUserAccount(
                 new UserAccount(
                         null,
-                        UserAccountExternalId.generate(),
-                        "jankowalski",
-                        "jankowalski@market-notes.pl")
+                        DEFAULT_LOGGED_ACCOUNT_EXTERNAL_ID,
+                        DEFAULT_LOGGED_NAME,
+                        DEFAULT_LOGGED_EMAIL)
         );
     }
 

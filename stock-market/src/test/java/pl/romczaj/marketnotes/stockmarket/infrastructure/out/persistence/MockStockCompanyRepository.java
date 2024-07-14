@@ -13,13 +13,13 @@ public class MockStockCompanyRepository implements StockCompanyRepository {
     private final Map<Long, StockCompanyEntity> DATABASE_STOCK_COMPANY = new HashMap<>();
     private final Map<Long, CalculationResultHistoryEntity> DATABASE_STOCK_SUMMARY = new HashMap<>();
     private final Map<Long, StockNoteEntity> DATABASE_STOCK_NOTE = new HashMap<>();
-    private Long idCounter = 0L;
+    private Long idPointer = 0L;
 
     @Override
     public StockCompany saveStockCompany(StockCompany stockCompany) {
         StockCompanyEntity stockCompanyEntity = StockCompanyEntity.fromDomain(stockCompany);
         if (stockCompany.id() == null) {
-            stockCompanyEntity.setId(++idCounter);
+            stockCompanyEntity.setId(++idPointer);
         }
         DATABASE_STOCK_COMPANY.put(stockCompanyEntity.getId(), stockCompanyEntity);
         return stockCompanyEntity.toDomain();
@@ -52,7 +52,7 @@ public class MockStockCompanyRepository implements StockCompanyRepository {
     public CalculationResultHistory saveSummary(CalculationResultHistory calculationResultHistory) {
         CalculationResultHistoryEntity calculationResultHistoryEntity = CalculationResultHistoryEntity.fromDomain(calculationResultHistory);
         if (calculationResultHistory.id() == null) {
-            calculationResultHistoryEntity.setId(++idCounter);
+            calculationResultHistoryEntity.setId(++idPointer);
         }
         DATABASE_STOCK_SUMMARY.put(calculationResultHistoryEntity.getId(), calculationResultHistoryEntity);
         return calculationResultHistoryEntity.toDomain();
@@ -70,7 +70,7 @@ public class MockStockCompanyRepository implements StockCompanyRepository {
     public StockNote saveNote(StockNote stockNote) {
         StockNoteEntity stockNoteEntity = StockNoteEntity.fromDomain(stockNote);
         if (stockNote.id() == null) {
-            stockNoteEntity.setId(++idCounter);
+            stockNoteEntity.setId(++idPointer);
         }
         DATABASE_STOCK_NOTE.put(stockNoteEntity.getId(), stockNoteEntity);
         return stockNoteEntity.toDomain();

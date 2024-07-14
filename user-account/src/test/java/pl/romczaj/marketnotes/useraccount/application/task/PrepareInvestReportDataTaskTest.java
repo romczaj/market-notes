@@ -8,7 +8,7 @@ import pl.romczaj.marketnotes.common.dto.Money;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 import pl.romczaj.marketnotes.internalapi.StockMarketInternalApi;
-import pl.romczaj.marketnotes.useraccount.application.BaseApplicationTest;
+import pl.romczaj.marketnotes.useraccount.application.config.BaseApplicationTest;
 import pl.romczaj.marketnotes.useraccount.domain.model.CompanyInvestGoal;
 import pl.romczaj.marketnotes.useraccount.domain.model.UserAccount;
 

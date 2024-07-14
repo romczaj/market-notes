@@ -7,7 +7,6 @@ import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 import java.time.LocalDate;
 
 public record NoteAccountRechargeRequest(
-        @NotNull UserAccountExternalId userAccountExternalId,
         @NotNull Money rechargeAmount,
         @NotNull LocalDate rechargeDate
 

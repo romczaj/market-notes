@@ -5,7 +5,6 @@ import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 
 public record NoteCompanyInvestGoalRequest(
-        @NotNull UserAccountExternalId userAccountExternalId,
         @NotNull StockCompanyExternalId stockCompanyExternalId,
         Double buyStopPrice,
         Double sellStopPrice,

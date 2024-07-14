@@ -5,10 +5,9 @@ import pl.romczaj.marketnotes.common.dto.ArchivePrice;
 import pl.romczaj.marketnotes.common.dto.CompanyUserNotification;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
-import pl.romczaj.marketnotes.useraccount.application.BaseApplicationTest;
+import pl.romczaj.marketnotes.useraccount.application.config.BaseApplicationTest;
 import pl.romczaj.marketnotes.useraccount.domain.model.InvestReport;
 import pl.romczaj.marketnotes.useraccount.domain.model.UserAccount;
-import pl.romczaj.marketnotes.useraccount.infrastructure.out.email.EmailSender;
 
 import java.util.List;
 

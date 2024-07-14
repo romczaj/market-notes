@@ -1,7 +1,7 @@
 package pl.romczaj.marketnotes.useraccount.domain.model;
 
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
-import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.AddAccountRequest;
+import pl.romczaj.marketnotes.internalapi.AuthenticationRetriever.LoggedUser;
 
 public record UserAccount(
         Long id,
@@ -11,11 +11,11 @@ public record UserAccount(
 ) {
 
 
-    public static UserAccount createFrom(AddAccountRequest addAccountRequest) {
+    public static UserAccount createFrom(LoggedUser loggedUser) {
         return new UserAccount(
                 null,
-                UserAccountExternalId.generate(),
-                addAccountRequest.username(),
-                addAccountRequest.email());
+                loggedUser.userAccountExternalId(),
+                loggedUser.username(),
+                loggedUser.email());
     }
 }

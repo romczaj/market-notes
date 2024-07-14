@@ -1,21 +1,5 @@
 version: '3.7'
 services:
-#  market-notes:
-#    container_name: market-notes
-#    build: .
-#    restart: always
-#    environment:
-#      - JAVA_OPTS=-Xms128m -Xmx1024m -Dspring.profiles.active=prod
-#      - DB_URL=jdbc:postgresql://market-notes-db:5432/postgres
-#      - DB_USERNAME=postgres
-#      - DB_PASSWORD=postgres
-#      - SMTP_USERNAME=username
-#      - SMTP_PASSWORD=password
-#    ports:
-#      - '8080:8080'
-#    depends_on:
-#      - market-notes-db
-
   market-notes-db:
     container_name: market-notes-db
     image: postgres:15.4
@@ -25,3 +9,30 @@ services:
       - POSTGRES_PASSWORD=postgres
     ports:
       - '5432:5432'
+  market-notes-keycloak-db:
+    container_name: market-notes-keycloak-db
+    image: postgres:15.4
+    restart: always
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+    ports:
+      - '6432:5432'
+
+  market-notes-keycloak:
+    container_name: market-notes-keycloak
+    image: quay.io/keycloak/keycloak:22.0.0
+    volumes:
+      - ./local-dev/realm:/opt/keycloak/data/import
+    environment:
+      KC_DB: postgres
+      KC_DB_URL: jdbc:postgresql://market-notes-keycloak-db:5432/postgres
+      KC_DB_USERNAME: postgres
+      KC_DB_PASSWORD: postgres
+      KEYCLOAK_ADMIN: admin
+      KEYCLOAK_ADMIN_PASSWORD: admin
+    ports:
+      - "8090:8080"
+    command: [ "start-dev --import-realm -Dkeycloak.migration.action=export" ]
+    depends_on:
+      - market-notes-keycloak-db

@@ -13,20 +13,20 @@ import java.util.Optional;
 
 public class MockUserAccountRepository implements UserAccountRepository {
 
-    private static final Map<Long, BalanceHistoryEntity> BALANCE_HISTORY_DB = new HashMap<>();
-    private static final Map<Long, RechargeHistoryEntity> RECHARGE_HISTORY_DB = new HashMap<>();
-    private static final Map<Long, BuySellHistoryEntity> OPERATION_HISTORY_DB = new HashMap<>();
-    private static final Map<Long, UserAccountEntity> USER_ACCOUNT_DB = new HashMap<>();
-    private static final Map<Long, CompanyInvestGoalEntity> COMPANY_INVEST_GOAL_DB = new HashMap<>();
-    private static final Map<Long, InvestReportEntity> INVEST_REPORT_ENTITY_GB = new HashMap<>();
-    private static final Map<Long, CompanyCommentEntity> COMPANY_NOTE_DB = new HashMap<>();
-    private Long idCounter = 0L;
+    private final Map<Long, BalanceHistoryEntity> BALANCE_HISTORY_DB = new HashMap<>();
+    private final Map<Long, RechargeHistoryEntity> RECHARGE_HISTORY_DB = new HashMap<>();
+    private final Map<Long, BuySellHistoryEntity> OPERATION_HISTORY_DB = new HashMap<>();
+    private final Map<Long, UserAccountEntity> USER_ACCOUNT_DB = new HashMap<>();
+    private final Map<Long, CompanyInvestGoalEntity> COMPANY_INVEST_GOAL_DB = new HashMap<>();
+    private final Map<Long, InvestReportEntity> INVEST_REPORT_ENTITY_GB = new HashMap<>();
+    private final Map<Long, CompanyCommentEntity> COMPANY_NOTE_DB = new HashMap<>();
+    private Long idPointer = 0L;
 
     @Override
     public UserAccount saveUserAccount(UserAccount userAccount) {
         UserAccountEntity userAccountEntity = UserAccountEntity.fromDomain(userAccount);
         if (userAccount.id() == null) {
-            userAccountEntity.setId(++idCounter);
+            userAccountEntity.setId(++idPointer);
         }
         USER_ACCOUNT_DB.put(userAccountEntity.getId(), userAccountEntity);
         return userAccountEntity.toDomain();
@@ -44,7 +44,7 @@ public class MockUserAccountRepository implements UserAccountRepository {
     public void saveRechargeHistory(RechargeHistory rechargeHistory) {
         RechargeHistoryEntity rechargeHistoryEntity = RechargeHistoryEntity.fromDomain(rechargeHistory);
         if (rechargeHistory.id() == null) {
-            rechargeHistoryEntity.setId(++idCounter);
+            rechargeHistoryEntity.setId(++idPointer);
         }
         RECHARGE_HISTORY_DB.put(rechargeHistoryEntity.getId(), rechargeHistoryEntity);
     }
@@ -53,7 +53,7 @@ public class MockUserAccountRepository implements UserAccountRepository {
     public void saveBuySellHistory(BuySellHistory buySellHistory) {
         BuySellHistoryEntity buySellHistoryEntity = BuySellHistoryEntity.fromDomain(buySellHistory);
         if (buySellHistory.id() == null) {
-            buySellHistoryEntity.setId(++idCounter);
+            buySellHistoryEntity.setId(++idPointer);
         }
         OPERATION_HISTORY_DB.put(buySellHistoryEntity.getId(), buySellHistoryEntity);
     }
@@ -62,7 +62,7 @@ public class MockUserAccountRepository implements UserAccountRepository {
     public CompanyInvestGoal saveCompanyInvestGoal(CompanyInvestGoal companyInvestGoal) {
         CompanyInvestGoalEntity companyInvestGoalEntity = CompanyInvestGoalEntity.fromDomain(companyInvestGoal);
         if (companyInvestGoal.id() == null) {
-            companyInvestGoalEntity.setId(++idCounter);
+            companyInvestGoalEntity.setId(++idPointer);
         }
         COMPANY_INVEST_GOAL_DB.put(companyInvestGoalEntity.getId(), companyInvestGoalEntity);
         return companyInvestGoalEntity.toDomain();
@@ -72,7 +72,7 @@ public class MockUserAccountRepository implements UserAccountRepository {
     public InvestReport saveInvestReport(InvestReport investReport) {
         InvestReportEntity investReportEntity = InvestReportEntity.fromDomain(investReport);
         if (investReport.id() == null) {
-            investReportEntity.setId(++idCounter);
+            investReportEntity.setId(++idPointer);
         }
         INVEST_REPORT_ENTITY_GB.put(investReportEntity.getId(), investReportEntity);
         return investReportEntity.toDomain();
@@ -108,7 +108,7 @@ public class MockUserAccountRepository implements UserAccountRepository {
     public BalanceHistory saveBalanceHistory(BalanceHistory balanceHistory) {
         BalanceHistoryEntity balanceHistoryEntity = BalanceHistoryEntity.fromDomain(balanceHistory);
         if (balanceHistory.id() == null) {
-            balanceHistoryEntity.setId(++idCounter);
+            balanceHistoryEntity.setId(++idPointer);
         }
         BALANCE_HISTORY_DB.put(balanceHistoryEntity.getId(), balanceHistoryEntity);
         return balanceHistoryEntity.toDomain();
@@ -173,7 +173,7 @@ public class MockUserAccountRepository implements UserAccountRepository {
     public void saveCompanyComment(CompanyComment companyComment) {
         CompanyCommentEntity companyCommentEntity = CompanyCommentEntity.fromDomain(companyComment);
         if (companyComment.id() == null) {
-            companyCommentEntity.setId(++idCounter);
+            companyCommentEntity.setId(++idPointer);
         }
         COMPANY_NOTE_DB.put(companyCommentEntity.getId(), companyCommentEntity);
     }

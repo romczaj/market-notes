@@ -7,7 +7,6 @@ import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 import java.time.LocalDate;
 
 public record NoteBalanceRequest(
-        @NotNull UserAccountExternalId userAccountExternalId,
         @NotNull LocalDate accountBalanceDate,
         @NotNull Money accountBalance
 ) implements UserAccountOperationRequest {

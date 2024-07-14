@@ -3,7 +3,7 @@ POST http://localhost:8080/add-note
 content-type: application/json
 
 {
-    "externalId": "ELT_WSE",
+    "externalId": "ALR_WSE",
     "noteContent": "This is a note35345345"
 }
 
@@ -32,13 +32,11 @@ content-type: application/json
   "noteContent": "good company"
 }
 
+### test
+GET http://localhost:8080/stock-market/test
+
 ### refresh companies
 GET http://192.168.100.44:30080/refresh-companies-scheduler/invoke
 
 ### user report
-GET http://localhost:8080/user-report-scheduler/invoke
-
-
-
-
-
+GET http://192.168.100.44:30080/actuator/prometheus

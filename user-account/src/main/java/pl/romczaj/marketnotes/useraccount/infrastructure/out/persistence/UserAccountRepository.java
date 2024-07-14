@@ -23,6 +23,10 @@ public interface UserAccountRepository {
                 .collect(Collectors.toMap(CompanyInvestGoal::stockCompanyExternalId, Function.identity()));
     }
 
+    default boolean existsByExternalId(UserAccountExternalId userAccountExternalId) {
+        return findByExternalId(userAccountExternalId).isPresent();
+    }
+
     UserAccount saveUserAccount(UserAccount userAccount);
 
     Optional<UserAccount> findByExternalId(UserAccountExternalId userAccountExternalId);

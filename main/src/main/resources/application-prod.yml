@@ -19,3 +19,6 @@ management:
   health:
     mail:
       enabled: false
+  metrics:
+    tags:
+      application: market-notes

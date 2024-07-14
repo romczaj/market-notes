@@ -9,169 +9,121 @@ content-type: application/json
       "companyName": "Alior Bank",
       "stockSymbol": "ALR",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "PLW.WA"
+      "dataProviderSymbol": "ALR.WA"
     },
     {
-      "companyName": "Polenergia",
-      "stockSymbol": "PEP",
+      "companyName": "Allegro.eu S.A.",
+      "stockSymbol": "ALE",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "PEP.WA"
+      "dataProviderSymbol": "ALE.WA"
     },
     {
-      "companyName": "Police",
-      "stockSymbol": "PCE",
+      "companyName": "Bank Pekao",
+      "stockSymbol": "PEO",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "PCE.WA"
+      "dataProviderSymbol": "PEO.WA"
     },
     {
-      "companyName": "Rafako",
-      "stockSymbol": "RAF",
+      "companyName": "Budimex",
+      "stockSymbol": "BDX",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "RAF.WA"
+      "dataProviderSymbol": "BDX.WA"
     },
     {
-      "companyName": "Sanok Rubber Company",
-      "stockSymbol": "SNK",
+      "companyName": "CD Projekt",
+      "stockSymbol": "CDR",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "SNK.WA"
+      "dataProviderSymbol": "CDR.WA"
     },
     {
-      "companyName": "Scope Fluidics",
-      "stockSymbol": "SCP",
+      "companyName": "Cyfrowy Polsat",
+      "stockSymbol": "CPS",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "SCP.WA"
+      "dataProviderSymbol": "CPS.WA"
     },
     {
-      "companyName": "Selena FM",
-      "stockSymbol": "SEL",
+      "companyName": "Dino Polska",
+      "stockSymbol": "DNP",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "SEL.WA"
+      "dataProviderSymbol": "DNP.WA"
     },
     {
-      "companyName": "Shoper",
-      "stockSymbol": "SHP",
+      "companyName": "Grupa Kęty",
+      "stockSymbol": "KTY",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "SHO.WA"
+      "dataProviderSymbol": "KTY.WA"
     },
     {
-      "companyName": "SpyroSoft",
-      "stockSymbol": "SPR",
+      "companyName": "JSW",
+      "stockSymbol": "JSW",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "SPR.WA"
+      "dataProviderSymbol": "JSW.WA"
     },
     {
-      "companyName": "Stalexport Autostrady",
-      "stockSymbol": "STX",
+      "companyName": "KGHM Polska Miedź",
+      "stockSymbol": "KGH",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "STX.WA"
+      "dataProviderSymbol": "KGH.WA"
     },
     {
-      "companyName": "Stalprodukt",
-      "stockSymbol": "STP",
+      "companyName": "Kruk",
+      "stockSymbol": "KRU",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "STP.WA"
+      "dataProviderSymbol": "KRU.WA"
     },
     {
-      "companyName": "Sunex",
-      "stockSymbol": "SNX",
+      "companyName": "LPP",
+      "stockSymbol": "LPP",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "SNX.WA"
+      "dataProviderSymbol": "LPP.WA"
     },
     {
-      "companyName": "Sygnity",
-      "stockSymbol": "SGN",
+      "companyName": "Orange Polska",
+      "stockSymbol": "OPL",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "SGN.WA"
+      "dataProviderSymbol": "OPL.WA"
     },
     {
-      "companyName": "Synthaverse",
-      "stockSymbol": "SYN",
+      "companyName": "Orlen",
+      "stockSymbol": "PKN",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "SVE.WA"
+      "dataProviderSymbol": "PKN.WA"
     },
     {
-      "companyName": "Torpol",
-      "stockSymbol": "TOR",
+      "companyName": "PGE",
+      "stockSymbol": "PGE",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "TOR.WA"
+      "dataProviderSymbol": "PGE.WA"
     },
     {
-      "companyName": "Toya",
-      "stockSymbol": "TOA",
+      "companyName": "PKO BP",
+      "stockSymbol": "PKO",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "TOA.WA"
+      "dataProviderSymbol": "PKO.WA"
     },
     {
-      "companyName": "Unimot",
-      "stockSymbol": "UNI",
+      "companyName": "PZU",
+      "stockSymbol": "PZU",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "UNI.WA"
+      "dataProviderSymbol": "PZU.WA"
     },
     {
-      "companyName": "VRG",
-      "stockSymbol": "VRG",
+      "companyName": "Pepco Group NV",
+      "stockSymbol": "PCO",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "VRG.WA"
+      "dataProviderSymbol": "PCO.WA"
     },
     {
-      "companyName": "Vercom",
-      "stockSymbol": "VRC",
+      "companyName": "Santander Bank Polska",
+      "stockSymbol": "SAN",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "VRC.WA"
+      "dataProviderSymbol": "SAN.WA"
     },
     {
-      "companyName": "Vigo Photonics",
-      "stockSymbol": "VGO",
+      "companyName": "mBank",
+      "stockSymbol": "MBK",
       "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "VGO.WA"
-    },
-    {
-      "companyName": "Votum",
-      "stockSymbol": "VOT",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "VOT.WA"
-    },
-    {
-      "companyName": "Voxel",
-      "stockSymbol": "VOX",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "VOX.WA"
-    },
-    {
-      "companyName": "Wawel",
-      "stockSymbol": "WWL",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "WWL.WA"
-    },
-    {
-      "companyName": "Wielton",
-      "stockSymbol": "WLT",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "WLT.WA"
-    },
-    {
-      "companyName": "Wittchen",
-      "stockSymbol": "WTC",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "WTN.WA"
-    },
-    {
-      "companyName": "XTPL",
-      "stockSymbol": "XTP",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "XTP.WA"
-    },
-    {
-      "companyName": "ZE PAK",
-      "stockSymbol": "ZEP",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "ZEP.WA"
-    },
-    {
-      "companyName": "Śnieżka",
-      "stockSymbol": "SKA",
-      "stockMarketSymbol": "WSE",
-      "dataProviderSymbol": "SKA.WA"
+      "dataProviderSymbol": "MBK.WA"
     }
   ]
 }

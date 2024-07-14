@@ -10,7 +10,6 @@ import java.time.LocalDate;
 
 public record NoteBuySellRequest(
         @NotNull StockOperation stockOperation,
-        @NotNull UserAccountExternalId userAccountExternalId,
         @NotNull StockCompanyExternalId stockCompanyExternalId,
         @NotNull Money operationPrice,
         @NotNull LocalDate operationDate

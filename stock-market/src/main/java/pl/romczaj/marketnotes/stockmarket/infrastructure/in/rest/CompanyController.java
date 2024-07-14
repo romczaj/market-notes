@@ -3,8 +3,10 @@ package pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
+import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose.FullCompanyResponse;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.AddCompanyNoteRequest;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCompanyRequest;
@@ -31,5 +33,11 @@ public class CompanyController {
     public FullCompanyResponse getCompany(@PathVariable("companyId") StockCompanyExternalId companyId) {
         return companyReader.getCompany(companyId);
     }
+
+    @GetMapping("/stock-market/test")
+    public ResponseEntity<String> test(){
+        return ResponseEntity.ok("sadas");
+    }
+
 
 }

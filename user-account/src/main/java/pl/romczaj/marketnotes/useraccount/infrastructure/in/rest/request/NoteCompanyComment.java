@@ -6,7 +6,6 @@ import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 
 public record NoteCompanyComment(
-        @NotNull UserAccountExternalId userAccountExternalId,
         @NotNull StockCompanyExternalId stockCompanyExternalId,
         @NotBlank String noteContent
 

@@ -6,7 +6,7 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.common.clock.ApplicationClock;
 import pl.romczaj.marketnotes.common.dto.HistoricData;
-import pl.romczaj.marketnotes.stockmarket.application.counter.StockCompanyCounter;
+import pl.romczaj.marketnotes.stockmarket.application.counter.StockCompanyCalculator;
 import pl.romczaj.marketnotes.stockmarket.domain.command.CalculationResultCreateCommand;
 import pl.romczaj.marketnotes.common.dto.CalculationResult;
 import pl.romczaj.marketnotes.stockmarket.domain.model.CalculationResultHistory;
@@ -40,8 +40,8 @@ public class RefreshAnalyzedDataCompanyTask {
 
         List<HistoricData> historicData = getCompanyDataResult.historicData();
 
-        StockCompanyCounter stockCompanyCounter = new StockCompanyCounter(historicData);
-        CalculationResult result = stockCompanyCounter.count();
+        StockCompanyCalculator stockCompanyCalculator = new StockCompanyCalculator(historicData);
+        CalculationResult result = stockCompanyCalculator.count();
 
         CalculationResultCreateCommand calculationResultCreateCommand = new CalculationResultCreateCommand(
                 company.id(),

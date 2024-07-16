@@ -1,4 +1,4 @@
-package pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.respose;
+package pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.response;
 
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 

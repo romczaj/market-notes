@@ -1,49 +1,28 @@
-package pl.romczaj.marketnotes.stockmarket.read;
-
-import jakarta.persistence.Tuple;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose.AnalyzeResponse;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose.CompanyNoteResponse;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose.FullCompanyResponse;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose.StockCompanyBaseInfoResponse;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.CalculationResultHistoryEntity;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyEntity;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockNoteEntity;
-
-import java.util.List;
-import java.util.Objects;
-
-class FullCompanyResponseMapper {
-
-    FullCompanyResponse mapToResponse(List<Tuple> tuples) {
-        if (tuples.isEmpty()) {
-            return null;
-        }
-
-        StockCompanyEntity companyEntity = tuples.get(0).get(0, StockCompanyEntity.class);
-        CalculationResultHistoryEntity analyzeEntity = tuples.get(0).get(1, CalculationResultHistoryEntity.class);
-
-        StockCompanyBaseInfoResponse baseInfo = new StockCompanyBaseInfoResponse(
-                companyEntity.getId(),
-                companyEntity.getExternalId(),
-                companyEntity.getDataProviderSymbol(),
-                companyEntity.getCompanyName()
-        );
-
-        AnalyzeResponse analyze = new AnalyzeResponse(
-                analyzeEntity.getId()
-        );
-
-        List<CompanyNoteResponse> notes = tuples.stream()
-                .map(tuple -> tuple.get(2, StockNoteEntity.class))
-                .filter(Objects::nonNull)
-                .map(noteEntity -> new CompanyNoteResponse(
-                        noteEntity.getId(),
-                        noteEntity.getNoteDate(),
-                        noteEntity.getPrice(),
-                        noteEntity.getNoteContent()
-                ))
-                .toList();
-
-        return new FullCompanyResponse(baseInfo, notes, analyze);
-    }
-}
+//package pl.romczaj.marketnotes.stockmarket.read;
+//
+//import jakarta.persistence.Tuple;
+//import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose.CompanySummaryResponse;
+//import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.CalculationResultHistoryEntity;
+//import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyEntity;
+//
+//import java.util.List;
+//
+//class FullCompanyResponseMapper {
+//
+//    CompanySummaryResponse mapToResponse(List<Tuple> tuples) {
+//        if (tuples.isEmpty()) {
+//            return null;
+//        }
+//
+//        StockCompanyEntity companyEntity = tuples.get(0).get(0, StockCompanyEntity.class);
+//        CalculationResultHistoryEntity analyzeEntity = tuples.get(0).get(1, CalculationResultHistoryEntity.class);
+//
+//        return new CompanySummaryResponse(
+//                companyEntity.getId(),
+//                companyEntity.getExternalId(),
+//                companyEntity.getDataProviderSymbol(),
+//                companyEntity.getCompanyName(),
+//                analyzeEntity.getCalculationDate(),
+//                analyzeEntity.getCalculationResult();
+//    }
+//}

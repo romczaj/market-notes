@@ -20,6 +20,24 @@ CREATE TABLE stock_company_calculation_result_history
     CONSTRAINT stock_company_calculation_result_history_pkey PRIMARY KEY (id)
 );
 
+create view stock_company_summary_view as
+
+WITH LatestResults AS (SELECT MAX(id) AS id
+                       FROM stock_company_calculation_result_history
+                       GROUP BY stock_company_id)
+SELECT sc.id,
+       actual_price,
+       company_name,
+       data_provider_symbol,
+       external_id,
+       stock_market_symbol,
+       stock_symbol,
+       s.calculation_date,
+       s.calculation_result
+FROM stock_company_calculation_result_history s
+         JOIN LatestResults lr ON s.id = lr.id
+         JOIN public.stock_company sc on sc.id = s.stock_company_id;
+
 CREATE TABLE stock_company_note
 (
     id               bigint NOT NULL,

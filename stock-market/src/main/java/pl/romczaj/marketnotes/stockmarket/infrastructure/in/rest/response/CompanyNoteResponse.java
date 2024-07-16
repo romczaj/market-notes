@@ -1,4 +1,4 @@
-package pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose;
+package pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.response;
 
 import java.time.Instant;
 

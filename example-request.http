@@ -36,7 +36,13 @@ content-type: application/json
 GET http://localhost:8080/stock-market/test
 
 ### refresh companies
-GET http://192.168.100.44:30080/refresh-companies-scheduler/invoke
+GET http://localhost:8080/refresh-companies-scheduler/invoke
 
 ### user report
 GET http://192.168.100.44:30080/actuator/prometheus
+
+### companies summary
+GET http://localhost:8080/companies-summary
+
+### company-detail-summary
+GET http://localhost:8080/company-detail-summary?stockCompanyExternalId=ELT_WSE

@@ -17,7 +17,7 @@ import static pl.romczaj.marketnotes.common.dto.Money.ofPln;
 
 
 @Slf4j
-class StockCompanyCounterTest {
+class StockCompanyCalculatorTest {
 
     private static final List<HistoricData> historicData = Arrays.asList(
             new HistoricData(of(2022, 1, 1), ofPln(100.0)),
@@ -34,7 +34,7 @@ class StockCompanyCounterTest {
             new HistoricData(of(2022, 1, 13), ofPln(250.0))
     );
 
-    private final StockCompanyCounter stockCompanyCounter = new StockCompanyCounter(historicData);
+    private final StockCompanyCalculator stockCompanyCalculator = new StockCompanyCalculator(historicData);
 
     private static Stream<Arguments> countIncreaseArguments() {
         return Stream.of(
@@ -48,7 +48,7 @@ class StockCompanyCounterTest {
     @MethodSource("countIncreaseArguments")
     void shouldCountIncrease(LocalDate baseDate, LocalDate today, Double result) {
         //when
-        Double increase = stockCompanyCounter.countIncrease(baseDate, today);
+        Double increase = stockCompanyCalculator.countIncrease(baseDate, today);
 
         //then
         Assertions.assertEquals(result, increase);
@@ -69,7 +69,7 @@ class StockCompanyCounterTest {
     @MethodSource("findHistoricDataByDateArguments")
     void shouldFindHistoricDataByDate(LocalDate wantedDate, LocalDate resultDate) {
         //when
-        HistoricData historicDataByDate = stockCompanyCounter.findHistoricDataByDate(wantedDate);
+        HistoricData historicDataByDate = stockCompanyCalculator.findHistoricDataByDate(wantedDate);
 
         //then
         Assertions.assertEquals(resultDate, historicDataByDate.date());

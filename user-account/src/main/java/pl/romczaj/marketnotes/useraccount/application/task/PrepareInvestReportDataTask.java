@@ -56,7 +56,7 @@ public class PrepareInvestReportDataTask {
     }
 
     private boolean twoWeeksIncreasePeriod(CalculationResult calculationResult) {
-        return calculationResult.increasePeriodResult()
+        return calculationResult.increasePeriodResults()
                 .stream().filter(c -> c.increasePeriod() == TWO_WEEKS)
                 .findFirst()
                 .map(IncreasePeriodResult::scoreLowestPeak)

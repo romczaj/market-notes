@@ -3,13 +3,12 @@ package pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
-import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.respose.FullCompanyResponse;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.AddCompanyNoteRequest;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCompanyRequest;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.response.CompaniesSummaryResponse;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.response.CompanyDetailSummaryResponse;
 
 @RestController
 @RequiredArgsConstructor
@@ -29,15 +28,15 @@ public class CompanyController {
         companyRestManagement.addNote(addNoteRequest);
     }
 
-    @GetMapping("/company/{companyId}")
-    public FullCompanyResponse getCompany(@PathVariable("companyId") StockCompanyExternalId companyId) {
-        return companyReader.getCompany(companyId);
+    @GetMapping("/companies-summary")
+    public CompaniesSummaryResponse getCompaniesSummary() {
+        return companyReader.getCompaniesSummary();
     }
 
-    @GetMapping("/stock-market/test")
-    public ResponseEntity<String> test(){
-        return ResponseEntity.ok("sadas");
+    @GetMapping("/company-detail-summary")
+    public CompanyDetailSummaryResponse getCompanyDetailSummary(
+            @RequestParam("stockCompanyExternalId") StockCompanyExternalId stockCompanyExternalId) {
+        return companyReader.getCompanyDetailSummary(stockCompanyExternalId);
     }
-
-
+    
 }

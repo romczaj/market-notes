@@ -3,7 +3,9 @@ package pl.romczaj.marketnotes.useraccount.infrastructure.in.rest;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
+import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.*;
+import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.response.UserCompanyNotesResponse;
 
 @RestController
 @RequiredArgsConstructor
@@ -11,6 +13,7 @@ import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.*;
 public class UserAccountController {
 
     private final UserAccountRestManagement userAccountRestManagement;
+    private final UserCompanyNotesReader userCompanyNotesReader;
 
     @PostMapping("/register")
     public void addAccount() {
@@ -41,9 +44,9 @@ public class UserAccountController {
         userAccountRestManagement.noteCompanyComment(noteCompanyComment);
     }
 
-    @GetMapping("/test")
-    public String test(){
-        return "Adsad";
+    @GetMapping("/company-notes")
+    public UserCompanyNotesResponse getCompanyNotes(
+            @RequestParam("stockCompanyExternalId") StockCompanyExternalId stockCompanyExternalId) {
+        return userCompanyNotesReader.getCompanyNotes(stockCompanyExternalId);
     }
-
 }

@@ -12,7 +12,6 @@ import java.util.Optional;
 public interface JpaStockCompanyRepository extends JpaRepository<StockCompanyEntity, Long> {
     Optional<StockCompanyEntity> findByExternalId(StockCompanyExternalId externalId);
 
-    //TODO fix multiple CalculationResultHistoryEntity
     @Query("""
             select c, a, n
             from StockCompanyEntity c

@@ -19,20 +19,18 @@ import java.util.stream.Stream;
 import static java.util.Objects.nonNull;
 
 @RequiredArgsConstructor
-public class StockCompanyCounter {
+public class StockCompanyCalculator {
 
     private final List<HistoricData> sortedHistoricData;
     private final Map<LocalDate, HistoricData> historicDataMap;
     private final LocalDate today;
 
-    //TODO refactor usage of historicDataMap
-    public StockCompanyCounter(List<HistoricData> historicDataParam) {
+    public StockCompanyCalculator(List<HistoricData> historicDataParam) {
         this.sortedHistoricData = historicDataParam.stream().sorted((Comparator.comparing(HistoricData::date))).toList();
         this.historicDataMap = this.sortedHistoricData.stream().collect(Collectors.toMap(HistoricData::date, Function.identity()));
         this.today = historicDataMap.keySet().stream().max(LocalDate::compareTo).orElseThrow();
     }
 
-    //TODO optimize
     public CalculationResult count() {
         return new CalculationResult(
                 findHistoricDataByDate(today).closePrice().amount(),
@@ -54,7 +52,6 @@ public class StockCompanyCounter {
                 .min(Comparator.comparing(HistoricData::closePrice))
                 .orElseThrow();
 
-        //TODO nulls
         return new IncreasePeriodResult(
                 increasePeriod,
                 countIncrease(baseDate),
@@ -65,7 +62,6 @@ public class StockCompanyCounter {
         );
     }
 
-    //TODO
     HistoricData findHistoricDataByDate(final LocalDate dateWanted) {
 
         HistoricData historicData = historicDataMap.get(dateWanted);

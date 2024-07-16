@@ -15,6 +15,7 @@ class ApplicationUserAccountArchitectureTest {
     static final String APPLICATION = "Application";
     static final String DOMAIN = "Domain";
     static final String JOB = "Job";
+    static final String READ = "Read";
     final JavaClasses javaClasses = new ClassFileImporter().importPackages(BASE_PACKAGE);
 
     @Test
@@ -28,10 +29,11 @@ class ApplicationUserAccountArchitectureTest {
                 .layer(PERSISTENCE_ADAPTER).definedBy(packageForLayer("infrastructure.out.persistence"))
                 .layer(APPLICATION).definedBy(packageForLayer("application"))
                 .layer(DOMAIN).definedBy(packageForLayer("domain"))
+                .layer(READ).definedBy(packageForLayer("read"))
 
-                .whereLayer(REST_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION, DOMAIN)
+                .whereLayer(REST_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION, DOMAIN, READ)
                 .whereLayer(JOB).mayOnlyBeAccessedByLayers(APPLICATION)
-                .whereLayer(PERSISTENCE_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION)
+                .whereLayer(PERSISTENCE_ADAPTER).mayOnlyBeAccessedByLayers(APPLICATION, READ)
                 .whereLayer(DOMAIN).mayOnlyBeAccessedByLayers(APPLICATION, PERSISTENCE_ADAPTER)
                 .whereLayer(APPLICATION).mayNotBeAccessedByAnyLayer();
 

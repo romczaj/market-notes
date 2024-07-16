@@ -4,7 +4,6 @@ import lombok.Builder;
 import lombok.Getter;
 import pl.romczaj.marketnotes.common.clock.ApplicationClock;
 import pl.romczaj.marketnotes.common.dto.HistoricData;
-import pl.romczaj.marketnotes.stockmarket.application.counter.StockCompanyCounter;
 import pl.romczaj.marketnotes.stockmarket.application.subtask.LoadCampaignTask;
 import pl.romczaj.marketnotes.stockmarket.application.subtask.RefreshAnalyzedDataCompanyTask;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort;

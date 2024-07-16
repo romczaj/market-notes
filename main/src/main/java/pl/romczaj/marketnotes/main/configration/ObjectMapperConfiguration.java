@@ -1,4 +1,4 @@
-package pl.romczaj.marketnotes.common.objectmapper;
+package pl.romczaj.marketnotes.main.configration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.module.SimpleModule;

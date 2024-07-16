@@ -11,7 +11,7 @@ import static java.time.temporal.ChronoUnit.*;
 public record CalculationResult(
         Double todayPrice,
         Double yesterdayPrice,
-        List<IncreasePeriodResult> increasePeriodResult
+        List<IncreasePeriodResult> increasePeriodResults
 ) {
 
     public static CalculationResult empty(){

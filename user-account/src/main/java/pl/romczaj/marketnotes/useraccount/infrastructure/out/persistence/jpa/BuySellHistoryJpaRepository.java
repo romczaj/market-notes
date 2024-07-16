@@ -13,4 +13,5 @@ public interface BuySellHistoryJpaRepository extends JpaRepository<BuySellHistor
             Long userAccountId, LocalDate operationDate, StockCompanyExternalId companyExternalId);
 
     List<BuySellHistoryEntity> findAllByUserAccountId(Long userAccountId);
+    List<BuySellHistoryEntity> findAllByUserAccountIdAndStockCompanyExternalId(Long userAccountId, StockCompanyExternalId stockCompanyExternalId);
 }

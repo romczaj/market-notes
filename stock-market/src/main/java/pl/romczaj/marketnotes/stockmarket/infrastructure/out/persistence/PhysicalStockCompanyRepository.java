@@ -47,7 +47,7 @@ public class PhysicalStockCompanyRepository implements StockCompanyRepository {
 
     @Override
     public Optional<CalculationResultHistory> findNewestCalculationResult(Long stockCompanyId) {
-        return jpaStockSummaryRepository.findTopByStockCompanyIdOrderById(stockCompanyId).map(CalculationResultHistoryEntity::toDomain);
+        return jpaStockSummaryRepository.findTopByStockCompanyIdOrderByIdDesc(stockCompanyId).map(CalculationResultHistoryEntity::toDomain);
     }
 
     @Override

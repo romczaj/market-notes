@@ -18,11 +18,16 @@ public record UserCompanyNotesResponse(
 
 ) {
     public record InvestGoalResponse(
+            StockCompanyExternalId stockCompanyExternalId,
             Double buyStopPrice,
             Double sellStopPrice,
             Double buyLimitPrice,
             Double sellLimitPrice
     ) {
+
+        public static InvestGoalResponse empty(StockCompanyExternalId stockCompanyExternalId){
+            return new InvestGoalResponse(stockCompanyExternalId, 0.0, 0.0, 0.0, 0.0);
+        }
     }
 
     public record CommentResponse(

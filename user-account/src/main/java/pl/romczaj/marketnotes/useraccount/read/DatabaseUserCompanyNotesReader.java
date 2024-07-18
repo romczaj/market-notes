@@ -40,7 +40,7 @@ public class DatabaseUserCompanyNotesReader implements UserCompanyNotesReader {
         InvestGoalResponse investGoalResponse = companyInvestGoalJpaRepository
                 .findByUserAccountIdAndStockCompanyExternalId(userAccountEntity.getId(), stockCompanyExternalId)
                 .map(this::toResponse)
-                .orElse(null);
+                .orElseGet(() -> InvestGoalResponse.empty(stockCompanyExternalId));
 
         List<CommentResponse> commentResponses = companyNoteJpaRepository
                 .findByUserAccountIdAndStockCompanyExternalId(userAccountEntity.getId(), stockCompanyExternalId)
@@ -69,6 +69,7 @@ public class DatabaseUserCompanyNotesReader implements UserCompanyNotesReader {
 
     private InvestGoalResponse toResponse(CompanyInvestGoalEntity companyInvestGoalEntity) {
         return new InvestGoalResponse(
+                companyInvestGoalEntity.getStockCompanyExternalId(),
                 companyInvestGoalEntity.getBuyStopPrice(),
                 companyInvestGoalEntity.getSellStopPrice(),
                 companyInvestGoalEntity.getBuyLimitPrice(),

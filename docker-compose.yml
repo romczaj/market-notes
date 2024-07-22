@@ -7,8 +7,11 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./build-resource/postgres-volume:/var/lib/postgresql/data
     ports:
       - '5432:5432'
+
   market-notes-keycloak-db:
     container_name: market-notes-keycloak-db
     image: postgres:15.4
@@ -16,14 +19,16 @@ services:
     environment:
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./build-resource/postgres-keycloak-volume:/var/lib/postgresql/data
     ports:
       - '6432:5432'
 
   market-notes-keycloak:
     container_name: market-notes-keycloak
-    image: quay.io/keycloak/keycloak:22.0.0
+    build: build-resource/keycloak
     volumes:
-      - ./local-dev/realm:/opt/keycloak/data/import
+      - ./build-resource/realm:/opt/keycloak/data/import
     environment:
       KC_DB: postgres
       KC_DB_URL: jdbc:postgresql://market-notes-keycloak-db:5432/postgres
@@ -31,8 +36,11 @@ services:
       KC_DB_PASSWORD: postgres
       KEYCLOAK_ADMIN: admin
       KEYCLOAK_ADMIN_PASSWORD: admin
+      API_URL: http://host.docker.internal:8080
+      API_USERNAME: keycloak
+      API_PASSWORD: password
     ports:
-      - "8090:8080"
-    command: [ "start-dev --import-realm -Dkeycloak.migration.action=export" ]
+      - "8090:8090"
+    command: [ "start-dev --import-realm --http-port=8090 -Dkeycloak.migration.action=export" ]
     depends_on:
       - market-notes-keycloak-db

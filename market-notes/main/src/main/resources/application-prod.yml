@@ -1,0 +1,29 @@
+spring:
+  main:
+    banner-mode: "off"
+  datasource:
+    password: ${DB_PASSWORD}
+    url: ${DB_URL}
+    username: ${DB_USERNAME}
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: ${OAUTH2_ISSUER_URI}
+
+logging:
+  config: classpath:logback-prod.xml
+
+refresh-companies:
+  cron: ${REFRESH_COMPANIES_CRON}
+
+user-report:
+  cron: ${USER_REPORT_CRON}
+
+management:
+  health:
+    mail:
+      enabled: false
+  metrics:
+    tags:
+      application: market-notes

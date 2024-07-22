@@ -34,3 +34,9 @@ build/
 ### Mac OS ###
 .DS_Store
 *.env
+
+build-resource/postgres-volume
+build-resource/postgres-keycloak-volume
+
+node_modules/
+dist

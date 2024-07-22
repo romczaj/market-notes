@@ -1,0 +1,14 @@
+td, th {
+  text-align: center !important;
+  vertical-align: middle !important;
+}
+
+.mat-sort-header-container {
+  justify-content: center !important;
+}
+
+.mat-mdc-table tr {
+  &:not(.mat-mdc-header-row):hover {
+    border: 4px solid black !important; /* Replace #yourBorderColorHere with your desired border color */
+  }
+}

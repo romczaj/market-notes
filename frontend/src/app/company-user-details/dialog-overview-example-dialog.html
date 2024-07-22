@@ -1,0 +1,10 @@
+<mat-dialog-content>
+  <mat-form-field>
+    <mat-label>Add your comment</mat-label>
+    <input matInput [(ngModel)]="data.noteContent" />
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button [mat-dialog-close]="noteContent()" cdkFocusInitial>Ok</button>
+</mat-dialog-actions>

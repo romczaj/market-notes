@@ -1,0 +1,58 @@
+<div style="display:flex">
+  <h4>Summary</h4>
+  <div class="ms-3">
+    <mat-checkbox [checked]="summaryHideIndicator()" (change)="toggleSummaryHideIndicator()">
+      Show
+    </mat-checkbox>
+  </div>
+  <div class="ms-3">
+    <div *ngIf="summaryHideIndicator()" style="white-space: pre;">
+      {{ JSON.stringify(companyDetails, null, 2) }}
+    </div>
+  </div>
+</div>
+
+<div style="display:flex">
+  <h4>Invest goal</h4>
+  <div class="ms-3">
+    <mat-checkbox [checked]="investGoalHideIndicator()" (change)="toggleInvestGoalHideIndicator()">
+      Show
+    </mat-checkbox>
+  </div>
+  <div class="ms-3">
+    <div *ngIf="investGoalHideIndicator()" style="white-space: pre;">
+      <app-user-invest-goal [investGoalModel]="userNotes.investGoalResponse"></app-user-invest-goal>
+    </div>
+  </div>
+</div>
+
+<div style="display:flex">
+  <h4>
+    Comments
+  </h4>
+  <div class="ms-3">
+    <mat-checkbox [checked]="commentsHideIndicator()" (change)="toggleCommentsHideIndicator()">
+      Show
+    </mat-checkbox>
+  </div>
+  <div *ngIf="commentsHideIndicator()">
+    <div class="ms-3">
+      <button mat-button (click)="addCompanyComment()">Add</button>
+    </div>
+
+    <mat-list>
+      @for (comment of userNotes.comments; track comment) {
+        <mat-list-item>
+          <div matListItemLine>{{ comment.noteContent }}</div>
+          <div matListItemTitle>{{ comment.noteDate | customDateTime }}</div>
+        </mat-list-item>
+      }
+    </mat-list>
+  </div>
+
+</div>
+
+
+
+
+

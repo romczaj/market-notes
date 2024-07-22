@@ -1,0 +1,26 @@
+<p>user-invest-goal works! {{investGoalModel.stockCompanyExternalId}}</p>
+
+<form>
+  <mat-form-field appearance="fill">
+    <mat-label>Buy stop limit</mat-label>
+    <input type="number" min="0" step="0.01" matInput [(ngModel)]="investGoalModel.buyStopPrice" name="buyStopPrice">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Sell stop price</mat-label>
+    <input type="number" min="0" step="0.01" matInput [(ngModel)]="investGoalModel.sellStopPrice" name="sellStopPrice">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Buy limit price</mat-label>
+    <input type="number" min="0" step="0.01" matInput [(ngModel)]="investGoalModel.buyLimitPrice" name="buyLimitPrice">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Sell limit price</mat-label>
+    <input type="number" min="0" step="0.01" matInput [(ngModel)]="investGoalModel.sellLimitPrice" name="sellLimitPrice">
+  </mat-form-field>
+
+  <button mat-button type="submit" (click)="submitForm()">Save</button>
+</form>
+

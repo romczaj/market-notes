@@ -1,0 +1,6 @@
+{
+  "backendApiUrl": "http://localhost:8080",
+  "keycloakUrl": "http://market-notes-keycloak:8090",
+  "keycloakRealm": "market-notes",
+  "keycloakClientId": "market-notes-frontend"
+}

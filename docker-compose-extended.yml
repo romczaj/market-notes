@@ -1,0 +1,49 @@
+version: '3.7'
+services:
+  market-notes-db:
+    extends:
+      file: docker-compose.yml
+      service: market-notes-db
+
+  market-notes-keycloak-db:
+    extends:
+      file: docker-compose.yml
+      service: market-notes-keycloak-db
+
+  market-notes-keycloak:
+    extends:
+      file: docker-compose.yml
+      service: market-notes-keycloak
+    environment:
+      API_URL: http://market-notes:8080
+
+  market-notes:
+    container_name: market-notes
+    build: ./market-notes
+    restart: always
+    environment:
+      - JAVA_OPTS=-Xms128m -Xmx1024m -Dspring.profiles.active=prod
+      - DB_URL=jdbc:postgresql://market-notes-db:5432/postgres
+      - DB_USERNAME=postgres
+      - DB_PASSWORD=postgres
+      - SMTP_USERNAME=username
+      - SMTP_PASSWORD=password
+      - SMTP_HOST=to_fill
+      - SMTP_USERNAME=to_fill
+      - SMTP_PASSWORD=to_fill
+      - REFRESH_COMPANIES_CRON=0 0 17 ? * MON-FRI
+      - USER_REPORT_CRON=0 0 18 ? * MON-FRI
+      - OAUTH2_ISSUER_URI=http://market-notes-keycloak:8090/realms/market-notes
+    ports:
+      - "8080:8080"
+    depends_on:
+      - market-notes-db
+
+  market-notes-frontend:
+    container_name: market-notes-frontend
+    build: ./frontend
+    restart: always
+    ports:
+      - "4200:80"
+    volumes:
+      - ./build-resource/frontend/assets/config:/usr/share/nginx/html/assets/config

@@ -7,5 +7,6 @@ import {CompanyUserDetailsComponent} from "./company-user-details/company-user-d
 export const routes: Routes = [
   {path: 'home', component: HomeComponent},
   {path: 'user-dashboard', component: UserDashboardBaseComponent, canActivate: [AuthGuard]},
-  {path: 'company-details/:stockCompanyExternalId', component: CompanyUserDetailsComponent, canActivate: [AuthGuard]}
+  {path: 'company-details/:stockCompanyExternalId', component: CompanyUserDetailsComponent, canActivate: [AuthGuard]},
+  {path: '', redirectTo: 'home', pathMatch: 'full'}
 ];

@@ -4,7 +4,7 @@ import {BackendApiService} from "../backend-api/backend-api.service";
 import {CompanyDetailSummaryResponse, UserCompanyNotesResponse} from "../backend-api/responses";
 import {MatButton, MatButtonModule} from "@angular/material/button";
 import {MatCheckbox} from "@angular/material/checkbox";
-import {NgIf} from "@angular/common";
+import {DecimalPipe, NgIf} from "@angular/common";
 import {MatFormFieldModule} from "@angular/material/form-field";
 import {MatInputModule} from "@angular/material/input";
 import {FormsModule} from "@angular/forms";
@@ -33,7 +33,8 @@ import {UserInvestGoalComponent} from "../user-invest-goal/user-invest-goal.comp
     MatList,
     MatListItem,
     CustomDatetimePipe,
-    UserInvestGoalComponent
+    UserInvestGoalComponent,
+    DecimalPipe
   ],
   templateUrl: './company-user-details.component.html',
   styleUrl: './company-user-details.component.css'

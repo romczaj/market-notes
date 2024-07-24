@@ -5,7 +5,6 @@ import {FormsModule} from "@angular/forms";
 import {MatButton} from "@angular/material/button";
 import {MatInput} from "@angular/material/input";
 import {BackendApiService} from "../backend-api/backend-api.service";
-import {formatNumberToTwoDecimalPlaces} from "../util/two-decimal-places";
 
 @Component({
   selector: 'app-user-invest-goal',

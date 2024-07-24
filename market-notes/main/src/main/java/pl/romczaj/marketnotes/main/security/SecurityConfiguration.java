@@ -2,18 +2,12 @@ package pl.romczaj.marketnotes.main.security;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Primary;
-import org.springframework.core.Ordered;
-import org.springframework.core.annotation.Order;
 import org.springframework.core.convert.converter.Converter;
-import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configuration.WebSecurityCustomizer;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.jwt.Jwt;
@@ -23,6 +17,7 @@ import org.springframework.security.web.util.matcher.AntPathRequestMatcher;
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
+import pl.romczaj.marketnotes.common.dto.ApplicationRole;
 
 import java.util.Collection;
 import java.util.List;
@@ -44,8 +39,8 @@ public class SecurityConfiguration {
         Converter<Jwt, Collection<GrantedAuthority>> jwtGrantedAuthoritiesConverter = jwt -> {
             Map<String, Collection<String>> realmAccess = jwt.getClaim("realm_access");
             Collection<String> roles = realmAccess.get("roles");
-            return roles.stream()
-                    .map(role -> new SimpleGrantedAuthority("ROLE_" + role))
+            return ApplicationRole.fromKeycloakValues(roles).stream()
+                    .map(ApplicationRole::toSimpleGrantedAuthority)
                     .collect(Collectors.toList());
         };
 
@@ -64,7 +59,7 @@ public class SecurityConfiguration {
         http
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
-                        .requestMatchers("/user-account/**").authenticated()
+                        .requestMatchers("/user-account/**").hasRole(ApplicationRole.USER.name())
                         .anyRequest().permitAll())
                 .sessionManagement(httpConfigurer -> httpConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .oauth2ResourceServer(httpConfigurer -> httpConfigurer

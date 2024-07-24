@@ -6,6 +6,5 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 
 @ComponentScan
 @Configuration
-@EnableWebSecurity
 public class CommonConfiguration {
 }

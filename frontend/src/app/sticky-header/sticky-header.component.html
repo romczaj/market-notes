@@ -1,0 +1,13 @@
+<div class="sticky-header">
+  <div class="d-flex align-items-center">
+    <button mat-button (click)="goHome()">
+      home
+    </button>
+    <div class=ms-3>
+      Market notes
+    </div>
+  </div>
+  <button mat-button (click)="loginOperation()">
+    {{ isLoggedIn() ? 'Log out' : 'Log in' }}
+  </button>
+</div>

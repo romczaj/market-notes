@@ -17,15 +17,4 @@ import {CompaniesTableComponent} from "../companies-table/companies-table.compon
 })
 export class HomeComponent {
 
-  constructor(private keycloakService: KeycloakService) {
-  }
-
-  logIn(): void {
-    console.log(`on click logIn()`)
-    const keycloakLoginOptions = {
-      redirectUri: 'http://localhost:4200/user-dashboard'
-    }
-    this.keycloakService.login(keycloakLoginOptions).then()
-  }
-
 }

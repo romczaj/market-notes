@@ -19,12 +19,12 @@ import static org.mockito.Mockito.verify;
 import static pl.romczaj.marketnotes.common.id.StockCompanyExternalId.wse;
 
 
-class PrepareInvestReportDataTaskTest extends BaseApplicationTest {
+class PrepareInvestReportDataSubtaskTest extends BaseApplicationTest {
 
     private static final String MBK = "MBK";
     private static final String CRD = "CRD";
 
-    PrepareInvestReportDataTaskTest() {
+    PrepareInvestReportDataSubtaskTest() {
         super(WithMockObjects.builder()
                 .stockMarketInternalApi(new StockMarketInternalApi() {
                     @Override
@@ -83,7 +83,7 @@ class PrepareInvestReportDataTaskTest extends BaseApplicationTest {
         userAccountRepository.saveCompanyInvestGoal(crdInvest);
 
         //when
-        List<CompanyUserNotification> notifications = prepareInvestReportDataTask.prepare(userAccount);
+        List<CompanyUserNotification> notifications = prepareInvestReportDataSubtask.prepare(userAccount);
 
         //then
         Assertions.assertAll(

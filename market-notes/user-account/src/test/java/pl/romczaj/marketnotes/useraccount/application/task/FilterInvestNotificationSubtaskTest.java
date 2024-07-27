@@ -10,7 +10,7 @@ import java.util.List;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
 
-class FilterInvestNotificationTaskTest {
+class FilterInvestNotificationSubtaskTest {
 
     private static final List<CompanyUserNotification> NOTIFICATIONS = List.of(
             new CompanyUserNotification("AAA company", new StockCompanyExternalId("AAA", WSE), List.of(ArchivePrice.SELL_LIMIT), true),
@@ -23,7 +23,7 @@ class FilterInvestNotificationTaskTest {
     void shouldFilterSignificant() {
 
         // when
-        List<CompanyUserNotification> result = FilterInvestNotificationTask.filterSignificant(NOTIFICATIONS);
+        List<CompanyUserNotification> result = FilterInvestNotificationSubtask.filterSignificant(NOTIFICATIONS);
 
         // then
         assertEquals(3, result.size());

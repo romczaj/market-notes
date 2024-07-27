@@ -3,6 +3,7 @@ package pl.romczaj.marketnotes.stockmarket.application;
 
 import org.junit.jupiter.api.Test;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
+import pl.romczaj.marketnotes.stockmarket.application.config.BaseApplicationTest;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockNote;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.AddCompanyNoteRequest;
@@ -25,7 +26,7 @@ class CompanyRestManagementProcessTest extends BaseApplicationTest {
         stockCompanyRepository.saveStockCompany(stockCompany);
 
         //when
-        stockCompanyLoaderProcessor.addNote(
+        companyRestManagementProcess.addNote(
                 new AddCompanyNoteRequest(stockCompany.stockCompanyExternalId(), "Note content")
         );
 

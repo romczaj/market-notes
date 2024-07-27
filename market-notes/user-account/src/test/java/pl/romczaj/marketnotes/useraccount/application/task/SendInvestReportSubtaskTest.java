@@ -17,7 +17,7 @@ import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.Mockito.*;
 import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
 
-class SendInvestReportTaskTest extends BaseApplicationTest {
+class SendInvestReportSubtaskTest extends BaseApplicationTest {
 
 
     @Test
@@ -37,7 +37,7 @@ class SendInvestReportTaskTest extends BaseApplicationTest {
         );
 
         //when
-        sendInvestReportTask.sendReport(userAccount, companyUserNotifications);
+        sendInvestReportSubtask.sendReport(userAccount, companyUserNotifications);
 
         //then
         List<InvestReport> investReports = userAccountRepository.findInvestReportByUserAccountId(userAccount.id());

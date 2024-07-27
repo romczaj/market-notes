@@ -2,14 +2,14 @@ package pl.romczaj.marketnotes.stockmarket.application.subtask;
 
 import org.junit.jupiter.api.Test;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
-import pl.romczaj.marketnotes.stockmarket.application.BaseApplicationTest;
+import pl.romczaj.marketnotes.stockmarket.application.config.BaseApplicationTest;
 import pl.romczaj.marketnotes.stockmarket.domain.model.CalculationResultHistory;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
 
 import static pl.romczaj.marketnotes.common.dto.Money.ofPln;
 import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
 
-class RefreshAnalyzedDataCompanyTaskTest extends BaseApplicationTest {
+class RefreshAnalyzedDataCompanySubtaskTest extends BaseApplicationTest {
 
     @Test
     void shouldRefreshCompanyStockData() {
@@ -19,7 +19,7 @@ class RefreshAnalyzedDataCompanyTaskTest extends BaseApplicationTest {
         StockCompany updatedStockData = stockCompanyRepository.saveStockCompany(stockCompany);
 
         //when
-        refreshAnalyzedDataCompanyTask.refreshCompanyStockData(stockCompany);
+        refreshAnalyzedDataCompanySubTask.refreshCompanyStockData(stockCompany);
         //then
         CalculationResultHistory calculationResultHistory = stockCompanyRepository.findNewestCalculationResult(stockCompany.id()).get();
 //        Assertions.assertAll(

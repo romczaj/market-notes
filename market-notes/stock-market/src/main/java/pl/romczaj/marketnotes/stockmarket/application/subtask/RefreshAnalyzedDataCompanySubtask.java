@@ -23,7 +23,7 @@ import static pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class RefreshAnalyzedDataCompanyTask {
+public class RefreshAnalyzedDataCompanySubtask {
 
     private final ApplicationClock applicationClock;
     private final StockCompanyRepository stockCompanyRepository;
@@ -45,7 +45,7 @@ public class RefreshAnalyzedDataCompanyTask {
 
         CalculationResultCreateCommand calculationResultCreateCommand = new CalculationResultCreateCommand(
                 company.id(),
-                applicationClock.now(),
+                applicationClock.localDateTime(),
                 result
         );
 

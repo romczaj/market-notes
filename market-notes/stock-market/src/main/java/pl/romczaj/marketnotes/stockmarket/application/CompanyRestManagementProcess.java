@@ -3,7 +3,7 @@ package pl.romczaj.marketnotes.stockmarket.application;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.common.clock.ApplicationClock;
-import pl.romczaj.marketnotes.stockmarket.application.subtask.LoadCampaignTask;
+import pl.romczaj.marketnotes.stockmarket.application.subtask.LoadCampaignSubtask;
 import pl.romczaj.marketnotes.stockmarket.domain.command.CreateStockCompanyNoteCommand;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockNote;
@@ -24,11 +24,11 @@ public class CompanyRestManagementProcess implements CompanyRestManagement {
     private final StockCompanyRepository stockCompanyRepository;
     private final ApplicationClock applicationClock;
     private final DataProviderPort dataProviderPort;
-    private final LoadCampaignTask loadCampaignTask;
+    private final LoadCampaignSubtask loadCampaignSubTask;
 
     @Override
     public void loadCompanies(LoadCompanyRequest loadCompanyRequest) {
-        loadCompanyRequest.companies().forEach(loadCampaignTask::loadOne);
+        loadCompanyRequest.companies().forEach(loadCampaignSubTask::loadOne);
     }
 
     @Override

@@ -3,7 +3,7 @@ package pl.romczaj.marketnotes.stockmarket.application;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import pl.romczaj.marketnotes.stockmarket.application.subtask.RefreshAnalyzedDataCompanyTask;
+import pl.romczaj.marketnotes.stockmarket.application.subtask.RefreshAnalyzedDataCompanySubtask;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.job.RefreshCompaniesPort;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyRepository;
 
@@ -13,11 +13,11 @@ import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCo
 public class RefreshCompanyStockDataProcess implements RefreshCompaniesPort {
 
     private final StockCompanyRepository stockCompanyRepository;
-    private final RefreshAnalyzedDataCompanyTask refreshAnalyzedDataCompanyTask;
+    private final RefreshAnalyzedDataCompanySubtask refreshAnalyzedDataCompanySubTask;
 
     @Override
     public void refreshCompanyStockData() {
-        stockCompanyRepository.findAll().forEach(refreshAnalyzedDataCompanyTask::refreshCompanyStockData);
+        stockCompanyRepository.findAll().forEach(refreshAnalyzedDataCompanySubTask::refreshCompanyStockData);
     }
 
 }

@@ -24,7 +24,7 @@ public class YahooDataProvider implements DataProviderPort {
     @Override
     public GetCompanyDataResult getCompanyData(GetCompanyDataCommand getCompanyDataCommand) {
         log.info("Command {}", getCompanyDataCommand);
-        LocalDate dateTo = applicationClock.today();
+        LocalDate dateTo = applicationClock.localDate();
         LocalDate fromDate = dateTo.minusDays(getCompanyDataCommand.fromDaysBefore());
 
 

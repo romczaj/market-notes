@@ -2,7 +2,7 @@ package pl.romczaj.marketnotes.stockmarket.application.subtask;
 
 import org.junit.jupiter.api.Test;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
-import pl.romczaj.marketnotes.stockmarket.application.BaseApplicationTest;
+import pl.romczaj.marketnotes.stockmarket.application.config.BaseApplicationTest;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCompanyRequest;
 
@@ -10,7 +10,7 @@ import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
 
-class LoadCampaignTaskTest extends BaseApplicationTest {
+class LoadCampaignSubtaskTest extends BaseApplicationTest {
 
 
     @Test
@@ -18,7 +18,7 @@ class LoadCampaignTaskTest extends BaseApplicationTest {
         //given
         LoadCompanyRequest.CompanyRequestModel companyRequestModel = new LoadCompanyRequest.CompanyRequestModel("Company 1", "Symbol 1", WSE, "a.1");
         //when
-        loadCampaignTask.loadOne(companyRequestModel);
+        loadCampaignSubTask.loadOne(companyRequestModel);
 
         //then
         StockCompanyExternalId stockCompanyExternalId = new StockCompanyExternalId("Symbol 1", WSE);

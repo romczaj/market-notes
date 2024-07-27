@@ -11,7 +11,6 @@ class DataProviderTestConfiguration {
     static YahooApiProperties yahooApiProperties = new YahooApiProperties("https://query1.finance.yahoo.com");
     static YahooFeignInterface yahooFeignInterface = YAHOO_CONFIGURATION.githubFeignClient(yahooApiProperties);
     static FeignClientInvoker feignClientInvoker = new FeignClientInvoker(yahooFeignInterface);
-    static DataProviderPort dataProviderPort = new YahooDataProvider(feignClientInvoker, ApplicationClock.fromLocalDateTime(LocalDateTime.now()));
-
+    static DataProviderPort dataProviderPort = new YahooDataProvider(feignClientInvoker, ApplicationClock.defaultApplicationClock());
 
 }

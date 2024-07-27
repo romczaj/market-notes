@@ -16,7 +16,7 @@ import static pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider
 @RequiredArgsConstructor
 @Component
 @Slf4j
-public class LoadCampaignTask {
+public class LoadCampaignSubtask {
 
     private final StockCompanyRepository stockCompanyRepository;
     private final DataProviderPort dataProviderPort;

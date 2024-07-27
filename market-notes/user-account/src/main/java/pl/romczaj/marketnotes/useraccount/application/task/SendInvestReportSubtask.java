@@ -18,7 +18,7 @@ import java.util.List;
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class SendInvestReportTask {
+public class SendInvestReportSubtask {
 
     private final EmailSender emailSender;
     private final UserAccountRepository userAccountRepository;
@@ -34,7 +34,7 @@ public class SendInvestReportTask {
         InvestReport investReport = InvestReport.create(
                 new CreateInvestReportCommand(
                         userAccount.id(),
-                        applicationClock.now(),
+                        applicationClock.localDateTime(),
                         companyUserNotifications,
                         sendEmailResult.success(),
                         sendEmailResult.htmlContentMessage(),

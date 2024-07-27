@@ -17,18 +17,29 @@ public class ApplicationClock {
         return clock.instant();
     }
 
-    public LocalDate today() {
+    public LocalDate localDate() {
         return LocalDate.now(clock);
     }
 
-    public LocalDateTime now() {
+    public LocalDateTime localDateTime() {
         return LocalDateTime.now(clock);
     }
 
-    public static ApplicationClock fromLocalDateTime(LocalDateTime localDateTime) {
+    public static ApplicationClock defaultApplicationClock() {
+        return new ApplicationClock(Clock.systemDefaultZone());
+    }
+
+    public static ApplicationClock from(Instant instant) {
         return new ApplicationClock(
-                Clock.fixed(
-                        localDateTime.atZone(Clock.systemDefaultZone().getZone()).toInstant(),
-                        Clock.systemDefaultZone().getZone()));
+                Clock.fixed(instant, Clock.systemDefaultZone().getZone()));
+    }
+
+    public static ApplicationClock from(LocalDateTime localDateTime) {
+        return new ApplicationClock(
+                Clock.fixed(instantFrom(localDateTime), Clock.systemDefaultZone().getZone()));
+    }
+
+    public static Instant instantFrom(LocalDateTime localDateTime){
+        return localDateTime.atZone(Clock.systemDefaultZone().getZone()).toInstant();
     }
 }

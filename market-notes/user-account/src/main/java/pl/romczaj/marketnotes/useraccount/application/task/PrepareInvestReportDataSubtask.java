@@ -20,7 +20,7 @@ import static pl.romczaj.marketnotes.common.dto.CalculationResult.IncreasePeriod
 
 @Component
 @RequiredArgsConstructor
-public class PrepareInvestReportDataTask {
+public class PrepareInvestReportDataSubtask {
 
     private final UserAccountRepository userAccountRepository;
     private final StockMarketInternalApi stockMarketInternalApi;

@@ -4,7 +4,7 @@ import pl.romczaj.marketnotes.common.dto.CompanyUserNotification;
 
 import java.util.List;
 
-public class FilterInvestNotificationTask {
+public class FilterInvestNotificationSubtask {
 
     public static List<CompanyUserNotification> filterSignificant(List<CompanyUserNotification> notifications) {
         return notifications

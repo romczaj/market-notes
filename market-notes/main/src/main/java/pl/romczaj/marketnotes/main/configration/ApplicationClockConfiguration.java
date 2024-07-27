@@ -11,6 +11,6 @@ public class ApplicationClockConfiguration {
 
     @Bean
     public ApplicationClock applicationClock() {
-        return new ApplicationClock(Clock.systemDefaultZone());
+        return ApplicationClock.defaultApplicationClock();
     }
 }

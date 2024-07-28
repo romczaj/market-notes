@@ -1,6 +1,7 @@
 package pl.romczaj.marketnotes.useraccount.domain.model;
 
 import pl.romczaj.marketnotes.common.dto.CompanyUserNotification;
+import pl.romczaj.marketnotes.common.domain.DomainModel;
 import pl.romczaj.marketnotes.useraccount.domain.command.CreateInvestReportCommand;
 
 import java.time.LocalDateTime;
@@ -14,7 +15,7 @@ public record InvestReport(
         boolean successSend,
         String emailMessage,
         String emailSubject
-) {
+) implements DomainModel {
     public static InvestReport create(CreateInvestReportCommand command){
         return new InvestReport(
                 null,

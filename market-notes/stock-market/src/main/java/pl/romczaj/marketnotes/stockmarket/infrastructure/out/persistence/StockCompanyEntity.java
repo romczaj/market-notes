@@ -37,7 +37,7 @@ public class StockCompanyEntity {
     @Column(nullable = false)
     private Double actualPrice;
 
-    StockCompany toDomain() {
+    public StockCompany toDomain() {
         return new StockCompany(
                 id,
                 externalId,

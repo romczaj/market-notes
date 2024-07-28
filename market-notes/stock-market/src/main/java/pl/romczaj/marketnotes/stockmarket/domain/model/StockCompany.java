@@ -3,6 +3,7 @@ package pl.romczaj.marketnotes.stockmarket.domain.model;
 import lombok.With;
 import pl.romczaj.marketnotes.common.dto.Money;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
+import pl.romczaj.marketnotes.common.domain.DomainModel;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCompanyRequest.CompanyRequestModel;
 
 public record StockCompany(
@@ -10,7 +11,7 @@ public record StockCompany(
         StockCompanyExternalId stockCompanyExternalId,
         @With String dataProviderSymbol,
         String companyName,
-        @With Money actualPrice) {
+        @With Money actualPrice) implements DomainModel {
 
     public static StockCompany createFrom(CompanyRequestModel companyRequestModel) {
         return new StockCompany(

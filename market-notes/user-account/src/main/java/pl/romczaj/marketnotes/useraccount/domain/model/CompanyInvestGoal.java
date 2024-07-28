@@ -3,6 +3,7 @@ package pl.romczaj.marketnotes.useraccount.domain.model;
 import lombok.With;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.dto.ArchivePrice;
+import pl.romczaj.marketnotes.common.domain.DomainModel;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.request.NoteCompanyInvestGoalRequest;
 
 import java.util.ArrayList;
@@ -17,7 +18,7 @@ public record CompanyInvestGoal(
         @With Double sellStopPrice,
         @With Double buyLimitPrice,
         @With Double sellLimitPrice
-) {
+) implements DomainModel {
 
     public static CompanyInvestGoal create(Long userAccountId, NoteCompanyInvestGoalRequest request) {
         return new CompanyInvestGoal(

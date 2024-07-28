@@ -1,5 +1,6 @@
 package pl.romczaj.marketnotes.stockmarket.domain.model;
 
+import pl.romczaj.marketnotes.common.domain.DomainModel;
 import pl.romczaj.marketnotes.stockmarket.domain.command.CreateStockCompanyNoteCommand;
 
 import java.time.Instant;
@@ -12,7 +13,7 @@ public record StockNote(
     LocalDate priceDate,
     Double price,
     String noteContent
-) {
+) implements DomainModel {
     public static StockNote createFrom(CreateStockCompanyNoteCommand command) {
         return new StockNote(
             null,

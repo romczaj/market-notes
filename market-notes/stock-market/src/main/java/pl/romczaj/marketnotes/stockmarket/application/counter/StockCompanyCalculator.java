@@ -28,7 +28,16 @@ public class StockCompanyCalculator {
     public StockCompanyCalculator(List<HistoricData> historicDataParam) {
         this.sortedHistoricData = historicDataParam.stream().sorted((Comparator.comparing(HistoricData::date))).toList();
         this.historicDataMap = this.sortedHistoricData.stream().collect(Collectors.toMap(HistoricData::date, Function.identity()));
-        this.today = historicDataMap.keySet().stream().max(LocalDate::compareTo).orElseThrow();
+        LocalDate foundToday = historicDataMap.keySet().stream().max(LocalDate::compareTo).orElseThrow();
+        this.today = todayFixed(foundToday);
+    }
+
+    private LocalDate todayFixed(LocalDate today) {
+        return switch (today.getDayOfWeek()) {
+            case SUNDAY -> today.minusDays(2);
+            case SATURDAY -> today.minusDays(1);
+            default -> today;
+        };
     }
 
     public CalculationResult count() {
@@ -41,7 +50,7 @@ public class StockCompanyCalculator {
     }
 
     IncreasePeriodResult countIncreasePeriodResult(IncreasePeriod increasePeriod) {
-        LocalDate baseDate = today.minus(increasePeriod.getMinusValue(), increasePeriod.getUnit());
+        LocalDate baseDate = increasePeriod.countDate(today);
         HistoricData highestHistoricData = sortedHistoricData.stream()
                 .filter(d -> d.date().equals(baseDate) || d.date().isAfter(baseDate))
                 .max(Comparator.comparing(HistoricData::closePrice))

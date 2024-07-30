@@ -7,6 +7,8 @@ import {KeycloakBearerInterceptor, KeycloakService} from "keycloak-angular";
 import {BackendApiService} from "./backend-api/backend-api.service";
 import {provideAnimationsAsync} from '@angular/platform-browser/animations/async';
 import {ConfigService} from "./configuration/config-service";
+import {provideToastr} from "ngx-toastr";
+import {provideAnimations} from "@angular/platform-browser/animations";
 
 function initializeKeycloak(keycloak: KeycloakService, configService: ConfigService): () => Promise<boolean> {
   return () => configService.loadConfig()
@@ -50,6 +52,13 @@ export const appConfig: ApplicationConfig = {
     provideHttpClient(withInterceptorsFromDi()),
     KeycloakService,
     BackendApiService,
-    { provide: HTTP_INTERCEPTORS, useClass: KeycloakBearerInterceptor, multi: true }, provideAnimationsAsync(),
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: KeycloakBearerInterceptor,
+      multi: true
+    },
+    provideAnimationsAsync(),
+    provideAnimations(),
+    provideToastr(),
   ],
 };

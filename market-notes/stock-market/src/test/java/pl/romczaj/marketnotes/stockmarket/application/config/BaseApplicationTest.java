@@ -11,6 +11,7 @@ import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.MockSto
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyRepository;
 
 import static org.apache.commons.lang3.ObjectUtils.defaultIfNull;
+import static org.mockito.Mockito.spy;
 import static pl.romczaj.marketnotes.common.clock.ApplicationClock.defaultApplicationClock;
 import static pl.romczaj.marketnotes.stockmarket.application.config.DefaultValues.DEFAULT_DATA_PROVIDER;
 
@@ -36,9 +37,9 @@ public class BaseApplicationTest {
         this.dataProviderPort = defaultIfNull(withMockObjects.dataProviderPort, DEFAULT_DATA_PROVIDER);
 
         this.stockCompanyRepository = new MockStockCompanyRepository();
-        this.refreshAnalyzedDataCompanySubTask = new RefreshAnalyzedDataCompanySubtask(applicationClock, stockCompanyRepository, dataProviderPort);
-        this.loadCampaignSubTask = new LoadCampaignSubtask(stockCompanyRepository, dataProviderPort);
-        this.refreshCompanyStockDataProcess = new RefreshCompanyStockDataProcess(stockCompanyRepository, refreshAnalyzedDataCompanySubTask);
+        this.refreshAnalyzedDataCompanySubTask = spy(new RefreshAnalyzedDataCompanySubtask(applicationClock, stockCompanyRepository, dataProviderPort));
+        this.loadCampaignSubTask = new LoadCampaignSubtask(stockCompanyRepository, refreshAnalyzedDataCompanySubTask);
+        this.refreshCompanyStockDataProcess = spy(new RefreshCompanyStockDataProcess(stockCompanyRepository, refreshAnalyzedDataCompanySubTask));
         this.companyRestManagementProcess = new CompanyRestManagementProcess(stockCompanyRepository, applicationClock, dataProviderPort, loadCampaignSubTask);
     }
 

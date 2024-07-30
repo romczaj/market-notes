@@ -74,7 +74,7 @@ export interface InvestGoalModel {
 }
 
 export interface CommentResponse {
-  noteDate: Date; // ISO 8601 format date string
+  noteDate: Date;
   companyPrice: number;
   noteContent: string;
 }
@@ -83,5 +83,5 @@ export interface BuySellOperationResponse {
   stockOperation: string;
   operationAmount: number;
   operationCurrency: string;
-  operationDate: string; // ISO 8601 format date string
+  operationDate: string;
 }

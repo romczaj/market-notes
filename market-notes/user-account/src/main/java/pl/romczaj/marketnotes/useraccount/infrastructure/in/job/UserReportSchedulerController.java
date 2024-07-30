@@ -2,6 +2,7 @@ package pl.romczaj.marketnotes.useraccount.infrastructure.in.job;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -12,7 +13,7 @@ class UserReportSchedulerController {
 
     private final UserReportScheduler userReportScheduler;
 
-    @GetMapping("/invoke")
+    @PostMapping("/invoke")
     void invoke(){
         userReportScheduler.prepareReports();
     }

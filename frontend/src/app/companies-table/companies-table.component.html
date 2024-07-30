@@ -3,12 +3,19 @@
 
     <ng-container matColumnDef="companyName">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Company name </th>
-      <td mat-cell *matCellDef="let element" (click)="cellClicked(element)"> {{element.companyName}} </td>
+      <td mat-cell *matCellDef="let element"> {{ element.companyName }}</td>
+    </ng-container>
+
+    <ng-container matColumnDef="operations">
+      <th mat-header-cell *matHeaderCellDef> Operations</th>
+      <td mat-cell *matCellDef="let element">
+        <button mat-button (click)="manageCompanyClicked(element)"> Manage</button>
+      </td>
     </ng-container>
 
     <ng-container matColumnDef="actualPrice">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> Actual price </th>
-      <td mat-cell *matCellDef="let element"> {{element.actualPrice}} </td>
+      <td mat-cell *matCellDef="let element"> {{ element.actualPrice | number: '1.2-2' }}</td>
     </ng-container>
 
     <ng-container matColumnDef="currency">
@@ -18,32 +25,32 @@
 
     <ng-container matColumnDef="dailyIncrease">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> 1D increase </th>
-      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.dailyIncrease)"> {{element.dailyIncrease}}</td>
+      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.dailyIncrease)"> {{element.dailyIncrease | number: '1.2-2' }}</td>
     </ng-container>
 
     <ng-container matColumnDef="weekIncrease">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> 1W increase </th>
-      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.weekIncrease)"> {{element.weekIncrease}}</td>
+      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.weekIncrease)"> {{element.weekIncrease | number: '1.2-2' }}</td>
     </ng-container>
 
     <ng-container matColumnDef="twoWeekIncrease">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> 2W increase </th>
-      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.twoWeekIncrease)"> {{element.twoWeekIncrease}}</td>d>
+      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.twoWeekIncrease)"> {{element.twoWeekIncrease | number: '1.2-2' }}</td>d>
     </ng-container>
 
     <ng-container matColumnDef="monthIncrease">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> 1M increase </th>
-      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.monthIncrease)"> {{element.monthIncrease}}</td>
+      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.monthIncrease)"> {{element.monthIncrease | number: '1.2-2' }}</td>
     </ng-container>
 
     <ng-container matColumnDef="threeMonthsIncrease">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> 3M increase </th>
-      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.threeMonthsIncrease)"> {{element.threeMonthsIncrease}}</td>
+      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.threeMonthsIncrease)"> {{element.threeMonthsIncrease | number: '1.2-2' }}</td>
     </ng-container>
 
     <ng-container matColumnDef="yearIncrease">
       <th mat-header-cell *matHeaderCellDef mat-sort-header> 1Y increase </th>
-      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.yearIncrease)"> {{element.yearIncrease}}</td>
+      <td mat-cell *matCellDef="let element" [style.background-color]="getColorForValue(element.yearIncrease)"> {{element.yearIncrease | number: '1.2-2' }}</td>
     </ng-container>
 
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

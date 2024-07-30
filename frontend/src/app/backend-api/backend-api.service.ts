@@ -7,7 +7,7 @@ import {
   InvestGoalModel,
   UserCompanyNotesResponse
 } from "./responses";
-import {NoteCompanyComment} from "./requests";
+import {LoadCompaniesModel, NoteCompanyComment} from "./requests";
 import {ConfigService} from "../configuration/config-service";
 
 @Injectable({
@@ -38,8 +38,20 @@ export class BackendApiService {
     return this.http.post(`${this.apiUrl}/user-account/company-comment`, newCompanyCommentRequest)
   }
 
-  postInvestGoal(investGoalMode: InvestGoalModel): Observable<any>{
-    return this.http.post(`${this.apiUrl}/user-account/company-invest-goal`, investGoalMode)
+  postInvestGoal(investGoalModel: InvestGoalModel): Observable<any> {
+    return this.http.post(`${this.apiUrl}/user-account/company-invest-goal`, investGoalModel)
+  }
+
+  postLoadCompanies(loadCompaniesModel: LoadCompaniesModel): Observable<any> {
+    return this.http.post(`${this.apiUrl}/load-companies`, loadCompaniesModel)
+  }
+
+  postRefreshCompaniesScheduler(): Observable<any> {
+    return this.http.post(`${this.apiUrl}/refresh-companies-scheduler/invoke`, {})
+  }
+
+  postUserReportScheduler(): Observable<any> {
+    return this.http.post(`${this.apiUrl}/user-report-scheduler/invoke`, {})
   }
 
 }

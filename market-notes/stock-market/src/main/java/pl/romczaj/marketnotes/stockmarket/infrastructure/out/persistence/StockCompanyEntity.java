@@ -11,6 +11,8 @@ import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.persistance.StockCompanyExternalIdDatabaseConverter;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
 
+import java.util.Optional;
+
 @Entity
 @Setter
 @Getter
@@ -55,7 +57,7 @@ public class StockCompanyEntity {
                 stockCompany.stockCompanyExternalId().stockSymbol(),
                 stockCompany.stockCompanyExternalId().stockMarketSymbol(),
                 stockCompany.dataProviderSymbol(),
-                stockCompany.actualPrice().amount()
+                Optional.ofNullable(stockCompany.actualPrice()).map(Money::amount).orElse(null)
         );
     }
 }

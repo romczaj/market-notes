@@ -1,0 +1,19 @@
+<h4>Load companies</h4>
+
+<button type="button" mat-button (click)="fileInput.click()">Choose File</button>
+{{ selectedFile?.name || "Not selected file" }}
+<input hidden #fileInput type="file" accept=".json" (change)="onFileSelected($event)"/>
+<button mat-button color="primary" (click)="onUpload()">Upload</button>
+
+<div>
+  <button mat-button (click)="refreshCompaniesScheduler()">
+    Refresh companies scheduler invoke
+  </button>
+</div>
+
+<div>
+  <button mat-button (click)="postUserReportScheduler()">
+    User report scheduler invoke
+  </button>
+
+</div>

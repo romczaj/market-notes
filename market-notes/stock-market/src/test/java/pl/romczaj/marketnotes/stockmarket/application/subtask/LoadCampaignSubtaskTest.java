@@ -8,6 +8,9 @@ import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCom
 
 import static org.junit.jupiter.api.Assertions.assertAll;
 import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.mockito.ArgumentMatchers.any;
+import static org.mockito.Mockito.times;
+import static org.mockito.Mockito.verify;
 import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
 
 class LoadCampaignSubtaskTest extends BaseApplicationTest {
@@ -16,7 +19,8 @@ class LoadCampaignSubtaskTest extends BaseApplicationTest {
     @Test
     void shouldLoadOne() {
         //given
-        LoadCompanyRequest.CompanyRequestModel companyRequestModel = new LoadCompanyRequest.CompanyRequestModel("Company 1", "Symbol 1", WSE, "a.1");
+        LoadCompanyRequest.CompanyRequestModel companyRequestModel = new LoadCompanyRequest.CompanyRequestModel(
+                "Company 1", "Symbol 1", WSE, "a.1");
         //when
         loadCampaignSubTask.loadOne(companyRequestModel);
 
@@ -27,8 +31,9 @@ class LoadCampaignSubtaskTest extends BaseApplicationTest {
                 () -> assertEquals(1, stockCompanyRepository.findAll().size()),
                 () -> assertEquals("Company 1", stockCompany.companyName()),
                 () -> assertEquals("Symbol 1", stockCompany.stockCompanyExternalId().stockSymbol()),
-                () -> assertEquals(WSE, stockCompany.stockCompanyExternalId().stockMarketSymbol()
-        ));
+                () -> assertEquals(WSE, stockCompany.stockCompanyExternalId().stockMarketSymbol()),
+                () -> verify(refreshAnalyzedDataCompanySubTask, times(1)).refreshCompanyStockData(any())
+        );
     }
 
 }

@@ -19,7 +19,7 @@ import static pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider
 public class LoadCampaignSubtask {
 
     private final StockCompanyRepository stockCompanyRepository;
-    private final DataProviderPort dataProviderPort;
+    private final RefreshAnalyzedDataCompanySubtask refreshAnalyzedDataCompanySubtask;
 
     @Async
     public void loadOne(CompanyRequestModel companyRequestModel) {
@@ -29,20 +29,13 @@ public class LoadCampaignSubtask {
                 .map(c -> c.updateFrom(companyRequestModel))
                 .orElseGet(() -> StockCompany.createFrom(companyRequestModel));
 
-        DataProviderPort.GetCompanyDataResult getCompanyDataResult = dataProviderPort.getCompanyData(new DataProviderPort.GetCompanyDataCommand(
-                stockCompany.stockCompanyExternalId(),
-                stockCompany.dataProviderSymbol(),
-                7,
-                DAILY
-        ));
 
         if (nonNull(stockCompany.id())) {
             log.info("Company {} is refreshed", stockCompany.companyName());
         }
 
-        StockCompany updatedStockCompany = stockCompany.updateActualPrice(getCompanyDataResult.getLatest().closePrice());
-        stockCompanyRepository.saveStockCompany(updatedStockCompany);
+        StockCompany savedStockCompany = stockCompanyRepository.saveStockCompany(stockCompany);
 
-
+        refreshAnalyzedDataCompanySubtask.refreshCompanyStockData(savedStockCompany);
     }
 }

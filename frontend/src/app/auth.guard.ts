@@ -1,6 +1,7 @@
 import {Injectable} from '@angular/core';
-import {ActivatedRouteSnapshot, Router, RouterStateSnapshot, UrlTree} from '@angular/router';
+import {ActivatedRouteSnapshot, Router, RouterStateSnapshot} from '@angular/router';
 import {KeycloakAuthGuard, KeycloakService} from 'keycloak-angular';
+import {ToastrService} from "ngx-toastr";
 
 
 @Injectable({
@@ -9,7 +10,8 @@ import {KeycloakAuthGuard, KeycloakService} from 'keycloak-angular';
 export class AuthGuard extends KeycloakAuthGuard {
   constructor(
     override readonly router: Router,
-    private readonly keycloak: KeycloakService
+    private readonly keycloak: KeycloakService,
+    private readonly toastService: ToastrService
   ) {
     super(router, keycloak);
   }
@@ -18,7 +20,6 @@ export class AuthGuard extends KeycloakAuthGuard {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot
   ) {
-    console.log(`override canActivate, route ${route}, state ${state}`)
 
     // Force the user to log in if currently unauthenticated.
     if (!this.authenticated) {
@@ -36,6 +37,11 @@ export class AuthGuard extends KeycloakAuthGuard {
     }
 
     // Allow the user to proceed if all the required roles are present.
-    return requiredRoles.every((role) => this.roles.includes(role));
+    const userHasPermission = requiredRoles.every((role) => this.roles.includes(role));
+    if (userHasPermission) {
+      return true
+    }
+    this.toastService.error('User not permitted')
+    return false;
   }
 }

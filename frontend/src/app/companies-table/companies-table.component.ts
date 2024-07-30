@@ -6,12 +6,14 @@ import {CompanySummaryResponse, emptyCompanySummaryResponse} from "../backend-ap
 import {getColorForValue} from "../util/color-range";
 import {MatSort, MatSortHeader} from "@angular/material/sort";
 import {Router} from "@angular/router";
+import {MatButton} from "@angular/material/button";
+import {DecimalPipe} from "@angular/common";
 
 @Component({
   selector: 'app-companies-table',
   standalone: true,
   imports: [
-    MatSlideToggle, MatTableModule, MatSort, MatSortHeader
+    MatSlideToggle, MatTableModule, MatSort, MatSortHeader, MatButton, DecimalPipe
   ],
   templateUrl: './companies-table.component.html',
   styleUrl: './companies-table.component.css'
@@ -19,7 +21,7 @@ import {Router} from "@angular/router";
 
 export class CompaniesTableComponent implements OnInit, AfterViewInit {
   companiesSourceMat = new MatTableDataSource(emptyCompanySummaryResponse);
-  displayedColumns: string[] = ['companyName', 'actualPrice', 'currency', 'dailyIncrease',
+  displayedColumns: string[] = ['companyName', 'operations', 'actualPrice', 'currency', 'dailyIncrease',
     'weekIncrease', 'twoWeekIncrease', 'monthIncrease', 'threeMonthsIncrease', 'yearIncrease']
 
   @ViewChild(MatSort) sort: MatSort = new MatSort()
@@ -40,7 +42,7 @@ export class CompaniesTableComponent implements OnInit, AfterViewInit {
 
   protected readonly getColorForValue = getColorForValue;
 
-  cellClicked(element: CompanySummaryResponse) {
+  manageCompanyClicked(element: CompanySummaryResponse) {
     this.router.navigate([`company-details/${element.stockCompanyExternalId}`])
   }
 }

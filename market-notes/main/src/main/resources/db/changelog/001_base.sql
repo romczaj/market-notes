@@ -1,7 +1,7 @@
 CREATE TABLE stock_company
 (
     id                   bigint       NOT NULL,
-    actual_price         float8       NOT NULL,
+    actual_price float8,
     company_name         varchar(255) NOT NULL,
     data_provider_symbol varchar(255) NOT NULL,
     external_id          varchar(255) NOT NULL,

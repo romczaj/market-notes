@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/refresh-companies-scheduler")
+@RequestMapping("/admin/refresh-companies-scheduler")
 public class RefreshCompaniesSchedulerController {
 
     private final RefreshCompaniesScheduler refreshCompaniesScheduler;

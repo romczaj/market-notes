@@ -20,7 +20,6 @@ public class DefaultValues {
     public static final UserAccountExternalId DEFAULT_LOGGED_ACCOUNT_EXTERNAL_ID = UserAccountExternalId.generate();
 
     public static final LoggedUser DEFAULT_LOGGED_USER = new LoggedUser(
-            DEFAULT_LOGGED_NAME,
             DEFAULT_LOGGED_EMAIL,
             DEFAULT_LOGGED_ACCOUNT_EXTERNAL_ID);
 

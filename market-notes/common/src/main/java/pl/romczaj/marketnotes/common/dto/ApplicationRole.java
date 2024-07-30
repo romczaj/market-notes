@@ -12,8 +12,8 @@ import java.util.stream.Stream;
 @RequiredArgsConstructor
 @Getter
 public enum ApplicationRole {
-    USER("default-roles-market-notes"),
-    ADMIN("admin-market-notes");
+    USER("user"),
+    ADMIN("admin");
 
     private final String keycloakValue;
 

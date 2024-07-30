@@ -8,7 +8,6 @@ public interface AuthenticationRetriever {
     LoggedUser loggedUser();
 
     record LoggedUser(
-            String username,
             String email,
             UserAccountExternalId userAccountExternalId) {
     }

@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequiredArgsConstructor
-@RequestMapping("/user-report-scheduler")
+@RequestMapping("/admin/user-report-scheduler")
 class UserReportSchedulerController {
 
     private final UserReportScheduler userReportScheduler;

@@ -43,15 +43,15 @@ export class BackendApiService {
   }
 
   postLoadCompanies(loadCompaniesModel: LoadCompaniesModel): Observable<any> {
-    return this.http.post(`${this.apiUrl}/load-companies`, loadCompaniesModel)
+    return this.http.post(`${this.apiUrl}/admin/load-companies`, loadCompaniesModel)
   }
 
   postRefreshCompaniesScheduler(): Observable<any> {
-    return this.http.post(`${this.apiUrl}/refresh-companies-scheduler/invoke`, {})
+    return this.http.post(`${this.apiUrl}/admin/refresh-companies-scheduler/invoke`, {})
   }
 
   postUserReportScheduler(): Observable<any> {
-    return this.http.post(`${this.apiUrl}/user-report-scheduler/invoke`, {})
+    return this.http.post(`${this.apiUrl}/admin/user-report-scheduler/invoke`, {})
   }
 
 }

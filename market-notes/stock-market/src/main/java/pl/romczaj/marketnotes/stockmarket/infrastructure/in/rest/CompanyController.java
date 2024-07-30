@@ -18,14 +18,9 @@ public class CompanyController {
     private final CompanyReader companyReader;
 
 
-    @PostMapping("/load-companies")
+    @PostMapping("/admin/load-companies")
     public void loadCompanies(@RequestBody @Valid LoadCompanyRequest loadCompanyRequest) {
         companyRestManagement.loadCompanies(loadCompanyRequest);
-    }
-
-    @PostMapping("/add-note")
-    public void addNote(@RequestBody @Valid AddCompanyNoteRequest addNoteRequest) {
-        companyRestManagement.addNote(addNoteRequest);
     }
 
     @GetMapping("/companies-summary")
@@ -33,10 +28,4 @@ public class CompanyController {
         return companyReader.getCompaniesSummary();
     }
 
-    @GetMapping("/company-detail-summary")
-    public CompanyDetailSummaryResponse getCompanyDetailSummary(
-            @RequestParam("stockCompanyExternalId") StockCompanyExternalId stockCompanyExternalId) {
-        return companyReader.getCompanyDetailSummary(stockCompanyExternalId);
-    }
-    
 }

@@ -39,7 +39,7 @@ import {UserInvestGoalComponent} from "../user-invest-goal/user-invest-goal.comp
   templateUrl: './company-user-details.component.html',
   styleUrl: './company-user-details.component.css'
 })
-export class CompanyUserDetailsComponent implements OnInit{
+export class CompanyUserDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute,
               private router: Router,

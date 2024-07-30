@@ -60,6 +60,7 @@ public class SecurityConfiguration {
                 .csrf(AbstractHttpConfigurer::disable)
                 .authorizeHttpRequests(auth -> auth
                         .requestMatchers("/user-account/**").hasRole(ApplicationRole.USER.name())
+                        .requestMatchers("/admin/**").hasRole(ApplicationRole.ADMIN.name())
                         .anyRequest().permitAll())
                 .sessionManagement(httpConfigurer -> httpConfigurer.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .oauth2ResourceServer(httpConfigurer -> httpConfigurer

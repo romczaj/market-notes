@@ -31,7 +31,6 @@ public class JwtAuthenticationRetriever implements AuthenticationRetriever {
         Object subObject = jwt.getClaim(SUB_CLAIM);
         UserAccountExternalId userAccountExternalId = UserAccountExternalId.fromString(subObject.toString());
         return new LoggedUser(
-                jwt.getClaim(NAME_CLAIM).toString(),
                 jwt.getClaim(EMAIL_CLAIM).toString(),
                 userAccountExternalId
         );

@@ -1,13 +1,20 @@
 import {Component, inject} from '@angular/core';
 import {KeycloakService} from "keycloak-angular";
 import {Router} from "@angular/router";
-import {MatButton} from "@angular/material/button";
+import {MatButton, MatMiniFabButton} from "@angular/material/button";
+import {MatMenu, MatMenuItem, MatMenuTrigger} from "@angular/material/menu";
+import {MatIconModule} from "@angular/material/icon";
 
 @Component({
   selector: 'app-sticky-header',
   standalone: true,
   imports: [
-    MatButton
+    MatButton,
+    MatMenu,
+    MatMenuItem,
+    MatMenuTrigger,
+    MatMiniFabButton,
+    MatIconModule
   ],
   templateUrl: './sticky-header.component.html',
   styleUrl: './sticky-header.component.css'
@@ -43,6 +50,10 @@ export class StickyHeaderComponent {
   }
 
   goHome() {
-    this.router.navigate(['/home'])
+
+  }
+
+  navigateTo(page: string) {
+    this.router.navigate([page])
   }
 }

@@ -1,8 +1,13 @@
 <div class="sticky-header">
   <div class="d-flex align-items-center">
-    <button mat-button (click)="goHome()">
-      home
+    <button mat-mini-fab [matMenuTriggerFor]="menu">
+      <mat-icon>menu</mat-icon>
     </button>
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="navigateTo('/home')">Home</button>
+      <button mat-menu-item (click)="navigateTo('/admin')">Admin panel</button>
+    </mat-menu>
+
     <div class=ms-3>
       Market notes
     </div>

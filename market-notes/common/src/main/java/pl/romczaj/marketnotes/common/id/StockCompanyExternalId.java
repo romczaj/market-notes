@@ -10,9 +10,9 @@ import java.util.regex.Pattern;
 import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
 
 public record StockCompanyExternalId(
-        @NonNull String stockSymbol,
-        @NonNull StockMarketSymbol stockMarketSymbol
-) {
+         @NonNull String stockSymbol,
+         @NonNull StockMarketSymbol stockMarketSymbol
+) implements StringOneLine {
 
     public static StockCompanyExternalId wse(String stockSymbol){
         return new StockCompanyExternalId(stockSymbol, WSE);

@@ -1,7 +1,5 @@
 package pl.romczaj.marketnotes.common.persistance;
 
-
-
 import jakarta.persistence.AttributeConverter;
 import jakarta.persistence.Converter;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;

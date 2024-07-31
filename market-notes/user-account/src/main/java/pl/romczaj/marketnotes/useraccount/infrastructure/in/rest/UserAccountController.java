@@ -40,8 +40,8 @@ public class UserAccountController {
     }
 
     @GetMapping("/company-notes")
-    public UserCompanyNotesResponse getCompanyNotes(
-            @RequestParam("stockCompanyExternalId") StockCompanyExternalId stockCompanyExternalId) {
+    public UserCompanyNotesResponse getCompanyNotes(StockCompanyExternalId stockCompanyExternalId) {
         return userCompanyNotesReader.getCompanyNotes(stockCompanyExternalId);
     }
+
 }

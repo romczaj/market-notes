@@ -4,6 +4,7 @@ import {UserDashboardBaseComponent} from "./user-dashboard-base/user-dashboard-b
 import {AuthGuard} from "./auth.guard";
 import {CompanyUserDetailsComponent} from "./company-user-details/company-user-details.component";
 import {AdminDashboardComponent} from "./admin-dashboard/admin-dashboard.component";
+import {UserAccountComponent} from "./user-account/user-account.component";
 
 export const routes: Routes = [
   {
@@ -27,6 +28,10 @@ export const routes: Routes = [
     component: AdminDashboardComponent,
     canActivate: [AuthGuard],
     data: {roles: ['admin']}
+  },
+  {
+    path: 'user-account',
+    component: UserAccountComponent
   },
   {
     path: '',

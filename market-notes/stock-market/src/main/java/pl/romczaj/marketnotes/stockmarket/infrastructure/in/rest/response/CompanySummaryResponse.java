@@ -1,6 +1,5 @@
 package pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.response;
 
-import pl.romczaj.marketnotes.common.dto.Money;
 import pl.romczaj.marketnotes.common.dto.Money.Currency;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 

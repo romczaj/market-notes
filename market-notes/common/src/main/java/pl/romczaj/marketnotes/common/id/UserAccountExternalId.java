@@ -6,7 +6,7 @@ import java.util.UUID;
 
 public record UserAccountExternalId(
         @NonNull UUID accountId
-) implements StringOneLine {
+) implements StringFormatField {
     public static UserAccountExternalId fromString(String accountId) {
         UUID accountIdUUID = UUID.fromString(accountId);
         return new UserAccountExternalId(accountIdUUID);

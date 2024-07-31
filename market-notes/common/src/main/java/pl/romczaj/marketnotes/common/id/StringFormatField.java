@@ -1,5 +1,5 @@
 package pl.romczaj.marketnotes.common.id;
 
-public interface StringOneLine {
+public interface StringFormatField {
 
 }

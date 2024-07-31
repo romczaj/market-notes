@@ -9,13 +9,13 @@ import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
 import lombok.AllArgsConstructor;
 import org.springframework.core.convert.converter.Converter;
-import pl.romczaj.marketnotes.common.id.StringOneLine;
+import pl.romczaj.marketnotes.common.id.StringFormatField;
 
 import java.io.IOException;
 import java.util.function.Function;
 
 @AllArgsConstructor
-public class StringOneLineConfigure<T extends StringOneLine> {
+public class StringFormatFieldConfigure<T extends StringFormatField> {
 
     private Class<T> valueObject;
     private Function<String, T> createFunction;
@@ -29,7 +29,7 @@ public class StringOneLineConfigure<T extends StringOneLine> {
         return new JsonDeserializer<>() {
             @Override
             public T deserialize(JsonParser jsonParser, DeserializationContext deserializationContext) throws IOException, JacksonException {
-                return createFunction.apply(deserializationContext.toString());
+                return createFunction.apply(jsonParser.getText());
             }
         };
     }
@@ -44,12 +44,7 @@ public class StringOneLineConfigure<T extends StringOneLine> {
     }
 
     public Converter<String, T> toMvcConvert() {
-        return new Converter<String, T>() {
-            @Override
-            public T convert(String source) {
-                return createFunction.apply(source);
-            }
-        };
+        return source -> createFunction.apply(source);
     }
 
 }

@@ -12,7 +12,7 @@ import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
 public record StockCompanyExternalId(
          @NonNull String stockSymbol,
          @NonNull StockMarketSymbol stockMarketSymbol
-) implements StringOneLine {
+) implements StringFormatField {
 
     public static StockCompanyExternalId wse(String stockSymbol){
         return new StockCompanyExternalId(stockSymbol, WSE);

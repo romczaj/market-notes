@@ -6,20 +6,21 @@ import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import pl.romczaj.marketnotes.common.id.StringOneLine;
+import org.springframework.context.annotation.Primary;
+import pl.romczaj.marketnotes.common.id.StringFormatField;
 
 import static com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES;
 import static com.fasterxml.jackson.databind.SerializationFeature.WRITE_DATES_AS_TIMESTAMPS;
-import static pl.romczaj.marketnotes.main.configration.rest.StringOneLineConfigureList.OBJECT_REGISTERS;
+import static pl.romczaj.marketnotes.main.configration.rest.StringFormatFieldConfigureList.OBJECT_LIST;
 
 @Configuration
 public class ObjectMapperConfiguration {
 
     private static SimpleModule marketNotesModule() {
         SimpleModule marketNotesModule = new SimpleModule();
-        OBJECT_REGISTERS.forEach(o -> {
-            Class<StringOneLine> type = (Class<StringOneLine>) o.getType();
-            JsonSerializer<StringOneLine> jsonSerializer = (JsonSerializer<StringOneLine>) o.toJsonSerializer();
+        OBJECT_LIST.forEach(o -> {
+            Class<StringFormatField> type = (Class<StringFormatField>) o.getType();
+            JsonSerializer<StringFormatField> jsonSerializer = (JsonSerializer<StringFormatField>) o.toJsonSerializer();
             marketNotesModule.addDeserializer(type, o.toJsonDeserializer());
             marketNotesModule.addSerializer(type, jsonSerializer);
         });
@@ -27,6 +28,7 @@ public class ObjectMapperConfiguration {
     }
 
     @Bean
+    @Primary
     public ObjectMapper objectMapper() {
         ObjectMapper mapper = new ObjectMapper();
         mapper.configure(FAIL_ON_UNKNOWN_PROPERTIES, false);

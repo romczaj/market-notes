@@ -28,4 +28,10 @@ public class CompanyController {
         return companyReader.getCompaniesSummary();
     }
 
+    @GetMapping("/company-detail-summary")
+    public CompanyDetailSummaryResponse getCompanyDetailSummary(
+            @RequestParam("stockCompanyExternalId") StockCompanyExternalId stockCompanyExternalId) {
+        return companyReader.getCompanyDetailSummary(stockCompanyExternalId);
+    }
+
 }

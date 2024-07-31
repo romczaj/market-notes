@@ -1,8 +1,9 @@
-package pl.romczaj.marketnotes.common.id;
+package pl.romczaj.marketnotes.main.configration.jackson;
 
 import com.fasterxml.jackson.core.JsonGenerator;
 import com.fasterxml.jackson.databind.JsonSerializer;
 import com.fasterxml.jackson.databind.SerializerProvider;
+import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 
 import java.io.IOException;
 

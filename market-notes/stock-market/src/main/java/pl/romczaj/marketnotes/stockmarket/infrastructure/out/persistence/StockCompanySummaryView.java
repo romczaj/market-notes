@@ -2,7 +2,7 @@ package pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence;
 
 import jakarta.persistence.*;
 import lombok.Getter;
-import net.jcip.annotations.Immutable;
+import org.hibernate.annotations.Immutable;
 import org.hibernate.annotations.JdbcTypeCode;
 import pl.romczaj.marketnotes.common.dto.CalculationResult;
 import pl.romczaj.marketnotes.common.dto.StockMarketSymbol;

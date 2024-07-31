@@ -40,7 +40,7 @@ public class SecurityConfiguration {
             Map<String, Collection<String>> realmAccess = jwt.getClaim("realm_access");
             Collection<String> roles = realmAccess.get("roles");
             return ApplicationRole.fromKeycloakValues(roles).stream()
-                    .map(ApplicationRole::toSimpleGrantedAuthority)
+                    .map(role -> new SimpleGrantedAuthority("ROLE_" + role.name()))
                     .collect(Collectors.toList());
         };
 

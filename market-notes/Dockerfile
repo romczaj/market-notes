@@ -6,7 +6,7 @@ VOLUME /tmp
 
 EXPOSE 8080
 
-ARG JAR_FILE=/main/target/*exe.jar
+ARG JAR_FILE=/main/target/*.jar
 
 ADD ${JAR_FILE} app.jar
 

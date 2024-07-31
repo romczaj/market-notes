@@ -3,7 +3,6 @@ package pl.romczaj.marketnotes.common.dto;
 
 import lombok.Getter;
 import lombok.RequiredArgsConstructor;
-import org.springframework.security.core.authority.SimpleGrantedAuthority;
 
 import java.util.Collection;
 import java.util.List;
@@ -23,9 +22,4 @@ public enum ApplicationRole {
                 .filter(r -> roles.contains(r.keycloakValue))
                 .toList();
     }
-
-    public SimpleGrantedAuthority toSimpleGrantedAuthority() {
-        return new SimpleGrantedAuthority("ROLE_" + this);
-    }
-
 }

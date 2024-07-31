@@ -40,7 +40,7 @@ services:
       API_USERNAME: keycloak
       API_PASSWORD: password
     ports:
-      - "8090:8080"
-    command: [ "start-dev", "--import-realm"]
+      - "8090:8090"
+    command: [ "start-dev", "--import-realm", "--http-port=8090"]
     depends_on:
       - market-notes-keycloak-db

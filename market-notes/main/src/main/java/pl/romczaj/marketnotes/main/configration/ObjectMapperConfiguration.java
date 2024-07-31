@@ -5,7 +5,13 @@ import com.fasterxml.jackson.databind.module.SimpleModule;
 import com.fasterxml.jackson.datatype.jsr310.JavaTimeModule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import pl.romczaj.marketnotes.common.id.*;
+import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
+import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
+import pl.romczaj.marketnotes.main.configration.jackson.StockCompanyExternalIdJacksonDeserializer;
+import pl.romczaj.marketnotes.main.configration.jackson.StockCompanyExternalIdJacksonSerializer;
+import pl.romczaj.marketnotes.main.configration.jackson.UserAccountExternalIdJacksonDeserializer;
+import pl.romczaj.marketnotes.main.configration.jackson.UserAccountExternalIdJacksonSerializer;
+
 
 import static com.fasterxml.jackson.databind.DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES;
 import static com.fasterxml.jackson.databind.SerializationFeature.WRITE_DATES_AS_TIMESTAMPS;

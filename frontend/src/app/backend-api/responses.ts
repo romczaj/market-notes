@@ -7,6 +7,7 @@ export const emptyCompanySummaryResponse: CompanySummaryResponse[] = []
 export interface CompanySummaryResponse {
   id: number;
   stockCompanyExternalId: string;
+  country: Country,
   dataProviderSymbol: string;
   companyName: string;
   calculationDate: string;
@@ -21,6 +22,12 @@ export interface CompanySummaryResponse {
   yearIncrease: number | undefined;
   twoYearsIncrease: number | undefined;
 }
+
+export enum Country{
+  POLAND="POLAND",
+  USA="USA"
+}
+
 
 export interface CalculationResult {
   todayPrice: number;

@@ -43,6 +43,7 @@ public class DatabaseCompanyReader implements CompanyReader {
         return new CompanySummaryResponse(
                 view.getId(),
                 view.getExternalId(),
+                view.getExternalId().stockMarketSymbol().getCountry(),
                 view.getDataProviderSymbol(),
                 view.getCompanyName(),
                 view.getCalculationDate(),

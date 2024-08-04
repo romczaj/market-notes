@@ -1,5 +1,6 @@
 package pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.response;
 
+import pl.romczaj.marketnotes.common.dto.Country;
 import pl.romczaj.marketnotes.common.dto.Money.Currency;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 
@@ -8,6 +9,7 @@ import java.time.LocalDateTime;
 public record CompanySummaryResponse(
             Long id,
             StockCompanyExternalId stockCompanyExternalId,
+            Country country,
             String dataProviderSymbol,
             String companyName,
             LocalDateTime calculationDate,

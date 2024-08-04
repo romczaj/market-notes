@@ -10,7 +10,7 @@ import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCo
 @Component
 @RequiredArgsConstructor
 @Slf4j
-public class RefreshCompanyStockDataProcess implements RefreshCompaniesPort {
+public class RefreshCompanyStockDataTask implements RefreshCompaniesPort {
 
     private final StockCompanyRepository stockCompanyRepository;
     private final RefreshAnalyzedDataCompanySubtask refreshAnalyzedDataCompanySubTask;

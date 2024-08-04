@@ -8,7 +8,7 @@ import pl.romczaj.marketnotes.common.dto.StockMarketSymbol;
 
 import java.util.List;
 
-public record LoadCompanyRequest(
+public record LoadCompanyRestModel(
         @NotEmpty List<@Valid CompanyRequestModel> companies
 ) {
     public record CompanyRequestModel(

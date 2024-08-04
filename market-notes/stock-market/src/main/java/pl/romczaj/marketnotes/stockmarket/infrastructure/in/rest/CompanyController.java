@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCompanyRequest;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCompanyRestModel;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.response.CompaniesSummaryResponse;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.response.CompanyDetailSummaryResponse;
 
@@ -23,8 +23,13 @@ public class CompanyController {
 
 
     @PostMapping("/admin/load-companies")
-    public void loadCompanies(@RequestBody @Valid LoadCompanyRequest loadCompanyRequest) {
-        companyRestManagement.loadCompanies(loadCompanyRequest);
+    public void loadCompanies(@RequestBody @Valid LoadCompanyRestModel loadCompanyRestModel) {
+        companyRestManagement.loadCompanies(loadCompanyRestModel);
+    }
+
+    @GetMapping("/admin/export-companies")
+    public LoadCompanyRestModel exportCompanies() {
+        return companyRestManagement.exportCompanies();
     }
 
     @GetMapping("/companies-summary")

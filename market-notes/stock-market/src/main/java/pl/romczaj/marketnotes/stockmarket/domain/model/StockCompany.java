@@ -4,7 +4,7 @@ import lombok.With;
 import pl.romczaj.marketnotes.common.dto.Money;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.domain.DomainModel;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCompanyRequest.CompanyRequestModel;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCompanyRestModel.CompanyRequestModel;
 
 public record StockCompany(
         Long id,

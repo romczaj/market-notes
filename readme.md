@@ -45,8 +45,5 @@ This option requires adding entry  `127.0.0.1 market-notes-keycloak` in `/etc/ho
 ## Use application
 - Create docker containers and optionally run angular application and java app manually (e.g. using IDE)
 - Create users on keycloak dashboard as admin (http://localhost:8090, u:admin, p:admin) in market-notes realm, assign them roles `user` and `admin`
-- Load companies to operate on them, use [load-companies.http](build-resource/request/load-companies.http) and [companies](build-resource%2Fcompanies) directory
 - Open application in browser http://localhost:4200
-
-### TODO
-- Admin panel for load companies from GUI
+- Load companies to operate on them, use files in [companies](build-resource%2Fcompanies) directory

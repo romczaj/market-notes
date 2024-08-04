@@ -13,7 +13,7 @@ import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
 class RefreshAnalyzedDataCompanySubtaskTest extends BaseApplicationTest {
 
     @Test
-    void shouldRefreshCompanyStockData() {
+    void shouldRefreshCompanyStockDataAsync() {
         //given
         StockCompany stockCompany = new StockCompany(1L,
                 new StockCompanyExternalId("aaa", WSE), "Market 1", "a.1", ofPln(100.0));

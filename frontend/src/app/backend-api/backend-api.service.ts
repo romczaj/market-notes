@@ -54,4 +54,8 @@ export class BackendApiService {
     return this.http.post(`${this.apiUrl}/admin/user-report-scheduler/invoke`, {})
   }
 
+  getExportCompanies(): Observable<LoadCompaniesModel> {
+    return this.http.get<LoadCompaniesModel>(`${this.apiUrl}/admin/export-companies`)
+  }
+
 }

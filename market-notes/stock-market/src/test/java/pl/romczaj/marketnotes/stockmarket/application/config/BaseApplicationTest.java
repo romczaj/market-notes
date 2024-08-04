@@ -2,8 +2,8 @@ package pl.romczaj.marketnotes.stockmarket.application.config;
 
 import lombok.Builder;
 import pl.romczaj.marketnotes.common.clock.ApplicationClock;
-import pl.romczaj.marketnotes.stockmarket.application.CompanyRestManagementProcess;
-import pl.romczaj.marketnotes.stockmarket.application.RefreshCompanyStockDataProcess;
+import pl.romczaj.marketnotes.stockmarket.application.CompanyRestManagementTask;
+import pl.romczaj.marketnotes.stockmarket.application.RefreshCompanyStockDataTask;
 import pl.romczaj.marketnotes.stockmarket.application.subtask.LoadCampaignSubtask;
 import pl.romczaj.marketnotes.stockmarket.application.subtask.RefreshAnalyzedDataCompanySubtask;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort;
@@ -24,8 +24,8 @@ public class BaseApplicationTest {
     protected final StockCompanyRepository stockCompanyRepository;
     protected final RefreshAnalyzedDataCompanySubtask refreshAnalyzedDataCompanySubTask;
     protected final LoadCampaignSubtask loadCampaignSubTask;
-    protected final RefreshCompanyStockDataProcess refreshCompanyStockDataProcess;
-    protected final CompanyRestManagementProcess companyRestManagementProcess;
+    protected final RefreshCompanyStockDataTask refreshCompanyStockDataTask;
+    protected final CompanyRestManagementTask companyRestManagementTask;
 
     public BaseApplicationTest() {
         this(WithMockObjects.builder().build());
@@ -38,9 +38,9 @@ public class BaseApplicationTest {
 
         this.stockCompanyRepository = new MockStockCompanyRepository();
         this.refreshAnalyzedDataCompanySubTask = spy(new RefreshAnalyzedDataCompanySubtask(applicationClock, stockCompanyRepository, dataProviderPort));
-        this.loadCampaignSubTask = new LoadCampaignSubtask(stockCompanyRepository, refreshAnalyzedDataCompanySubTask);
-        this.refreshCompanyStockDataProcess = spy(new RefreshCompanyStockDataProcess(stockCompanyRepository, refreshAnalyzedDataCompanySubTask));
-        this.companyRestManagementProcess = new CompanyRestManagementProcess(stockCompanyRepository, applicationClock, dataProviderPort, loadCampaignSubTask);
+        this.loadCampaignSubTask = new LoadCampaignSubtask(stockCompanyRepository, refreshAnalyzedDataCompanySubTask, dataProviderPort);
+        this.refreshCompanyStockDataTask = spy(new RefreshCompanyStockDataTask(stockCompanyRepository, refreshAnalyzedDataCompanySubTask));
+        this.companyRestManagementTask = new CompanyRestManagementTask(stockCompanyRepository, applicationClock, dataProviderPort, loadCampaignSubTask);
     }
 
     @Builder

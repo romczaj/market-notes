@@ -52,7 +52,3 @@ refresh-companies:
 
 user-report:
   cron: '0 10 17 ? * MON-FRI'
-
-#logging:
-#  level:
-#    root: debug

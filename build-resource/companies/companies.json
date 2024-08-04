@@ -1,0 +1,3844 @@
+{
+  "companies": [
+    {
+      "companyName": "AbbVie",
+      "stockSymbol": "ABBV",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ABBV"
+    },
+    {
+      "companyName": "Agilent Technologies",
+      "stockSymbol": "A",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "A"
+    },
+    {
+      "companyName": "Airbnb",
+      "stockSymbol": "ABNB",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ABNB"
+    },
+    {
+      "companyName": "American Airlines Group",
+      "stockSymbol": "AAL",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "AAL"
+    },
+    {
+      "companyName": "Apple",
+      "stockSymbol": "AAPL",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "AAPL"
+    },
+    {
+      "companyName": "Abbott Laboratories",
+      "stockSymbol": "ABT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ABT"
+    },
+    {
+      "companyName": "Arch Capital Group",
+      "stockSymbol": "ACGL",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ACGL"
+    },
+    {
+      "companyName": "Accenture",
+      "stockSymbol": "ACN",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ACN"
+    },
+    {
+      "companyName": "Analog Devices",
+      "stockSymbol": "ADI",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ADI"
+    },
+    {
+      "companyName": "Adobe",
+      "stockSymbol": "ADBE",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ADBE"
+    },
+    {
+      "companyName": "Automatic Data Processing",
+      "stockSymbol": "ADP",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ADP"
+    },
+    {
+      "companyName": "Archer-Daniels-Midland",
+      "stockSymbol": "ADM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ADM"
+    },
+    {
+      "companyName": "Autodesk",
+      "stockSymbol": "ADSK",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ADSK"
+    },
+    {
+      "companyName": "Ameren",
+      "stockSymbol": "AEE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AEE"
+    },
+    {
+      "companyName": "AES",
+      "stockSymbol": "AES",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AES"
+    },
+    {
+      "companyName": "Aflac",
+      "stockSymbol": "AFL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AFL"
+    },
+    {
+      "companyName": "American Electric Power",
+      "stockSymbol": "AEP",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AEP"
+    },
+    {
+      "companyName": "American Int Group",
+      "stockSymbol": "AIG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AIG"
+    },
+    {
+      "companyName": "Assurant",
+      "stockSymbol": "AIZ",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AIZ"
+    },
+    {
+      "companyName": "Arthur J Gallagher",
+      "stockSymbol": "AJG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AJG"
+    },
+    {
+      "companyName": "Akamai Technologies",
+      "stockSymbol": "AKAM",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "AKAM"
+    },
+    {
+      "companyName": "Albemarle",
+      "stockSymbol": "ALB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ALB"
+    },
+    {
+      "companyName": "Align Technology",
+      "stockSymbol": "ALGN",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ALGN"
+    },
+    {
+      "companyName": "Allstate",
+      "stockSymbol": "ALL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ALL"
+    },
+    {
+      "companyName": "Allegion",
+      "stockSymbol": "ALLE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ALLE"
+    },
+    {
+      "companyName": "Applied Materials",
+      "stockSymbol": "AMAT",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "AMAT"
+    },
+    {
+      "companyName": "Amcor",
+      "stockSymbol": "AMCR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AMCR"
+    },
+    {
+      "companyName": "Advanced Micro Devices",
+      "stockSymbol": "AMD",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "AMD"
+    },
+    {
+      "companyName": "Ametek",
+      "stockSymbol": "AME",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AME"
+    },
+    {
+      "companyName": "Amgen",
+      "stockSymbol": "AMGN",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "AMGN"
+    },
+    {
+      "companyName": "Ameriprise Financial",
+      "stockSymbol": "AMP",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AMP"
+    },
+    {
+      "companyName": "American Tower",
+      "stockSymbol": "AMT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AMT"
+    },
+    {
+      "companyName": "Amazon.com",
+      "stockSymbol": "AMZN",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "AMZN"
+    },
+    {
+      "companyName": "Arista Networks",
+      "stockSymbol": "ANET",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ANET"
+    },
+    {
+      "companyName": "ANSYS",
+      "stockSymbol": "ANSS",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ANSS"
+    },
+    {
+      "companyName": "APA",
+      "stockSymbol": "APA",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "APA"
+    },
+    {
+      "companyName": "A O Smith",
+      "stockSymbol": "AOS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AOS"
+    },
+    {
+      "companyName": "Air Products and Chemicals",
+      "stockSymbol": "APD",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "APD"
+    },
+    {
+      "companyName": "Aon",
+      "stockSymbol": "AON",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AON"
+    },
+    {
+      "companyName": "Amphenol",
+      "stockSymbol": "APH",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "APH"
+    },
+    {
+      "companyName": "Aptiv",
+      "stockSymbol": "APTV",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "APTV"
+    },
+    {
+      "companyName": "Alexandria Real Estate Equities",
+      "stockSymbol": "ARE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ARE"
+    },
+    {
+      "companyName": "Atmos Energy",
+      "stockSymbol": "ATO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ATO"
+    },
+    {
+      "companyName": "AvalonBay Communities",
+      "stockSymbol": "AVB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AVB"
+    },
+    {
+      "companyName": "Broadcom",
+      "stockSymbol": "AVGO",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "AVGO"
+    },
+    {
+      "companyName": "American Water Works",
+      "stockSymbol": "AWK",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AWK"
+    },
+    {
+      "companyName": "Axon Enterprise",
+      "stockSymbol": "AXON",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "AXON"
+    },
+    {
+      "companyName": "Avery Dennison",
+      "stockSymbol": "AVY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AVY"
+    },
+    {
+      "companyName": "AutoZone",
+      "stockSymbol": "AZO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AZO"
+    },
+    {
+      "companyName": "American Express",
+      "stockSymbol": "AXP",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "AXP"
+    },
+    {
+      "companyName": "Boeing",
+      "stockSymbol": "BA",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BA"
+    },
+    {
+      "companyName": "Ball",
+      "stockSymbol": "BALL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BALL"
+    },
+    {
+      "companyName": "Bank of America",
+      "stockSymbol": "BAC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BAC"
+    },
+    {
+      "companyName": "Baxter Int",
+      "stockSymbol": "BAX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BAX"
+    },
+    {
+      "companyName": "Bath & Body Works",
+      "stockSymbol": "BBWI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BBWI"
+    },
+    {
+      "companyName": "Best Buy",
+      "stockSymbol": "BBY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BBY"
+    },
+    {
+      "companyName": "Franklin Resources",
+      "stockSymbol": "BEN",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BEN"
+    },
+    {
+      "companyName": "Becton Dickinson",
+      "stockSymbol": "BDX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BDX"
+    },
+    {
+      "companyName": "Biogen",
+      "stockSymbol": "BIIB",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "BIIB"
+    },
+    {
+      "companyName": "Bunge Global",
+      "stockSymbol": "BG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BG"
+    },
+    {
+      "companyName": "Bio-Rad Laboratories",
+      "stockSymbol": "BIO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BIO"
+    },
+    {
+      "companyName": "Booking Holdings",
+      "stockSymbol": "BKNG",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "BKNG"
+    },
+    {
+      "companyName": "Bank of New York Mellon",
+      "stockSymbol": "BK",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BK"
+    },
+    {
+      "companyName": "Baker Hughes",
+      "stockSymbol": "BKR",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "BKR"
+    },
+    {
+      "companyName": "Builders FirstSource",
+      "stockSymbol": "BLDR",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "BLDR"
+    },
+    {
+      "companyName": "BlackRock",
+      "stockSymbol": "BLK",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BLK"
+    },
+    {
+      "companyName": "Bristol-Myers Squibb",
+      "stockSymbol": "BMY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BMY"
+    },
+    {
+      "companyName": "Boston Scientific",
+      "stockSymbol": "BSX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BSX"
+    },
+    {
+      "companyName": "Broadridge Financial Solutions",
+      "stockSymbol": "BR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BR"
+    },
+    {
+      "companyName": "Brown & Brown",
+      "stockSymbol": "BRO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BRO"
+    },
+    {
+      "companyName": "Blackstone",
+      "stockSymbol": "BX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BX"
+    },
+    {
+      "companyName": "BorgWarner",
+      "stockSymbol": "BWA",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BWA"
+    },
+    {
+      "companyName": "Boston Properties",
+      "stockSymbol": "BXP",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "BXP"
+    },
+    {
+      "companyName": "Carrier Global",
+      "stockSymbol": "CARR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CARR"
+    },
+    {
+      "companyName": "Conagra Brands",
+      "stockSymbol": "CAG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CAG"
+    },
+    {
+      "companyName": "Cardinal Health",
+      "stockSymbol": "CAH",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CAH"
+    },
+    {
+      "companyName": "Citigroup",
+      "stockSymbol": "C",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "C"
+    },
+    {
+      "companyName": "Cboe Global Markets",
+      "stockSymbol": "CBOE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CBOE"
+    },
+    {
+      "companyName": "Caterpillar",
+      "stockSymbol": "CAT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CAT"
+    },
+    {
+      "companyName": "Chubb",
+      "stockSymbol": "CB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CB"
+    },
+    {
+      "companyName": "CBRE Group",
+      "stockSymbol": "CBRE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CBRE"
+    },
+    {
+      "companyName": "Crown Castle",
+      "stockSymbol": "CCI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CCI"
+    },
+    {
+      "companyName": "Cadence Design Systems",
+      "stockSymbol": "CDNS",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CDNS"
+    },
+    {
+      "companyName": "Carnival",
+      "stockSymbol": "CCL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CCL"
+    },
+    {
+      "companyName": "Celanese",
+      "stockSymbol": "CE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CE"
+    },
+    {
+      "companyName": "Constellation Energy",
+      "stockSymbol": "CEG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CEG"
+    },
+    {
+      "companyName": "CDW Corp/DE",
+      "stockSymbol": "CDW",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CDW"
+    },
+    {
+      "companyName": "CF Industries Holdings",
+      "stockSymbol": "CF",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CF"
+    },
+    {
+      "companyName": "Cigna Group",
+      "stockSymbol": "CI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CI"
+    },
+    {
+      "companyName": "CME Group",
+      "stockSymbol": "CME",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CME"
+    },
+    {
+      "companyName": "Citizens Financial Group",
+      "stockSymbol": "CFG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CFG"
+    },
+    {
+      "companyName": "Cincinnati Financial",
+      "stockSymbol": "CINF",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CINF"
+    },
+    {
+      "companyName": "Chipotle Mexican Grill",
+      "stockSymbol": "CMG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CMG"
+    },
+    {
+      "companyName": "11 bit studios",
+      "stockSymbol": "11B",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "11B.WA"
+    },
+    {
+      "companyName": "Asseco Poland",
+      "stockSymbol": "ACP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ACP.WA"
+    },
+    {
+      "companyName": "CCC",
+      "stockSymbol": "CCC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CCC.WA"
+    },
+    {
+      "companyName": "Enea",
+      "stockSymbol": "ENA",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ENA.WA"
+    },
+    {
+      "companyName": "Grupa Azoty",
+      "stockSymbol": "ATT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ATT.WA"
+    },
+    {
+      "companyName": "LW Bogdanka",
+      "stockSymbol": "LWB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "LWB.WA"
+    },
+    {
+      "companyName": "Rainbow Tours",
+      "stockSymbol": "RBW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "RBW.WA"
+    },
+    {
+      "companyName": "Ten Square Games",
+      "stockSymbol": "TEN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "TEN.WA"
+    },
+    {
+      "companyName": "Agora",
+      "stockSymbol": "AGO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "AGO.WA"
+    },
+    {
+      "companyName": "Asseco BS",
+      "stockSymbol": "ABS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ABS.WA"
+    },
+    {
+      "companyName": "BNP Paribas Bank Polska",
+      "stockSymbol": "BNP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BNP.WA"
+    },
+    {
+      "companyName": "Boryszew",
+      "stockSymbol": "BRS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BRS.WA"
+    },
+    {
+      "companyName": "Creepy Jar",
+      "stockSymbol": "CRJ",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CRJ.WA"
+    },
+    {
+      "companyName": "Echo Investment",
+      "stockSymbol": "ECH",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ECH.WA"
+    },
+    {
+      "companyName": "Ferro",
+      "stockSymbol": "FER",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "FER.WA"
+    },
+    {
+      "companyName": "ML System",
+      "stockSymbol": "MLS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MLS.WA"
+    },
+    {
+      "companyName": "Mirbud",
+      "stockSymbol": "MRB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MRB.WA"
+    },
+    {
+      "companyName": "OT Logistics",
+      "stockSymbol": "OTS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "OTS.WA"
+    },
+    {
+      "companyName": "Pekabex",
+      "stockSymbol": "PBX",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PBX.WA"
+    },
+    {
+      "companyName": "Selena FM",
+      "stockSymbol": "SEL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SEL.WA"
+    },
+    {
+      "companyName": "Sunex",
+      "stockSymbol": "SNX",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SNX.WA"
+    },
+    {
+      "companyName": "Unimot",
+      "stockSymbol": "UNI",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "UNI.WA"
+    },
+    {
+      "companyName": "Voxel",
+      "stockSymbol": "VOX",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "VOX.WA"
+    },
+    {
+      "companyName": "ZE PAK",
+      "stockSymbol": "ZEP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ZEP.WA"
+    },
+    {
+      "companyName": "Budimex",
+      "stockSymbol": "BDX",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BDX.WA"
+    },
+    {
+      "companyName": "KGHM Polska Miedź",
+      "stockSymbol": "KGH",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "KGH.WA"
+    },
+    {
+      "companyName": "PKO BP",
+      "stockSymbol": "PKO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PKO.WA"
+    },
+    {
+      "companyName": "Charter Communications",
+      "stockSymbol": "CHTR",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CHTR"
+    },
+    {
+      "companyName": "Colgate-Palmolive",
+      "stockSymbol": "CL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CL"
+    },
+    {
+      "companyName": "Cummins",
+      "stockSymbol": "CMI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CMI"
+    },
+    {
+      "companyName": "Arctic Paper",
+      "stockSymbol": "ATC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ATC.WA"
+    },
+    {
+      "companyName": "Auto Partner",
+      "stockSymbol": "ATP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ATP.WA"
+    },
+    {
+      "companyName": "CI Games SE",
+      "stockSymbol": "CIG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CIG.WA"
+    },
+    {
+      "companyName": "Dom Development",
+      "stockSymbol": "DOM",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "DOM.WA"
+    },
+    {
+      "companyName": "Grupa Pracuj",
+      "stockSymbol": "GPP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "GPP.WA"
+    },
+    {
+      "companyName": "Neuca",
+      "stockSymbol": "NEU",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "NEU.WA"
+    },
+    {
+      "companyName": "Synektik",
+      "stockSymbol": "SNT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SNT.WA"
+    },
+    {
+      "companyName": "XTB",
+      "stockSymbol": "XTB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "XTB.WA"
+    },
+    {
+      "companyName": "Amica",
+      "stockSymbol": "AMC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "AMC.WA"
+    },
+    {
+      "companyName": "Apator",
+      "stockSymbol": "APT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "APT.WA"
+    },
+    {
+      "companyName": "Atal",
+      "stockSymbol": "1AT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "1AT.WA"
+    },
+    {
+      "companyName": "Celon Pharma",
+      "stockSymbol": "CLN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CLN.WA"
+    },
+    {
+      "companyName": "Cyber_Folks",
+      "stockSymbol": "CBF",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CBF.WA"
+    },
+    {
+      "companyName": "Enter Air",
+      "stockSymbol": "ENT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ENT.WA"
+    },
+    {
+      "companyName": "Kogeneracja",
+      "stockSymbol": "KGN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "KGN.WA"
+    },
+    {
+      "companyName": "Mabion",
+      "stockSymbol": "MAB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MAB.WA"
+    },
+    {
+      "companyName": "Molecure",
+      "stockSymbol": "MOC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MOC.WA"
+    },
+    {
+      "companyName": "Onde",
+      "stockSymbol": "OND",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "OND.WA"
+    },
+    {
+      "companyName": "Photon Energy NV",
+      "stockSymbol": "PEN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PEN.WA"
+    },
+    {
+      "companyName": "Rafako",
+      "stockSymbol": "RAF",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "RAF.WA"
+    },
+    {
+      "companyName": "SpyroSoft",
+      "stockSymbol": "SPR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SPR.WA"
+    },
+    {
+      "companyName": "Synthaverse",
+      "stockSymbol": "SYN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SVE.WA"
+    },
+    {
+      "companyName": "Vercom",
+      "stockSymbol": "VRC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "VRC.WA"
+    },
+    {
+      "companyName": "Wawel",
+      "stockSymbol": "WWL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "WWL.WA"
+    },
+    {
+      "companyName": "Śnieżka",
+      "stockSymbol": "SKA",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SKA.WA"
+    },
+    {
+      "companyName": "CD Projekt",
+      "stockSymbol": "CDR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CDR.WA"
+    },
+    {
+      "companyName": "Grupa Kęty",
+      "stockSymbol": "KTY",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "KTY.WA"
+    },
+    {
+      "companyName": "Orange Polska",
+      "stockSymbol": "OPL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "OPL.WA"
+    },
+    {
+      "companyName": "mBank",
+      "stockSymbol": "MBK",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MBK.WA"
+    },
+    {
+      "companyName": "CH Robinson Worldwide",
+      "stockSymbol": "CHRW",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CHRW"
+    },
+    {
+      "companyName": "Clorox",
+      "stockSymbol": "CLX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CLX"
+    },
+    {
+      "companyName": "AmRest Holdings SE",
+      "stockSymbol": "EAT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "EAT.WA"
+    },
+    {
+      "companyName": "Bank Handlowy w Warszawie",
+      "stockSymbol": "BHW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BHW.WA"
+    },
+    {
+      "companyName": "Develia",
+      "stockSymbol": "DVL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "DVL.WA"
+    },
+    {
+      "companyName": "GreenX Metals Ltd.",
+      "stockSymbol": "GRX",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "GRX.WA"
+    },
+    {
+      "companyName": "Huuuge, Inc.",
+      "stockSymbol": "HUG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "HUG.WA"
+    },
+    {
+      "companyName": "Mo-Bruk",
+      "stockSymbol": "MBR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MBR.WA"
+    },
+    {
+      "companyName": "Ryvu Therapeutics",
+      "stockSymbol": "RVU",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "RVU.WA"
+    },
+    {
+      "companyName": "Text",
+      "stockSymbol": "TXT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "TXT.WA"
+    },
+    {
+      "companyName": "Ambra",
+      "stockSymbol": "AMB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "AMB.WA"
+    },
+    {
+      "companyName": "Astarta Holding PLC",
+      "stockSymbol": "AST",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "AST.WA"
+    },
+    {
+      "companyName": "Bioton",
+      "stockSymbol": "BIO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BIO.WA"
+    },
+    {
+      "companyName": "Comp",
+      "stockSymbol": "CMP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CMP.WA"
+    },
+    {
+      "companyName": "Decora",
+      "stockSymbol": "DCR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "DCR.WA"
+    },
+    {
+      "companyName": "Fabryki Mebli Forte",
+      "stockSymbol": "FTE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "FTE.WA"
+    },
+    {
+      "companyName": "MCI Capital ASI",
+      "stockSymbol": "MCI",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MCI.WA"
+    },
+    {
+      "companyName": "Mercator Medical",
+      "stockSymbol": "MRC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MRC.WA"
+    },
+    {
+      "companyName": "Murapol",
+      "stockSymbol": "MUR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MUR.WA"
+    },
+    {
+      "companyName": "PCC Rokita",
+      "stockSymbol": "PCR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PCR.WA"
+    },
+    {
+      "companyName": "Polenergia",
+      "stockSymbol": "PEP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PEP.WA"
+    },
+    {
+      "companyName": "Scope Fluidics",
+      "stockSymbol": "SCP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SCP.WA"
+    },
+    {
+      "companyName": "Stalexport Autostrady",
+      "stockSymbol": "STX",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "STX.WA"
+    },
+    {
+      "companyName": "Torpol",
+      "stockSymbol": "TOR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "TOR.WA"
+    },
+    {
+      "companyName": "Vigo Photonics",
+      "stockSymbol": "VGO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "VGO.WA"
+    },
+    {
+      "companyName": "Wittchen",
+      "stockSymbol": "WTC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "WTN.WA"
+    },
+    {
+      "companyName": "Allegro.eu S.A.",
+      "stockSymbol": "ALE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ALE.WA"
+    },
+    {
+      "companyName": "Dino Polska",
+      "stockSymbol": "DNP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "DNP.WA"
+    },
+    {
+      "companyName": "LPP",
+      "stockSymbol": "LPP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "LPP.WA"
+    },
+    {
+      "companyName": "PZU",
+      "stockSymbol": "PZU",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PZU.WA"
+    },
+    {
+      "companyName": "Church & Dwight",
+      "stockSymbol": "CHD",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CHD"
+    },
+    {
+      "companyName": "Comcast",
+      "stockSymbol": "CMCSA",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CMCSA"
+    },
+    {
+      "companyName": "Cooper Cos",
+      "stockSymbol": "COO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "COO"
+    },
+    {
+      "companyName": "Centene",
+      "stockSymbol": "CNC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CNC"
+    },
+    {
+      "companyName": "Capital One Financial",
+      "stockSymbol": "COF",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "COF"
+    },
+    {
+      "companyName": "CMS Energy",
+      "stockSymbol": "CMS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CMS"
+    },
+    {
+      "companyName": "ConocoPhillips",
+      "stockSymbol": "COP",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "COP"
+    },
+    {
+      "companyName": "CenterPoint Energy",
+      "stockSymbol": "CNP",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CNP"
+    },
+    {
+      "companyName": "Cencora",
+      "stockSymbol": "COR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "COR"
+    },
+    {
+      "companyName": "Costco Wholesale",
+      "stockSymbol": "COST",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "COST"
+    },
+    {
+      "companyName": "Corpay",
+      "stockSymbol": "CPAY",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CPAY"
+    },
+    {
+      "companyName": "Copart",
+      "stockSymbol": "CPRT",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CPRT"
+    },
+    {
+      "companyName": "Campbell Soup",
+      "stockSymbol": "CPB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CPB"
+    },
+    {
+      "companyName": "Salesforce",
+      "stockSymbol": "CRM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CRM"
+    },
+    {
+      "companyName": "Charles River Laboratories Int",
+      "stockSymbol": "CRL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CRL"
+    },
+    {
+      "companyName": "Camden Property Trust",
+      "stockSymbol": "CPT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CPT"
+    },
+    {
+      "companyName": "CrowdStrike Holdings",
+      "stockSymbol": "CRWD",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CRWD"
+    },
+    {
+      "companyName": "Cisco Systems",
+      "stockSymbol": "CSCO",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CSCO"
+    },
+    {
+      "companyName": "CoStar Group",
+      "stockSymbol": "CSGP",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CSGP"
+    },
+    {
+      "companyName": "Catalent",
+      "stockSymbol": "CTLT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CTLT"
+    },
+    {
+      "companyName": "CSX",
+      "stockSymbol": "CSX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CSX"
+    },
+    {
+      "companyName": "Cintas",
+      "stockSymbol": "CTAS",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CTAS"
+    },
+    {
+      "companyName": "Coterra Energy",
+      "stockSymbol": "CTRA",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CTRA"
+    },
+    {
+      "companyName": "Cognizant Technology Solutions",
+      "stockSymbol": "CTSH",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CTSH"
+    },
+    {
+      "companyName": "Caesars Entertainment",
+      "stockSymbol": "CZR",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "CZR"
+    },
+    {
+      "companyName": "CVS Health",
+      "stockSymbol": "CVS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CVS"
+    },
+    {
+      "companyName": "Corteva",
+      "stockSymbol": "CTVA",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CTVA"
+    },
+    {
+      "companyName": "Chevron",
+      "stockSymbol": "CVX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "CVX"
+    },
+    {
+      "companyName": "Dominion Energy",
+      "stockSymbol": "D",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "D"
+    },
+    {
+      "companyName": "Delta Air Lines",
+      "stockSymbol": "DAL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DAL"
+    },
+    {
+      "companyName": "Dayforce",
+      "stockSymbol": "DAY",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "DAY"
+    },
+    {
+      "companyName": "DuPont de Nemours",
+      "stockSymbol": "DD",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DD"
+    },
+    {
+      "companyName": "Deckers Outdoor",
+      "stockSymbol": "DECK",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DECK"
+    },
+    {
+      "companyName": "Deere",
+      "stockSymbol": "DE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DE"
+    },
+    {
+      "companyName": "Dollar General",
+      "stockSymbol": "DG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DG"
+    },
+    {
+      "companyName": "Discover Financial Services",
+      "stockSymbol": "DFS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DFS"
+    },
+    {
+      "companyName": "Quest Diagnostics",
+      "stockSymbol": "DGX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DGX"
+    },
+    {
+      "companyName": "DR Horton",
+      "stockSymbol": "DHI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DHI"
+    },
+    {
+      "companyName": "Danaher",
+      "stockSymbol": "DHR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DHR"
+    },
+    {
+      "companyName": "Walt Disney",
+      "stockSymbol": "DIS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DIS"
+    },
+    {
+      "companyName": "Digital Realty Trust",
+      "stockSymbol": "DLR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DLR"
+    },
+    {
+      "companyName": "Dollar Tree",
+      "stockSymbol": "DLTR",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "DLTR"
+    },
+    {
+      "companyName": "Dover",
+      "stockSymbol": "DOV",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DOV"
+    },
+    {
+      "companyName": "Dow",
+      "stockSymbol": "DOW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DOW"
+    },
+    {
+      "companyName": "Healthpeak Properties",
+      "stockSymbol": "DOC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DOC"
+    },
+    {
+      "companyName": "Domino's Pizza",
+      "stockSymbol": "DPZ",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DPZ"
+    },
+    {
+      "companyName": "Darden Restaurants",
+      "stockSymbol": "DRI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DRI"
+    },
+    {
+      "companyName": "DTE Energy",
+      "stockSymbol": "DTE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DTE"
+    },
+    {
+      "companyName": "DaVita",
+      "stockSymbol": "DVA",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DVA"
+    },
+    {
+      "companyName": "Duke Energy",
+      "stockSymbol": "DUK",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DUK"
+    },
+    {
+      "companyName": "Devon Energy",
+      "stockSymbol": "DVN",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "DVN"
+    },
+    {
+      "companyName": "Dexcom",
+      "stockSymbol": "DXCM",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "DXCM"
+    },
+    {
+      "companyName": "Electronic Arts",
+      "stockSymbol": "EA",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "EA"
+    },
+    {
+      "companyName": "eBay",
+      "stockSymbol": "EBAY",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "EBAY"
+    },
+    {
+      "companyName": "Ecolab",
+      "stockSymbol": "ECL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ECL"
+    },
+    {
+      "companyName": "Consolidated Edison",
+      "stockSymbol": "ED",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ED"
+    },
+    {
+      "companyName": "Equifax",
+      "stockSymbol": "EFX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EFX"
+    },
+    {
+      "companyName": "Everest Group",
+      "stockSymbol": "EG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EG"
+    },
+    {
+      "companyName": "Estee Lauder Cos",
+      "stockSymbol": "EL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EL"
+    },
+    {
+      "companyName": "Edison Int",
+      "stockSymbol": "EIX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EIX"
+    },
+    {
+      "companyName": "Elevance Health",
+      "stockSymbol": "ELV",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ELV"
+    },
+    {
+      "companyName": "Eastman Chemical",
+      "stockSymbol": "EMN",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EMN"
+    },
+    {
+      "companyName": "Enphase Energy",
+      "stockSymbol": "ENPH",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ENPH"
+    },
+    {
+      "companyName": "Emerson Electric",
+      "stockSymbol": "EMR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EMR"
+    },
+    {
+      "companyName": "EOG Resources",
+      "stockSymbol": "EOG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EOG"
+    },
+    {
+      "companyName": "EPAM Systems",
+      "stockSymbol": "EPAM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EPAM"
+    },
+    {
+      "companyName": "Equinix",
+      "stockSymbol": "EQIX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "EQIX"
+    },
+    {
+      "companyName": "Equity Residential",
+      "stockSymbol": "EQR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EQR"
+    },
+    {
+      "companyName": "Eversource Energy",
+      "stockSymbol": "ES",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ES"
+    },
+    {
+      "companyName": "EQT",
+      "stockSymbol": "EQT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EQT"
+    },
+    {
+      "companyName": "Essex Property Trust",
+      "stockSymbol": "ESS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ESS"
+    },
+    {
+      "companyName": "Eaton",
+      "stockSymbol": "ETN",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ETN"
+    },
+    {
+      "companyName": "Etsy",
+      "stockSymbol": "ETSY",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ETSY"
+    },
+    {
+      "companyName": "Edwards Lifesciences",
+      "stockSymbol": "EW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EW"
+    },
+    {
+      "companyName": "Evergy",
+      "stockSymbol": "EVRG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EVRG"
+    },
+    {
+      "companyName": "Entergy",
+      "stockSymbol": "ETR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ETR"
+    },
+    {
+      "companyName": "Exelon",
+      "stockSymbol": "EXC",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "EXC"
+    },
+    {
+      "companyName": "Expeditors Int of Washington",
+      "stockSymbol": "EXPD",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "EXPD"
+    },
+    {
+      "companyName": "Expedia Group",
+      "stockSymbol": "EXPE",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "EXPE"
+    },
+    {
+      "companyName": "Extra Space Storage",
+      "stockSymbol": "EXR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "EXR"
+    },
+    {
+      "companyName": "Diamondback Energy",
+      "stockSymbol": "FANG",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "FANG"
+    },
+    {
+      "companyName": "Ford Motor",
+      "stockSymbol": "F",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "F"
+    },
+    {
+      "companyName": "Fastenal",
+      "stockSymbol": "FAST",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "FAST"
+    },
+    {
+      "companyName": "Freeport-McMoRan",
+      "stockSymbol": "FCX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "FCX"
+    },
+    {
+      "companyName": "FedEx",
+      "stockSymbol": "FDX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "FDX"
+    },
+    {
+      "companyName": "FactSet Research Systems",
+      "stockSymbol": "FDS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "FDS"
+    },
+    {
+      "companyName": "FirstEnergy",
+      "stockSymbol": "FE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "FE"
+    },
+    {
+      "companyName": "F5",
+      "stockSymbol": "FFIV",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "FFIV"
+    },
+    {
+      "companyName": "Fidelity National Information Services",
+      "stockSymbol": "FIS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "FIS"
+    },
+    {
+      "companyName": "Federal Realty Investment Trust",
+      "stockSymbol": "FRT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "FRT"
+    },
+    {
+      "companyName": "Fiserv",
+      "stockSymbol": "FI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "FI"
+    },
+    {
+      "companyName": "Fox",
+      "stockSymbol": "FOX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "FOX"
+    },
+    {
+      "companyName": "Fortive",
+      "stockSymbol": "FTV",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "FTV"
+    },
+    {
+      "companyName": "GE Vernova",
+      "stockSymbol": "GEV",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "GEV"
+    },
+    {
+      "companyName": "General Motors",
+      "stockSymbol": "GM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GM"
+    },
+    {
+      "companyName": "Global Payments",
+      "stockSymbol": "GPN",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GPN"
+    },
+    {
+      "companyName": "Hasbro",
+      "stockSymbol": "HAS",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "HAS"
+    },
+    {
+      "companyName": "Hartford Financial Services Group",
+      "stockSymbol": "HIG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HIG"
+    },
+    {
+      "companyName": "Honeywell Int",
+      "stockSymbol": "HON",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "HON"
+    },
+    {
+      "companyName": "Hershey",
+      "stockSymbol": "HSY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HSY"
+    },
+    {
+      "companyName": "Intercontinental Exchange",
+      "stockSymbol": "ICE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ICE"
+    },
+    {
+      "companyName": "Int Flavors & Fragrances",
+      "stockSymbol": "IFF",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "IFF"
+    },
+    {
+      "companyName": "Int Paper",
+      "stockSymbol": "IP",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "IP"
+    },
+    {
+      "companyName": "Intuitive Surgical",
+      "stockSymbol": "ISRG",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ISRG"
+    },
+    {
+      "companyName": "JB Hunt Transport Services",
+      "stockSymbol": "JBHT",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "JBHT"
+    },
+    {
+      "companyName": "JPMorgan Chase",
+      "stockSymbol": "JPM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "JPM"
+    },
+    {
+      "companyName": "Kraft Heinz",
+      "stockSymbol": "KHC",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "KHC"
+    },
+    {
+      "companyName": "Kinder Morgan",
+      "stockSymbol": "KMI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "KMI"
+    },
+    {
+      "companyName": "Kenvue",
+      "stockSymbol": "KVUE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "KVUE"
+    },
+    {
+      "companyName": "Lennar",
+      "stockSymbol": "LEN",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LEN"
+    },
+    {
+      "companyName": "Eli Lilly",
+      "stockSymbol": "LLY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LLY"
+    },
+    {
+      "companyName": "Southwest Airlines",
+      "stockSymbol": "LUV",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LUV"
+    },
+    {
+      "companyName": "Mid-America Apartment Communities",
+      "stockSymbol": "MAA",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MAA"
+    },
+    {
+      "companyName": "McKesson",
+      "stockSymbol": "MCK",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MCK"
+    },
+    {
+      "companyName": "Mohawk Industries",
+      "stockSymbol": "MHK",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MHK"
+    },
+    {
+      "companyName": "Marsh & McLennan Companies",
+      "stockSymbol": "MMC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MMC"
+    },
+    {
+      "companyName": "Marathon Petroleum",
+      "stockSymbol": "MPC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MPC"
+    },
+    {
+      "companyName": "Marathon Oil",
+      "stockSymbol": "MRO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MRO"
+    },
+    {
+      "companyName": "M&T Bank",
+      "stockSymbol": "MTB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MTB"
+    },
+    {
+      "companyName": "NextEra Energy",
+      "stockSymbol": "NEE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "NEE"
+    },
+    {
+      "companyName": "NRG Energy",
+      "stockSymbol": "NRG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "NRG"
+    },
+    {
+      "companyName": "NVIDIA",
+      "stockSymbol": "NVDA",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "NVDA"
+    },
+    {
+      "companyName": "NXP Semiconductors",
+      "stockSymbol": "NXPI",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "NXPI"
+    },
+    {
+      "companyName": "ON Semiconductor",
+      "stockSymbol": "ON",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ON"
+    },
+    {
+      "companyName": "Palo Alto Networks",
+      "stockSymbol": "PANW",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "PANW"
+    },
+    {
+      "companyName": "PG&E",
+      "stockSymbol": "PCG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PCG"
+    },
+    {
+      "companyName": "Procter & Gamble",
+      "stockSymbol": "PG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PG"
+    },
+    {
+      "companyName": "Packaging Corporation of America",
+      "stockSymbol": "PKG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PKG"
+    },
+    {
+      "companyName": "Pinnacle West Capital",
+      "stockSymbol": "PNW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PNW"
+    },
+    {
+      "companyName": "Public Storage",
+      "stockSymbol": "PSA",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PSA"
+    },
+    {
+      "companyName": "Qualcomm",
+      "stockSymbol": "QCOM",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "QCOM"
+    },
+    {
+      "companyName": "Raymond James Financial",
+      "stockSymbol": "RJF",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "RJF"
+    },
+    {
+      "companyName": "Rollins",
+      "stockSymbol": "ROL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ROL"
+    },
+    {
+      "companyName": "Revvity",
+      "stockSymbol": "RVTY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "RVTY"
+    },
+    {
+      "companyName": "Sherwin-Williams",
+      "stockSymbol": "SHW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SHW"
+    },
+    {
+      "companyName": "Snap-on",
+      "stockSymbol": "SNA",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SNA"
+    },
+    {
+      "companyName": "Sempra",
+      "stockSymbol": "SRE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SRE"
+    },
+    {
+      "companyName": "Smurfit WestRock",
+      "stockSymbol": "SW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SW"
+    },
+    {
+      "companyName": "Skyworks Solutions",
+      "stockSymbol": "SWKS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SWKS"
+    },
+    {
+      "companyName": "Molson Coors Beverage",
+      "stockSymbol": "TAP",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TAP"
+    },
+    {
+      "companyName": "TE Connectivity",
+      "stockSymbol": "TEL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TEL"
+    },
+    {
+      "companyName": "Thermo Fisher Scientific",
+      "stockSymbol": "TMO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TMO"
+    },
+    {
+      "companyName": "T. Rowe Price Group",
+      "stockSymbol": "TROW",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "TROW"
+    },
+    {
+      "companyName": "Trane Technologies",
+      "stockSymbol": "TT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TT"
+    },
+    {
+      "companyName": "Uber Technologies",
+      "stockSymbol": "UBER",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "UBER"
+    },
+    {
+      "companyName": "UnitedHealth Group",
+      "stockSymbol": "UNH",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "UNH"
+    },
+    {
+      "companyName": "Veralto",
+      "stockSymbol": "VLTO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "VLTO"
+    },
+    {
+      "companyName": "VeriSign",
+      "stockSymbol": "VRSN",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "VRSN"
+    },
+    {
+      "companyName": "Verizon Communications",
+      "stockSymbol": "VZ",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "VZ"
+    },
+    {
+      "companyName": "Western Digital",
+      "stockSymbol": "WDC",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "WDC"
+    },
+    {
+      "companyName": "Williams Companies",
+      "stockSymbol": "WMB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "WMB"
+    },
+    {
+      "companyName": "Weyerhaeuser",
+      "stockSymbol": "WY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "WY"
+    },
+    {
+      "companyName": "Yum! Brands",
+      "stockSymbol": "YUM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "YUM"
+    },
+    {
+      "companyName": "ASBISc Enterprises plc.",
+      "stockSymbol": "ASB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ASB.WA"
+    },
+    {
+      "companyName": "Bank Millennium",
+      "stockSymbol": "MIL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MIL.WA"
+    },
+    {
+      "companyName": "Comarch",
+      "stockSymbol": "CMR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CMR.WA"
+    },
+    {
+      "companyName": "GPW",
+      "stockSymbol": "GPW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "GPW.WA"
+    },
+    {
+      "companyName": "ING Bank Śląski",
+      "stockSymbol": "ING",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ING.WA"
+    },
+    {
+      "companyName": "PKP Cargo",
+      "stockSymbol": "PKP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PKP.WA"
+    },
+    {
+      "companyName": "Selvita",
+      "stockSymbol": "SLV",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SLV.WA"
+    },
+    {
+      "companyName": "WP Holding",
+      "stockSymbol": "WPL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "WPL.WA"
+    },
+    {
+      "companyName": "Ailleron",
+      "stockSymbol": "ALL",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ALL.WA"
+    },
+    {
+      "companyName": "Archicom",
+      "stockSymbol": "ARH",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ARH.WA"
+    },
+    {
+      "companyName": "Bioceltix",
+      "stockSymbol": "BCX",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BCX.WA"
+    },
+    {
+      "companyName": "Bumech",
+      "stockSymbol": "BMC",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BMC.WA"
+    },
+    {
+      "companyName": "DataWalk",
+      "stockSymbol": "DAT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "DAT.WA"
+    },
+    {
+      "companyName": "Erbud",
+      "stockSymbol": "ERB",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ERB.WA"
+    },
+    {
+      "companyName": "Lubawa",
+      "stockSymbol": "LBW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "LBW.WA"
+    },
+    {
+      "companyName": "Medicalgorithmics",
+      "stockSymbol": "MDG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MDG.WA"
+    },
+    {
+      "companyName": "Newag",
+      "stockSymbol": "NWG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "NWG.WA"
+    },
+    {
+      "companyName": "PCF Group",
+      "stockSymbol": "PCF",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PCF.WA"
+    },
+    {
+      "companyName": "Police",
+      "stockSymbol": "PCE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PCE.WA"
+    },
+    {
+      "companyName": "Shoper",
+      "stockSymbol": "SHP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SHO.WA"
+    },
+    {
+      "companyName": "Sygnity",
+      "stockSymbol": "SGN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SGN.WA"
+    },
+    {
+      "companyName": "Toya",
+      "stockSymbol": "TOA",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "TOA.WA"
+    },
+    {
+      "companyName": "Votum",
+      "stockSymbol": "VOT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "VOT.WA"
+    },
+    {
+      "companyName": "XTPL",
+      "stockSymbol": "XTP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "XTP.WA"
+    },
+    {
+      "companyName": "Bank Pekao",
+      "stockSymbol": "PEO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PEO.WA"
+    },
+    {
+      "companyName": "JSW",
+      "stockSymbol": "JSW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "JSW.WA"
+    },
+    {
+      "companyName": "Orlen",
+      "stockSymbol": "PKN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PKN.WA"
+    },
+    {
+      "companyName": "Pepco Group NV",
+      "stockSymbol": "PCO",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PCO.WA"
+    },
+    {
+      "companyName": "Fair Isaac",
+      "stockSymbol": "FICO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "FICO"
+    },
+    {
+      "companyName": "Fox",
+      "stockSymbol": "FOXA",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "FOXA"
+    },
+    {
+      "companyName": "General Dynamics",
+      "stockSymbol": "GD",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GD"
+    },
+    {
+      "companyName": "Gilead Sciences",
+      "stockSymbol": "GILD",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "GILD"
+    },
+    {
+      "companyName": "Generac Holdings",
+      "stockSymbol": "GNRC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GNRC"
+    },
+    {
+      "companyName": "Garmin",
+      "stockSymbol": "GRMN",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GRMN"
+    },
+    {
+      "companyName": "HCA Healthcare",
+      "stockSymbol": "HCA",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HCA"
+    },
+    {
+      "companyName": "Hilton Worldwide Holdings",
+      "stockSymbol": "HLT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HLT"
+    },
+    {
+      "companyName": "Hewlett Packard Enterprise",
+      "stockSymbol": "HPE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HPE"
+    },
+    {
+      "companyName": "Host Hotels & Resorts",
+      "stockSymbol": "HST",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HST"
+    },
+    {
+      "companyName": "Int Business Machines",
+      "stockSymbol": "IBM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "IBM"
+    },
+    {
+      "companyName": "Intel",
+      "stockSymbol": "INTC",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "INTC"
+    },
+    {
+      "companyName": "IQVIA Holdings",
+      "stockSymbol": "IQV",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "IQV"
+    },
+    {
+      "companyName": "Illinois Tool Works",
+      "stockSymbol": "ITW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ITW"
+    },
+    {
+      "companyName": "Johnson Controls Int",
+      "stockSymbol": "JCI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "JCI"
+    },
+    {
+      "companyName": "Keurig Dr Pepper",
+      "stockSymbol": "KDP",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "KDP"
+    },
+    {
+      "companyName": "Kimco Realty",
+      "stockSymbol": "KIM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "KIM"
+    },
+    {
+      "companyName": "CarMax",
+      "stockSymbol": "KMX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "KMX"
+    },
+    {
+      "companyName": "Leidos Holdings",
+      "stockSymbol": "LDOS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LDOS"
+    },
+    {
+      "companyName": "LKQ",
+      "stockSymbol": "LKQ",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "LKQ"
+    },
+    {
+      "companyName": "Lowe's Companies",
+      "stockSymbol": "LOW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LOW"
+    },
+    {
+      "companyName": "LyondellBasell Industries",
+      "stockSymbol": "LYB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LYB"
+    },
+    {
+      "companyName": "Marriott Int Inc/MD",
+      "stockSymbol": "MAR",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "MAR"
+    },
+    {
+      "companyName": "Moody's",
+      "stockSymbol": "MCO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MCO"
+    },
+    {
+      "companyName": "Meta Platforms",
+      "stockSymbol": "META",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "META"
+    },
+    {
+      "companyName": "Martin Marietta Materials",
+      "stockSymbol": "MLM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MLM"
+    },
+    {
+      "companyName": "Molina Healthcare",
+      "stockSymbol": "MOH",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MOH"
+    },
+    {
+      "companyName": "Merck",
+      "stockSymbol": "MRK",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MRK"
+    },
+    {
+      "companyName": "Motorola Solutions",
+      "stockSymbol": "MSI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MSI"
+    },
+    {
+      "companyName": "Nordson",
+      "stockSymbol": "NDSN",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "NDSN"
+    },
+    {
+      "companyName": "Nike",
+      "stockSymbol": "NKE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "NKE"
+    },
+    {
+      "companyName": "Northern Trust",
+      "stockSymbol": "NTRS",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "NTRS"
+    },
+    {
+      "companyName": "News",
+      "stockSymbol": "NWSA",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "NWSA"
+    },
+    {
+      "companyName": "Omnicom Group",
+      "stockSymbol": "OMC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "OMC"
+    },
+    {
+      "companyName": "Occidental Petroleum",
+      "stockSymbol": "OXY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "OXY"
+    },
+    {
+      "companyName": "PACCAR",
+      "stockSymbol": "PCAR",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "PCAR"
+    },
+    {
+      "companyName": "Principal Financial Group",
+      "stockSymbol": "PFG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PFG"
+    },
+    {
+      "companyName": "Philip Morris International",
+      "stockSymbol": "PM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PM"
+    },
+    {
+      "companyName": "Pool",
+      "stockSymbol": "POOL",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "POOL"
+    },
+    {
+      "companyName": "Phillips 66",
+      "stockSymbol": "PSX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PSX"
+    },
+    {
+      "companyName": "Qorvo",
+      "stockSymbol": "QRVO",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "QRVO"
+    },
+    {
+      "companyName": "Regions Financial",
+      "stockSymbol": "RF",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "RF"
+    },
+    {
+      "companyName": "Roper Technologies",
+      "stockSymbol": "ROP",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ROP"
+    },
+    {
+      "companyName": "Charles Schwab",
+      "stockSymbol": "SCHW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SCHW"
+    },
+    {
+      "companyName": "Synopsys",
+      "stockSymbol": "SNPS",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "SNPS"
+    },
+    {
+      "companyName": "S&P Global",
+      "stockSymbol": "SPGI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SPGI"
+    },
+    {
+      "companyName": "Seagate Technology Holdings",
+      "stockSymbol": "STX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "STX"
+    },
+    {
+      "companyName": "Stryker",
+      "stockSymbol": "SY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SY"
+    },
+    {
+      "companyName": "Teledyne Technologies",
+      "stockSymbol": "TDY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TDY"
+    },
+    {
+      "companyName": "Teradyne",
+      "stockSymbol": "TER",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "TER"
+    },
+    {
+      "companyName": "TJX Companies",
+      "stockSymbol": "TJX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TJX"
+    },
+    {
+      "companyName": "Trimble",
+      "stockSymbol": "TRMB",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "TRMB"
+    },
+    {
+      "companyName": "Tesla",
+      "stockSymbol": "TSLA",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "TSLA"
+    },
+    {
+      "companyName": "Texas Instruments",
+      "stockSymbol": "TXN",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "TXN"
+    },
+    {
+      "companyName": "Ulta Beauty",
+      "stockSymbol": "ULTA",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ULTA"
+    },
+    {
+      "companyName": "United Rentals",
+      "stockSymbol": "URI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "URI"
+    },
+    {
+      "companyName": "Valero Energy",
+      "stockSymbol": "VLO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "VLO"
+    },
+    {
+      "companyName": "Vistra",
+      "stockSymbol": "VST",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "VST"
+    },
+    {
+      "companyName": "Waters",
+      "stockSymbol": "WAT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "WAT"
+    },
+    {
+      "companyName": "WEC Energy Group",
+      "stockSymbol": "WEC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "WEC"
+    },
+    {
+      "companyName": "Walmart",
+      "stockSymbol": "WMT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "WMT"
+    },
+    {
+      "companyName": "Wynn Resorts",
+      "stockSymbol": "WYNN",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "WYNN"
+    },
+    {
+      "companyName": "Zimmer Biomet Holdings",
+      "stockSymbol": "ZBH",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ZBH"
+    },
+    {
+      "companyName": "AB",
+      "stockSymbol": "ABE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ABE.WA"
+    },
+    {
+      "companyName": "Benefit Systems",
+      "stockSymbol": "BFT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BFT.WA"
+    },
+    {
+      "companyName": "Cognor Holding",
+      "stockSymbol": "COG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "COG.WA"
+    },
+    {
+      "companyName": "Eurocash",
+      "stockSymbol": "EUR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "EUR.WA"
+    },
+    {
+      "companyName": "Grenevia",
+      "stockSymbol": "GEA",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "GEA.WA"
+    },
+    {
+      "companyName": "Inter Cars",
+      "stockSymbol": "CAR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CAR.WA"
+    },
+    {
+      "companyName": "Polimex Mostostal",
+      "stockSymbol": "PXM",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PXM.WA"
+    },
+    {
+      "companyName": "Tauron PE",
+      "stockSymbol": "TPE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "TPE.WA"
+    },
+    {
+      "companyName": "Action",
+      "stockSymbol": "ACT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ACT.WA"
+    },
+    {
+      "companyName": "Asseco SEE",
+      "stockSymbol": "ASE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ASE.WA"
+    },
+    {
+      "companyName": "BOŚ",
+      "stockSymbol": "BOS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "BOS.WA"
+    },
+    {
+      "companyName": "Captor Therapeutics",
+      "stockSymbol": "CAP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CAP.WA"
+    },
+    {
+      "companyName": "Creotech Instruments",
+      "stockSymbol": "CRI",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CRI.WA"
+    },
+    {
+      "companyName": "Elektrotim",
+      "stockSymbol": "ELT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ELT.WA"
+    },
+    {
+      "companyName": "Instal Kraków",
+      "stockSymbol": "INK",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "INK.WA"
+    },
+    {
+      "companyName": "Mangata Holding",
+      "stockSymbol": "MGT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MGT.WA"
+    },
+    {
+      "companyName": "Mostostal Zabrze",
+      "stockSymbol": "MSZ",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "MSZ.WA"
+    },
+    {
+      "companyName": "Oponeo.pl",
+      "stockSymbol": "OPN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "OPN.WA"
+    },
+    {
+      "companyName": "PlayWay",
+      "stockSymbol": "PLW",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PLW.WA"
+    },
+    {
+      "companyName": "Sanok Rubber Company",
+      "stockSymbol": "SNK",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SNK.WA"
+    },
+    {
+      "companyName": "Stalprodukt",
+      "stockSymbol": "STP",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "STP.WA"
+    },
+    {
+      "companyName": "VRG",
+      "stockSymbol": "VRG",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "VRG.WA"
+    },
+    {
+      "companyName": "Wielton",
+      "stockSymbol": "WLT",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "WLT.WA"
+    },
+    {
+      "companyName": "Alior Bank",
+      "stockSymbol": "ALR",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "ALR.WA"
+    },
+    {
+      "companyName": "Cyfrowy Polsat",
+      "stockSymbol": "CPS",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "CPS.WA"
+    },
+    {
+      "companyName": "Kruk",
+      "stockSymbol": "KRU",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "KRU.WA"
+    },
+    {
+      "companyName": "PGE",
+      "stockSymbol": "PGE",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "PGE.WA"
+    },
+    {
+      "companyName": "FMC",
+      "stockSymbol": "FMC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "FMC"
+    },
+    {
+      "companyName": "First Solar",
+      "stockSymbol": "FSLR",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "FSLR"
+    },
+    {
+      "companyName": "General Electric",
+      "stockSymbol": "GE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GE"
+    },
+    {
+      "companyName": "Globe Life",
+      "stockSymbol": "GL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GL"
+    },
+    {
+      "companyName": "Alphabet",
+      "stockSymbol": "GOOG",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "GOOG"
+    },
+    {
+      "companyName": "Goldman Sachs Group",
+      "stockSymbol": "GS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GS"
+    },
+    {
+      "companyName": "Huntington Bancshares Inc/OH",
+      "stockSymbol": "HBAN",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "HBAN"
+    },
+    {
+      "companyName": "Huntington Ingalls Industries",
+      "stockSymbol": "HII",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HII"
+    },
+    {
+      "companyName": "Hormel Foods",
+      "stockSymbol": "HRL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HRL"
+    },
+    {
+      "companyName": "Humana",
+      "stockSymbol": "HUM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HUM"
+    },
+    {
+      "companyName": "Incyte",
+      "stockSymbol": "INCY",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "INCY"
+    },
+    {
+      "companyName": "Interpublic Group of Cos",
+      "stockSymbol": "IPG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "IPG"
+    },
+    {
+      "companyName": "Gartner",
+      "stockSymbol": "IT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "IT"
+    },
+    {
+      "companyName": "Jabil",
+      "stockSymbol": "JBL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "JBL"
+    },
+    {
+      "companyName": "Juniper Networks",
+      "stockSymbol": "JNPR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "JNPR"
+    },
+    {
+      "companyName": "KeyCorp",
+      "stockSymbol": "KEY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "KEY"
+    },
+    {
+      "companyName": "KKR",
+      "stockSymbol": "KKR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "KKR"
+    },
+    {
+      "companyName": "Kroger",
+      "stockSymbol": "KR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "KR"
+    },
+    {
+      "companyName": "Labcorp Holdings",
+      "stockSymbol": "LH",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LH"
+    },
+    {
+      "companyName": "Lockheed Martin",
+      "stockSymbol": "LMT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LMT"
+    },
+    {
+      "companyName": "Lululemon Athletica",
+      "stockSymbol": "LULU",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "LULU"
+    },
+    {
+      "companyName": "Live Nation Entertainment",
+      "stockSymbol": "LYV",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LYV"
+    },
+    {
+      "companyName": "McDonald's",
+      "stockSymbol": "MCD",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MCD"
+    },
+    {
+      "companyName": "Mondelez International",
+      "stockSymbol": "MDLZ",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "MDLZ"
+    },
+    {
+      "companyName": "McCormick & Company",
+      "stockSymbol": "MKC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MKC"
+    },
+    {
+      "companyName": "Altria Group",
+      "stockSymbol": "MO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MO"
+    },
+    {
+      "companyName": "Moderna",
+      "stockSymbol": "MRNA",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "MRNA"
+    },
+    {
+      "companyName": "Microsoft",
+      "stockSymbol": "MSFT",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "MSFT"
+    },
+    {
+      "companyName": "Micron Technology",
+      "stockSymbol": "MU",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "MU"
+    },
+    {
+      "companyName": "Newmont",
+      "stockSymbol": "NEM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "NEM"
+    },
+    {
+      "companyName": "Northrop Grumman",
+      "stockSymbol": "NOC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "NOC"
+    },
+    {
+      "companyName": "Nucor",
+      "stockSymbol": "NUE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "NUE"
+    },
+    {
+      "companyName": "ONEOK",
+      "stockSymbol": "OKE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "OKE"
+    },
+    {
+      "companyName": "Otis Worldwide",
+      "stockSymbol": "OTIS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "OTIS"
+    },
+    {
+      "companyName": "Paychex",
+      "stockSymbol": "PAYX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "PAYX"
+    },
+    {
+      "companyName": "Pfizer",
+      "stockSymbol": "PFE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PFE"
+    },
+    {
+      "companyName": "PulteGroup",
+      "stockSymbol": "PHM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PHM"
+    },
+    {
+      "companyName": "Pentair",
+      "stockSymbol": "PNR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PNR"
+    },
+    {
+      "companyName": "PPL",
+      "stockSymbol": "PPL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PPL"
+    },
+    {
+      "companyName": "PayPal Holdings",
+      "stockSymbol": "PYPL",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "PYPL"
+    },
+    {
+      "companyName": "Regeneron Pharmaceuticals",
+      "stockSymbol": "REGN",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "REGN"
+    },
+    {
+      "companyName": "ResMed",
+      "stockSymbol": "RMD",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "RMD"
+    },
+    {
+      "companyName": "Republic Services",
+      "stockSymbol": "RSG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "RSG"
+    },
+    {
+      "companyName": "Starbucks",
+      "stockSymbol": "SBUX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "SBUX"
+    },
+    {
+      "companyName": "Super Micro Computer",
+      "stockSymbol": "SMCI",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "SMCI"
+    },
+    {
+      "companyName": "Simon Property Group",
+      "stockSymbol": "SPG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SPG"
+    },
+    {
+      "companyName": "State Street",
+      "stockSymbol": "STT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "STT"
+    },
+    {
+      "companyName": "Sysco",
+      "stockSymbol": "SYY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SYY"
+    },
+    {
+      "companyName": "Bio-Techne",
+      "stockSymbol": "TECH",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "TECH"
+    },
+    {
+      "companyName": "Target",
+      "stockSymbol": "TGT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TGT"
+    },
+    {
+      "companyName": "Targa Resources",
+      "stockSymbol": "TRGP",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TRGP"
+    },
+    {
+      "companyName": "Tyson Foods",
+      "stockSymbol": "TSN",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TSN"
+    },
+    {
+      "companyName": "Tyler Technologies",
+      "stockSymbol": "TYL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TYL"
+    },
+    {
+      "companyName": "UDR",
+      "stockSymbol": "UDR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "UDR"
+    },
+    {
+      "companyName": "United Parcel Service",
+      "stockSymbol": "UPS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "UPS"
+    },
+    {
+      "companyName": "Visa",
+      "stockSymbol": "V",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "V"
+    },
+    {
+      "companyName": "Vertex Pharmaceuticals",
+      "stockSymbol": "VRTX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "VRTX"
+    },
+    {
+      "companyName": "Walgreens Boots Alliance",
+      "stockSymbol": "WBA",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "WBA"
+    },
+    {
+      "companyName": "Wells Fargo",
+      "stockSymbol": "WFC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "WFC"
+    },
+    {
+      "companyName": "W R Berkley",
+      "stockSymbol": "WRB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "WRB"
+    },
+    {
+      "companyName": "Xcel Energy",
+      "stockSymbol": "XEL",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "XEL"
+    },
+    {
+      "companyName": "Zebra Technologies",
+      "stockSymbol": "ZBRA",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ZBRA"
+    },
+    {
+      "companyName": "Santander Bank Polska",
+      "stockSymbol": "SAN",
+      "stockMarketSymbol": "WSE",
+      "dataProviderSymbol": "SAN.WA"
+    },
+    {
+      "companyName": "Fifth Third Bancorp",
+      "stockSymbol": "FITB",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "FITB"
+    },
+    {
+      "companyName": "Fortinet",
+      "stockSymbol": "FTNT",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "FTNT"
+    },
+    {
+      "companyName": "GE Healthcare Technologies",
+      "stockSymbol": "GEHC",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "GEHC"
+    },
+    {
+      "companyName": "General Mills",
+      "stockSymbol": "GIS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GIS"
+    },
+    {
+      "companyName": "Alphabet",
+      "stockSymbol": "GOOGL",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "GOOGL"
+    },
+    {
+      "companyName": "WW Grainger",
+      "stockSymbol": "GWW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GWW"
+    },
+    {
+      "companyName": "Home Depot",
+      "stockSymbol": "HD",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HD"
+    },
+    {
+      "companyName": "Hologic",
+      "stockSymbol": "HOLX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "HOLX"
+    },
+    {
+      "companyName": "Henry Schein",
+      "stockSymbol": "HSIC",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "HSIC"
+    },
+    {
+      "companyName": "Howmet Aerospace",
+      "stockSymbol": "HWM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HWM"
+    },
+    {
+      "companyName": "Idex",
+      "stockSymbol": "IEX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "IEX"
+    },
+    {
+      "companyName": "Invitation Homes",
+      "stockSymbol": "INVH",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "INVH"
+    },
+    {
+      "companyName": "Ingersoll Rand",
+      "stockSymbol": "IR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "IR"
+    },
+    {
+      "companyName": "Invesco",
+      "stockSymbol": "IVZ",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "IVZ"
+    },
+    {
+      "companyName": "Johnson & Johnson",
+      "stockSymbol": "JNJ",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "JNJ"
+    },
+    {
+      "companyName": "Keysight Technologies",
+      "stockSymbol": "KEYS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "KEYS"
+    },
+    {
+      "companyName": "Kimberly-Clark",
+      "stockSymbol": "KMB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "KMB"
+    },
+    {
+      "companyName": "Loews",
+      "stockSymbol": "L",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "L"
+    },
+    {
+      "companyName": "L3Harris Technologies",
+      "stockSymbol": "LHX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LHX"
+    },
+    {
+      "companyName": "Alliant Energy",
+      "stockSymbol": "LNT",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "LNT"
+    },
+    {
+      "companyName": "Las Vegas Sands",
+      "stockSymbol": "LVS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LVS"
+    },
+    {
+      "companyName": "Mastercard",
+      "stockSymbol": "MA",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MA"
+    },
+    {
+      "companyName": "Microchip Technology",
+      "stockSymbol": "MCHP",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "MCHP"
+    },
+    {
+      "companyName": "MetLife",
+      "stockSymbol": "MET",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MET"
+    },
+    {
+      "companyName": "MGM Resorts International",
+      "stockSymbol": "MGM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MGM"
+    },
+    {
+      "companyName": "Monster Beverage",
+      "stockSymbol": "MNST",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "MNST"
+    },
+    {
+      "companyName": "Mosaic",
+      "stockSymbol": "MOS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MOS"
+    },
+    {
+      "companyName": "Morgan Stanley",
+      "stockSymbol": "MS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MS"
+    },
+    {
+      "companyName": "Match Group",
+      "stockSymbol": "MTCH",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "MTCH"
+    },
+    {
+      "companyName": "Nasdaq",
+      "stockSymbol": "NDAQ",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "NDAQ"
+    },
+    {
+      "companyName": "NiSource",
+      "stockSymbol": "NI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "NI"
+    },
+    {
+      "companyName": "Norfolk Southern",
+      "stockSymbol": "NSC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "NSC"
+    },
+    {
+      "companyName": "News",
+      "stockSymbol": "NWS",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "NWS"
+    },
+    {
+      "companyName": "Old Dominion Freight Line",
+      "stockSymbol": "ODFL",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ODFL"
+    },
+    {
+      "companyName": "O'Reilly Automotive",
+      "stockSymbol": "ORLY",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ORLY"
+    },
+    {
+      "companyName": "Paycom Software",
+      "stockSymbol": "PAYC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PAYC"
+    },
+    {
+      "companyName": "PepsiCo",
+      "stockSymbol": "PEP",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "PEP"
+    },
+    {
+      "companyName": "Parker-Hannifin",
+      "stockSymbol": "PH",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PH"
+    },
+    {
+      "companyName": "PNC Financial Services Group",
+      "stockSymbol": "PNC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PNC"
+    },
+    {
+      "companyName": "Prudential Financial",
+      "stockSymbol": "PRU",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PRU"
+    },
+    {
+      "companyName": "Quanta Services",
+      "stockSymbol": "PWR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PWR"
+    },
+    {
+      "companyName": "Regency Centers",
+      "stockSymbol": "REG",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "REG"
+    },
+    {
+      "companyName": "Rockwell Automation",
+      "stockSymbol": "ROK",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ROK"
+    },
+    {
+      "companyName": "RTX",
+      "stockSymbol": "RTX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "RTX"
+    },
+    {
+      "companyName": "J M Smucker",
+      "stockSymbol": "SJM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SJM"
+    },
+    {
+      "companyName": "Solventum",
+      "stockSymbol": "SOLV",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SOLV"
+    },
+    {
+      "companyName": "Steris",
+      "stockSymbol": "STE",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "STE"
+    },
+    {
+      "companyName": "Constellation Brands",
+      "stockSymbol": "STZ",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "STZ"
+    },
+    {
+      "companyName": "Synchrony Financial",
+      "stockSymbol": "SYF",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SYF"
+    },
+    {
+      "companyName": "TransDigm Group",
+      "stockSymbol": "TDG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TDG"
+    },
+    {
+      "companyName": "Teleflex",
+      "stockSymbol": "TFX",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TFX"
+    },
+    {
+      "companyName": "Tapestry",
+      "stockSymbol": "TPR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TPR"
+    },
+    {
+      "companyName": "Tractor Supply",
+      "stockSymbol": "TSCO",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "TSCO"
+    },
+    {
+      "companyName": "Textron",
+      "stockSymbol": "TXT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TXT"
+    },
+    {
+      "companyName": "Union Pacific",
+      "stockSymbol": "UNP",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "UNP"
+    },
+    {
+      "companyName": "VICI Properties",
+      "stockSymbol": "VICI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "VICI"
+    },
+    {
+      "companyName": "Verisk AnalyticsS",
+      "stockSymbol": "VRSK",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "VRSK"
+    },
+    {
+      "companyName": "Viatris",
+      "stockSymbol": "VTRS",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "VTRS"
+    },
+    {
+      "companyName": "Warner Bros Discovery",
+      "stockSymbol": "WBD",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "WBD"
+    },
+    {
+      "companyName": "Waste Management",
+      "stockSymbol": "WM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "WM"
+    },
+    {
+      "companyName": "West Pharmaceutical Services",
+      "stockSymbol": "WST",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "WST"
+    },
+    {
+      "companyName": "Exxon Mobil",
+      "stockSymbol": "XOM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "XOM"
+    },
+    {
+      "companyName": "GoDaddy",
+      "stockSymbol": "GDDY",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GDDY"
+    },
+    {
+      "companyName": "Gen Digital",
+      "stockSymbol": "GEN",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "GEN"
+    },
+    {
+      "companyName": "Corning",
+      "stockSymbol": "GLW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GLW"
+    },
+    {
+      "companyName": "Genuine Parts",
+      "stockSymbol": "GPC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "GPC"
+    },
+    {
+      "companyName": "Halliburton",
+      "stockSymbol": "HAL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HAL"
+    },
+    {
+      "companyName": "Hess",
+      "stockSymbol": "HES",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HES"
+    },
+    {
+      "companyName": "HP",
+      "stockSymbol": "HPQ",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HPQ"
+    },
+    {
+      "companyName": "Hubbell",
+      "stockSymbol": "HUBB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "HUBB"
+    },
+    {
+      "companyName": "Idexx Laboratories",
+      "stockSymbol": "IDXX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "IDXX"
+    },
+    {
+      "companyName": "Intuit",
+      "stockSymbol": "INTU",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "INTU"
+    },
+    {
+      "companyName": "Iron Mountain",
+      "stockSymbol": "IRM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "IRM"
+    },
+    {
+      "companyName": "Jacobs Solutions",
+      "stockSymbol": "J",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "J"
+    },
+    {
+      "companyName": "Jack Henry & Associates",
+      "stockSymbol": "JKHY",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "JKHY"
+    },
+    {
+      "companyName": "Kellanova",
+      "stockSymbol": "K",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "K"
+    },
+    {
+      "companyName": "KLA",
+      "stockSymbol": "KLAC",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "KLAC"
+    },
+    {
+      "companyName": "Coca-Cola",
+      "stockSymbol": "KO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "KO"
+    },
+    {
+      "companyName": "Linde",
+      "stockSymbol": "LIN",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LIN"
+    },
+    {
+      "companyName": "Lam Research",
+      "stockSymbol": "LRCX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "LRCX"
+    },
+    {
+      "companyName": "Lamb Weston Holdings",
+      "stockSymbol": "LW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "LW"
+    },
+    {
+      "companyName": "Masco",
+      "stockSymbol": "MAS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MAS"
+    },
+    {
+      "companyName": "Medtronic",
+      "stockSymbol": "MDT",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MDT"
+    },
+    {
+      "companyName": "MarketAxess Holdings",
+      "stockSymbol": "MKTX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "MKTX"
+    },
+    {
+      "companyName": "3M",
+      "stockSymbol": "MMM",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MMM"
+    },
+    {
+      "companyName": "Monolithic Power Systems",
+      "stockSymbol": "MPWR",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "MPWR"
+    },
+    {
+      "companyName": "MSCI",
+      "stockSymbol": "MSCI",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MSCI"
+    },
+    {
+      "companyName": "Mettler-Toledo International",
+      "stockSymbol": "MTD",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "MTD"
+    },
+    {
+      "companyName": "Norwegian Cruise Line Holdings",
+      "stockSymbol": "NCLH",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "NCLH"
+    },
+    {
+      "companyName": "Netflix",
+      "stockSymbol": "NFLX",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "NFLX"
+    },
+    {
+      "companyName": "ServiceNow",
+      "stockSymbol": "NOW",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "NOW"
+    },
+    {
+      "companyName": "NetApp",
+      "stockSymbol": "NTAP",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "NTAP"
+    },
+    {
+      "companyName": "NVR",
+      "stockSymbol": "NVR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "NVR"
+    },
+    {
+      "companyName": "Realty Income",
+      "stockSymbol": "O",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "O"
+    },
+    {
+      "companyName": "Oracle",
+      "stockSymbol": "ORCL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "ORCL"
+    },
+    {
+      "companyName": "Paramount Global",
+      "stockSymbol": "PARA",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "PARA"
+    },
+    {
+      "companyName": "Public Service Enterprise Group",
+      "stockSymbol": "PEG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PEG"
+    },
+    {
+      "companyName": "Progressive",
+      "stockSymbol": "PGR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PGR"
+    },
+    {
+      "companyName": "Prologis",
+      "stockSymbol": "PLD",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PLD"
+    },
+    {
+      "companyName": "Insulet",
+      "stockSymbol": "PODD",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "PODD"
+    },
+    {
+      "companyName": "PPG Industries",
+      "stockSymbol": "PPG",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "PPG"
+    },
+    {
+      "companyName": "PTC",
+      "stockSymbol": "PTC",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "PTC"
+    },
+    {
+      "companyName": "Royal Caribbean Cruises",
+      "stockSymbol": "RCL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "RCL"
+    },
+    {
+      "companyName": "Ralph Lauren",
+      "stockSymbol": "RL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "RL"
+    },
+    {
+      "companyName": "Ross Stores",
+      "stockSymbol": "ROST",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "ROST"
+    },
+    {
+      "companyName": "SBA Communications",
+      "stockSymbol": "SBAC",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "SBAC"
+    },
+    {
+      "companyName": "Schlumberger",
+      "stockSymbol": "SLB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SLB"
+    },
+    {
+      "companyName": "Southern",
+      "stockSymbol": "SO",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SO"
+    },
+    {
+      "companyName": "Steel Dynamics",
+      "stockSymbol": "STLD",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "STLD"
+    },
+    {
+      "companyName": "Stanley Black & Decker",
+      "stockSymbol": "SWK",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "SWK"
+    },
+    {
+      "companyName": "AT&T",
+      "stockSymbol": "T",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "T"
+    },
+    {
+      "companyName": "Truist Financial",
+      "stockSymbol": "TFC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TFC"
+    },
+    {
+      "companyName": "T-Mobile US",
+      "stockSymbol": "TMUS",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "TMUS"
+    },
+    {
+      "companyName": "Travelers Companies",
+      "stockSymbol": "TRV",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "TRV"
+    },
+    {
+      "companyName": "Take-Two Interactive Software",
+      "stockSymbol": "TTWO",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "TTWO"
+    },
+    {
+      "companyName": "United Airlines Holdings",
+      "stockSymbol": "UAL",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "UAL"
+    },
+    {
+      "companyName": "Universal Health Services",
+      "stockSymbol": "UHS",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "UHS"
+    },
+    {
+      "companyName": "US Bancorp",
+      "stockSymbol": "USB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "USB"
+    },
+    {
+      "companyName": "Vulcan Materials",
+      "stockSymbol": "VMC",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "VMC"
+    },
+    {
+      "companyName": "Ventas",
+      "stockSymbol": "VTR",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "VTR"
+    },
+    {
+      "companyName": "Westinghouse Air Brake Technologies",
+      "stockSymbol": "WAB",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "WAB"
+    },
+    {
+      "companyName": "Welltower",
+      "stockSymbol": "WELL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "WELL"
+    },
+    {
+      "companyName": "Willis Towers Watson",
+      "stockSymbol": "WTW",
+      "stockMarketSymbol": "NASDAQ",
+      "dataProviderSymbol": "WTW"
+    },
+    {
+      "companyName": "Xylem Inc",
+      "stockSymbol": "XYL",
+      "stockMarketSymbol": "NYSE",
+      "dataProviderSymbol": "XYL"
+    }
+  ]
+}

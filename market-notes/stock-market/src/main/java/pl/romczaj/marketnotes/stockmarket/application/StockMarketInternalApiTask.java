@@ -14,7 +14,7 @@ import java.util.List;
 
 @Component
 @RequiredArgsConstructor
-public class StockInternalApiProcess implements StockMarketInternalApi {
+public class StockMarketInternalApiTask implements StockMarketInternalApi {
 
     private final StockCompanyRepository stockCompanyRepository;
 

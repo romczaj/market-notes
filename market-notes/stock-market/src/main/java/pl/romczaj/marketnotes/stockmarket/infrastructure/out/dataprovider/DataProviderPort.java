@@ -13,6 +13,8 @@ public interface DataProviderPort {
 
     GetCompanyDataResult getCompanyData(GetCompanyDataCommand getCompanyDataCommand);
 
+    CompanyExistsResult companyExistsResult(CompanyExistsCommand companyExistsCommand);
+
     record GetCompanyDataCommand(
             StockCompanyExternalId stockCompanyExternalId,
             String dataProviderSymbol,
@@ -20,7 +22,20 @@ public interface DataProviderPort {
             DataProviderInterval dataProviderInterval) {
     }
 
-    record GetCompanyDataResult(String dataProviderSymbol, List<HistoricData> historicData) {
+    record CompanyExistsCommand(
+            StockCompanyExternalId stockCompanyExternalId,
+            String dataProviderSymbol
+    ) {
+    }
+
+    record CompanyExistsResult(
+            boolean companyExists
+    ) {
+    }
+
+    record GetCompanyDataResult(
+            String dataProviderSymbol,
+            List<HistoricData> historicData) {
         public HistoricData getLatest() {
             return historicData.stream()
                     .max(Comparator.comparing(HistoricData::date))

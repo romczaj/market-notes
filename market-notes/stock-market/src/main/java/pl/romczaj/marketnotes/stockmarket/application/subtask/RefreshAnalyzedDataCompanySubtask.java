@@ -30,7 +30,7 @@ public class RefreshAnalyzedDataCompanySubtask {
     private final DataProviderPort dataProviderPort;
 
     @Async
-    public void refreshCompanyStockData(StockCompany company) {
+    public void refreshCompanyStockData(StockCompany company){
         GetCompanyDataCommand getCompanyDataCommand = new GetCompanyDataCommand(
                 company.stockCompanyExternalId(),
                 company.dataProviderSymbol(),
@@ -55,4 +55,5 @@ public class RefreshAnalyzedDataCompanySubtask {
         stockCompanyRepository.saveStockCompany(updatedStockCompany);
         stockCompanyRepository.saveSummary(calculationResultHistory);
     }
+
 }

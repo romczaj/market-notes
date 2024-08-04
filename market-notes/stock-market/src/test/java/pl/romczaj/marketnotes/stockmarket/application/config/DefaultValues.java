@@ -20,5 +20,10 @@ public class DefaultValues {
                     )
             );
         }
+
+        @Override
+        public CompanyExistsResult companyExistsResult(CompanyExistsCommand companyExistsCommand) {
+            return new CompanyExistsResult(true);
+        }
     };
 }

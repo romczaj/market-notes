@@ -15,7 +15,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static pl.romczaj.marketnotes.common.dto.Money.ofPln;
 import static pl.romczaj.marketnotes.common.dto.StockMarketSymbol.WSE;
 
-class CompanyRestManagementProcessTest extends BaseApplicationTest {
+class CompanyRestManagementTaskTest extends BaseApplicationTest {
 
 
     @Test
@@ -26,7 +26,7 @@ class CompanyRestManagementProcessTest extends BaseApplicationTest {
         stockCompanyRepository.saveStockCompany(stockCompany);
 
         //when
-        companyRestManagementProcess.addNote(
+        companyRestManagementTask.addNote(
                 new AddCompanyNoteRequest(stockCompany.stockCompanyExternalId(), "Note content")
         );
 

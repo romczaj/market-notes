@@ -53,4 +53,19 @@ export class AdminDashboardComponent {
       next: () => this.toastrService.success('User report scheduler started'),
     })
   }
+
+  exportCompanies() {
+    this.backendApiService.getExportCompanies().subscribe({
+      next: (data) => {
+        const blob = new Blob([JSON.stringify(data)], { type: 'application/json' });
+        const url = window.URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url;
+        a.download = 'companies.json';
+        a.click();
+        window.URL.revokeObjectURL(url);
+      },
+      error: () => this.toastrService.error('Error exporting companies')
+    });
+  }
 }

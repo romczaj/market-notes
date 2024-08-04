@@ -6,12 +6,13 @@ import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
-import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCompanyRequest.CompanyRequestModel;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.request.LoadCompanyRestModel.CompanyRequestModel;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort.CompanyExistsCommand;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort.CompanyExistsResult;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyRepository;
 
 import static java.util.Objects.nonNull;
-import static pl.romczaj.marketnotes.stockmarket.infrastructure.out.dataprovider.DataProviderPort.DataProviderInterval.DAILY;
 
 @RequiredArgsConstructor
 @Component
@@ -20,6 +21,7 @@ public class LoadCampaignSubtask {
 
     private final StockCompanyRepository stockCompanyRepository;
     private final RefreshAnalyzedDataCompanySubtask refreshAnalyzedDataCompanySubtask;
+    private final DataProviderPort dataProviderPort;
 
     @Async
     public void loadOne(CompanyRequestModel companyRequestModel) {
@@ -29,13 +31,23 @@ public class LoadCampaignSubtask {
                 .map(c -> c.updateFrom(companyRequestModel))
                 .orElseGet(() -> StockCompany.createFrom(companyRequestModel));
 
-
         if (nonNull(stockCompany.id())) {
             log.info("Company {} is refreshed", stockCompany.companyName());
         }
 
-        StockCompany savedStockCompany = stockCompanyRepository.saveStockCompany(stockCompany);
+        CompanyExistsResult companyExistsResult = dataProviderPort.companyExistsResult(
+                new CompanyExistsCommand(
+                    new StockCompanyExternalId(
+                        companyRequestModel.stockSymbol(), companyRequestModel.stockMarketSymbol()),
+                companyRequestModel.dataProviderSymbol())
+        );
 
-        refreshAnalyzedDataCompanySubtask.refreshCompanyStockData(savedStockCompany);
+        if (companyExistsResult.companyExists()) {
+            StockCompany savedStockCompany = stockCompanyRepository.saveStockCompany(stockCompany);
+            log.info("Company {} has been loaded", savedStockCompany.companyName());
+            refreshAnalyzedDataCompanySubtask.refreshCompanyStockData(savedStockCompany);
+        } else {
+            log.warn("Cannot saved company {} because it does not exist in data provider", stockCompany.companyName());
+        }
     }
 }

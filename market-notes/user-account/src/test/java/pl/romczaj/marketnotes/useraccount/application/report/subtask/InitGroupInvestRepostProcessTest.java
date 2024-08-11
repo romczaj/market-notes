@@ -1,4 +1,4 @@
-package pl.romczaj.marketnotes.useraccount.application;
+package pl.romczaj.marketnotes.useraccount.application.report.subtask;
 
 import org.junit.jupiter.api.Test;
 import pl.romczaj.marketnotes.useraccount.application.config.BaseApplicationTest;
@@ -24,10 +24,10 @@ class InitGroupInvestRepostProcessTest extends BaseApplicationTest {
         userAccountRepository.saveUserAccount(userAccount);
 
         //when
-        initGroupInvestReportProcess.prepareAndSend();
+        initDailyUserReportProcess.prepareAndSend();
 
         //then
-        verify(prepareInvestReportDataSubtask, times(1)).prepare(eq(userAccount));
+        verify(companyUserNotificationFactory, times(1)).prepare(eq(userAccount));
         verify(sendInvestReportSubtask, times(1)).sendReport(eq(userAccount), any());
     }
 

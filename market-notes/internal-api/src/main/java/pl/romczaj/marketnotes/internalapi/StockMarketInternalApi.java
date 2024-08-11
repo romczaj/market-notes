@@ -8,19 +8,16 @@ import java.util.List;
 
 public interface StockMarketInternalApi {
 
-    List<StockCompanyExternalId> findAll();
+    List<StockCompanyResponse> findAll();
     StockCompanyResponse getCompanyBySymbol(StockCompanyExternalId companyExternalId);
 
     record StockCompanyResponse(
             String companyName,
             StockCompanyExternalId stockCompanyExternalId,
             Money actualPrice,
-            CalculationResult companyCounts
+            CalculationResult calculationResult
     ) {
     }
 
-
-    default void validateStockCompanyExists(StockCompanyExternalId companyExternalId) {
-        getCompanyBySymbol(companyExternalId);
-    }
+    void validateStockCompanyExists(StockCompanyExternalId companyExternalId);
 }

@@ -1,6 +1,7 @@
 package pl.romczaj.marketnotes.useraccount.domain.command;
 
-import pl.romczaj.marketnotes.common.dto.CompanyUserNotification;
+
+import pl.romczaj.marketnotes.useraccount.common.notification.CompanyUserNotification;
 
 import java.time.LocalDateTime;
 import java.util.List;

@@ -2,13 +2,13 @@ package pl.romczaj.marketnotes.useraccount.infrastructure.out.email;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.stereotype.Component;
-import pl.romczaj.marketnotes.common.dto.CompanyUserNotification;
+import pl.romczaj.marketnotes.common.clock.ApplicationClock;
+import pl.romczaj.marketnotes.useraccount.common.notification.CompanyUserNotification;
 
 import java.util.List;
 
@@ -16,10 +16,11 @@ import java.util.List;
 @Slf4j
 public class PhysicalEmailSender implements EmailSender{
 
-    private static final String DEFAULT_EMAIL_SUBJECT = "Daily invest report";
+    private static final String DEFAULT_EMAIL_SUBJECT_TEMPLATE = "Daily invest report %s";
     private final String username;
 
     private final ObjectMapper objectMapper;
+    private final ApplicationClock applicationClock;
 
     private final JavaMailSender mailSender;
     @Override
@@ -28,7 +29,7 @@ public class PhysicalEmailSender implements EmailSender{
         SimpleMailMessage message = new SimpleMailMessage();
         message.setFrom(username);
         message.setTo(sendEmailReportCommand.emailAddress());
-        message.setSubject(DEFAULT_EMAIL_SUBJECT);
+        message.setSubject(String.format( DEFAULT_EMAIL_SUBJECT_TEMPLATE, applicationClock.localDate()));
         message.setText(buildMessage(sendEmailReportCommand.companyUserNotifications()));
 
         try {
@@ -52,10 +53,12 @@ public class PhysicalEmailSender implements EmailSender{
     }
 
     public PhysicalEmailSender(@Value("${spring.mail.username}") String username,
-                               ObjectMapper objectMapper, JavaMailSender mailSender) {
+                               ObjectMapper objectMapper, JavaMailSender mailSender,
+                               ApplicationClock applicationClock) {
         this.username = username;
         this.objectMapper = objectMapper;
         this.mailSender = mailSender;
+        this.applicationClock = applicationClock;
     }
 
 }

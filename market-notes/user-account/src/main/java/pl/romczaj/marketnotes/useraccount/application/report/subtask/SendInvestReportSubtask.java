@@ -1,10 +1,10 @@
-package pl.romczaj.marketnotes.useraccount.application.task;
+package pl.romczaj.marketnotes.useraccount.application.report.subtask;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import pl.romczaj.marketnotes.common.clock.ApplicationClock;
-import pl.romczaj.marketnotes.common.dto.CompanyUserNotification;
+import pl.romczaj.marketnotes.useraccount.common.notification.CompanyUserNotification;
 import pl.romczaj.marketnotes.useraccount.domain.command.CreateInvestReportCommand;
 import pl.romczaj.marketnotes.useraccount.domain.model.InvestReport;
 import pl.romczaj.marketnotes.useraccount.domain.model.UserAccount;

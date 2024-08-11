@@ -1,6 +1,5 @@
 package pl.romczaj.marketnotes.common.dto;
 
-import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 
 import java.time.DayOfWeek;

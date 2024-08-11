@@ -32,11 +32,10 @@ public class DefaultValues {
     };
 
     public static final StockMarketInternalApi DEFAULT_STOCK_MARKET_INTERNAL_API = new StockMarketInternalApi() {
+
         @Override
-        public List<StockCompanyExternalId> findAll() {
-            return List.of(
-                    new StockCompanyExternalId("ELK", WSE)
-            );
+        public List<StockCompanyResponse> findAll() {
+            return List.of();
         }
 
         @Override
@@ -46,6 +45,11 @@ public class DefaultValues {
                     companyExternalId,
                     Money.ofPln(100.0),
                     CalculationResult.empty());
+        }
+
+        @Override
+        public void validateStockCompanyExists(StockCompanyExternalId companyExternalId) {
+
         }
     };
 

@@ -6,7 +6,7 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.hibernate.annotations.JdbcTypeCode;
-import pl.romczaj.marketnotes.common.dto.CompanyUserNotification;
+import pl.romczaj.marketnotes.useraccount.common.notification.CompanyUserNotification;
 import pl.romczaj.marketnotes.useraccount.domain.model.InvestReport;
 
 import java.time.LocalDateTime;

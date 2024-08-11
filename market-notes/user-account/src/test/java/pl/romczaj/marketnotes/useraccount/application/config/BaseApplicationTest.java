@@ -4,10 +4,10 @@ import lombok.Builder;
 import pl.romczaj.marketnotes.common.clock.ApplicationClock;
 import pl.romczaj.marketnotes.internalapi.AuthenticationRetriever;
 import pl.romczaj.marketnotes.internalapi.StockMarketInternalApi;
-import pl.romczaj.marketnotes.useraccount.application.InitGroupInvestReportProcess;
+import pl.romczaj.marketnotes.useraccount.application.report.InitDailyUserReportProcess;
 import pl.romczaj.marketnotes.useraccount.application.UserAccountRestManagementProcess;
-import pl.romczaj.marketnotes.useraccount.application.task.PrepareInvestReportDataSubtask;
-import pl.romczaj.marketnotes.useraccount.application.task.SendInvestReportSubtask;
+import pl.romczaj.marketnotes.useraccount.application.report.subtask.CompanyUserNotificationFactory;
+import pl.romczaj.marketnotes.useraccount.application.report.subtask.SendInvestReportSubtask;
 import pl.romczaj.marketnotes.useraccount.infrastructure.in.rest.UserAccountRestManagement;
 import pl.romczaj.marketnotes.useraccount.infrastructure.out.email.EmailSender;
 import pl.romczaj.marketnotes.useraccount.infrastructure.out.persistence.MockUserAccountRepository;
@@ -27,11 +27,11 @@ public class BaseApplicationTest {
 
     protected final UserAccountRepository userAccountRepository;
 
-    protected final PrepareInvestReportDataSubtask prepareInvestReportDataSubtask;
+    protected final CompanyUserNotificationFactory companyUserNotificationFactory;
     protected final SendInvestReportSubtask sendInvestReportSubtask;
 
     protected final UserAccountRestManagement userAccountRestManagement;
-    protected final InitGroupInvestReportProcess initGroupInvestReportProcess;
+    protected final InitDailyUserReportProcess initDailyUserReportProcess;
 
     public BaseApplicationTest() {
         this(WithMockObjects.builder().build());
@@ -48,11 +48,11 @@ public class BaseApplicationTest {
         this.userAccountRepository = spy(new MockUserAccountRepository());
 
         //task
-        this.prepareInvestReportDataSubtask = spy(new PrepareInvestReportDataSubtask(userAccountRepository, stockMarketInternalApi));
+        this.companyUserNotificationFactory = spy(new CompanyUserNotificationFactory(userAccountRepository, stockMarketInternalApi));
         this.sendInvestReportSubtask = spy(new SendInvestReportSubtask(emailSender, userAccountRepository, applicationClock));
 
         this.userAccountRestManagement = spy(new UserAccountRestManagementProcess(stockMarketInternalApi, userAccountRepository, applicationClock, authenticationRetriever));
-        this.initGroupInvestReportProcess = spy(new InitGroupInvestReportProcess(prepareInvestReportDataSubtask, userAccountRepository, sendInvestReportSubtask));
+        this.initDailyUserReportProcess = spy(new InitDailyUserReportProcess(companyUserNotificationFactory, userAccountRepository, sendInvestReportSubtask));
     }
 
     @Builder

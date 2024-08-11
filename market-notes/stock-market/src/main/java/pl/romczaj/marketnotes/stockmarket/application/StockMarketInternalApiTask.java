@@ -3,12 +3,12 @@ package pl.romczaj.marketnotes.stockmarket.application;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
-import pl.romczaj.marketnotes.common.dto.CalculationResult;
+import pl.romczaj.marketnotes.common.dto.Money;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.internalapi.StockMarketInternalApi;
-import pl.romczaj.marketnotes.stockmarket.domain.model.CalculationResultHistory;
-import pl.romczaj.marketnotes.stockmarket.domain.model.StockCompany;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.JpaStockCompanySummaryViewRepository;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanyRepository;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanySummaryView;
 
 import java.util.List;
 
@@ -17,30 +17,34 @@ import java.util.List;
 public class StockMarketInternalApiTask implements StockMarketInternalApi {
 
     private final StockCompanyRepository stockCompanyRepository;
+    private final JpaStockCompanySummaryViewRepository jpaStockCompanySummaryViewRepository;
 
     @Override
-    public List<StockCompanyExternalId> findAll() {
-        return stockCompanyRepository.findAll()
-                .stream()
-                .map(StockCompany::stockCompanyExternalId)
-                .toList();
+    public List<StockCompanyResponse> findAll() {
+        return jpaStockCompanySummaryViewRepository.findAll().stream().map(this::stockCompanyResponse).toList();
     }
 
     @Override
     public StockCompanyResponse getCompanyBySymbol(StockCompanyExternalId companyExternalId) {
-        StockCompany stockCompany = stockCompanyRepository.findByExternalId(companyExternalId)
+        return jpaStockCompanySummaryViewRepository.findByExternalId(companyExternalId)
+                .map(this::stockCompanyResponse)
                 .orElseThrow(() -> new IllegalArgumentException("Company not found"));
+    }
 
-        CalculationResult calculationResult = stockCompanyRepository.findNewestCalculationResult(stockCompany.id())
-                .map(CalculationResultHistory::calculationResult)
-                .orElse(CalculationResult.empty());
+    @Override
+    public void validateStockCompanyExists(StockCompanyExternalId companyExternalId) {
+        stockCompanyRepository.findByExternalId(companyExternalId)
+                .orElseThrow(() -> new IllegalArgumentException("Company not found"));
+    }
 
+    private StockCompanyResponse stockCompanyResponse(StockCompanySummaryView stockCompanySummaryView) {
         return new StockCompanyResponse(
-                stockCompany.companyName(),
-                stockCompany.stockCompanyExternalId(),
-                stockCompany.actualPrice(),
-                calculationResult
+                stockCompanySummaryView.getCompanyName(),
+                stockCompanySummaryView.getExternalId(),
+                new Money(
+                        stockCompanySummaryView.getActualPrice(),
+                        stockCompanySummaryView.getExternalId().stockMarketSymbol().getCurrency()),
+                stockCompanySummaryView.getCalculationResult()
         );
-
     }
 }

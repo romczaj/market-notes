@@ -1,7 +1,7 @@
 package pl.romczaj.marketnotes.useraccount.infrastructure.out.email;
 
-import lombok.With;
-import pl.romczaj.marketnotes.common.dto.CompanyUserNotification;
+
+import pl.romczaj.marketnotes.useraccount.common.notification.CompanyUserNotification;
 
 import java.util.List;
 

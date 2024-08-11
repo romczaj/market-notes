@@ -1,8 +1,7 @@
-package pl.romczaj.marketnotes.useraccount.application.task;
+package pl.romczaj.marketnotes.useraccount.application.report.subtask;
 
 import org.junit.jupiter.api.Test;
-import pl.romczaj.marketnotes.common.dto.ArchivePrice;
-import pl.romczaj.marketnotes.common.dto.CompanyUserNotification;
+import pl.romczaj.marketnotes.useraccount.common.notification.CompanyUserNotification;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 import pl.romczaj.marketnotes.useraccount.application.config.BaseApplicationTest;
@@ -32,8 +31,8 @@ class SendInvestReportSubtaskTest extends BaseApplicationTest {
         userAccountRepository.saveUserAccount(userAccount);
 
         List<CompanyUserNotification> companyUserNotifications = List.of(
-                new CompanyUserNotification("AAA company", new StockCompanyExternalId("AAA", WSE), List.of(ArchivePrice.BUY_STOP), true),
-                new CompanyUserNotification("BBB company", new StockCompanyExternalId("BBB", WSE), List.of(ArchivePrice.BUY_STOP),  false)
+                new CompanyUserNotification("AAA company", new StockCompanyExternalId("AAA", WSE), null, null),
+                new CompanyUserNotification("BBB company", new StockCompanyExternalId("BBB", WSE), null, null)
         );
 
         //when

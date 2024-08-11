@@ -1,14 +1,14 @@
-package pl.romczaj.marketnotes.useraccount.application.task;
+package pl.romczaj.marketnotes.useraccount.application.report;
 
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import pl.romczaj.marketnotes.common.dto.CalculationResult;
-import pl.romczaj.marketnotes.common.dto.CompanyUserNotification;
 import pl.romczaj.marketnotes.common.dto.Money;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.common.id.UserAccountExternalId;
 import pl.romczaj.marketnotes.internalapi.StockMarketInternalApi;
 import pl.romczaj.marketnotes.useraccount.application.config.BaseApplicationTest;
+import pl.romczaj.marketnotes.useraccount.common.notification.CompanyUserNotification;
 import pl.romczaj.marketnotes.useraccount.domain.model.CompanyInvestGoal;
 import pl.romczaj.marketnotes.useraccount.domain.model.UserAccount;
 
@@ -19,17 +19,18 @@ import static org.mockito.Mockito.verify;
 import static pl.romczaj.marketnotes.common.id.StockCompanyExternalId.wse;
 
 
-class PrepareInvestReportDataSubtaskTest extends BaseApplicationTest {
+class CompanyUserNotificationFactoryTest extends BaseApplicationTest {
 
-    private static final String MBK = "MBK";
-    private static final String CRD = "CRD";
+    private static final StockCompanyExternalId MBK = wse("MBK");
+    private static final StockCompanyExternalId CRD = wse("CRD");
 
-    PrepareInvestReportDataSubtaskTest() {
+    CompanyUserNotificationFactoryTest() {
         super(WithMockObjects.builder()
                 .stockMarketInternalApi(new StockMarketInternalApi() {
+
                     @Override
-                    public List<StockCompanyExternalId> findAll() {
-                        return List.of(wse(MBK), wse(CRD));
+                    public List<StockCompanyResponse> findAll() {
+                        return List.of(getCompanyBySymbol(MBK), getCompanyBySymbol(CRD));
                     }
 
                     @Override
@@ -42,6 +43,11 @@ class PrepareInvestReportDataSubtaskTest extends BaseApplicationTest {
                                         80.0,
                                         List.of()
                                 ));
+                    }
+
+                    @Override
+                    public void validateStockCompanyExists(StockCompanyExternalId companyExternalId) {
+
                     }
                 })
                 .build());
@@ -61,7 +67,7 @@ class PrepareInvestReportDataSubtaskTest extends BaseApplicationTest {
         CompanyInvestGoal mbkInvest = new CompanyInvestGoal(
                 2l,
                 userAccount.id(),
-                wse(MBK),
+                MBK,
                 150.0,
                 120.0,
                 10.0,
@@ -73,7 +79,7 @@ class PrepareInvestReportDataSubtaskTest extends BaseApplicationTest {
         CompanyInvestGoal crdInvest = new CompanyInvestGoal(
                 3l,
                 userAccount.id(),
-                wse(CRD),
+                CRD,
                 150.0,
                 120.0,
                 10.0,
@@ -83,7 +89,7 @@ class PrepareInvestReportDataSubtaskTest extends BaseApplicationTest {
         userAccountRepository.saveCompanyInvestGoal(crdInvest);
 
         //when
-        List<CompanyUserNotification> notifications = prepareInvestReportDataSubtask.prepare(userAccount);
+        List<CompanyUserNotification> notifications = companyUserNotificationFactory.prepare(userAccount);
 
         //then
         Assertions.assertAll(

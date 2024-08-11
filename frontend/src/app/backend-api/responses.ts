@@ -13,7 +13,7 @@ export interface CompanySummaryResponse {
   calculationDate: string;
   actualPrice: number;
   currency: string;
-  calculationResult: CalculationResult;
+  increasePeriodResults: IncreasePeriodResult[];
   dailyIncrease: number | undefined;
   weekIncrease: number | undefined;
   twoWeekIncrease: number | undefined;

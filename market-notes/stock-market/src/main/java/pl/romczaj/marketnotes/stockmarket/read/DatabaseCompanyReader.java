@@ -3,17 +3,16 @@ package pl.romczaj.marketnotes.stockmarket.read;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
-import pl.romczaj.marketnotes.common.dto.CalculationResult.IncreasePeriod;
+import pl.romczaj.marketnotes.common.dto.CalculationResult;
 import pl.romczaj.marketnotes.common.dto.CalculationResult.IncreasePeriodResult;
 import pl.romczaj.marketnotes.common.id.StockCompanyExternalId;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.CompanyReader;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.response.CompaniesSummaryResponse;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.response.CompanyDetailSummaryResponse;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.response.CompanySummaryResponse;
+import pl.romczaj.marketnotes.stockmarket.infrastructure.in.rest.response.CompanySummaryResponse.IncreasePeriodSummaryResponse;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.JpaStockCompanySummaryViewRepository;
 import pl.romczaj.marketnotes.stockmarket.infrastructure.out.persistence.StockCompanySummaryView;
-
-import java.util.List;
 
 @RequiredArgsConstructor
 @Component
@@ -39,7 +38,6 @@ public class DatabaseCompanyReader implements CompanyReader {
     }
 
     private CompanySummaryResponse toResponse(StockCompanySummaryView view) {
-        List<IncreasePeriodResult> increasePeriodResults = view.getCalculationResult().increasePeriodResults();
         return new CompanySummaryResponse(
                 view.getId(),
                 view.getExternalId(),
@@ -49,21 +47,15 @@ public class DatabaseCompanyReader implements CompanyReader {
                 view.getCalculationDate(),
                 view.getCalculationResult().todayPrice(),
                 view.getExternalId().stockMarketSymbol().getCurrency(),
-                retrieveIncrease(increasePeriodResults, IncreasePeriod.DAILY),
-                retrieveIncrease(increasePeriodResults, IncreasePeriod.WEEK),
-                retrieveIncrease(increasePeriodResults, IncreasePeriod.TWO_WEEKS),
-                retrieveIncrease(increasePeriodResults, IncreasePeriod.MONTH),
-                retrieveIncrease(increasePeriodResults, IncreasePeriod.THREE_MONTHS),
-                retrieveIncrease(increasePeriodResults, IncreasePeriod.YEAR),
-                retrieveIncrease(increasePeriodResults, IncreasePeriod.TWO_YEARS)
+                view.getCalculationResult().increasePeriodResults().stream()
+                        .map(this::toIncreasePeriodSummaryResponse).toList()
         );
     }
 
-    private Double retrieveIncrease(List<IncreasePeriodResult> increasePeriodResults, IncreasePeriod increasePeriod) {
-        return increasePeriodResults.stream()
-                .filter(c -> c.increasePeriod() == increasePeriod)
-                .findFirst()
-                .map(IncreasePeriodResult::increasePercent)
-                .orElse(0.0);
+    private IncreasePeriodSummaryResponse toIncreasePeriodSummaryResponse(IncreasePeriodResult increasePeriodResult){
+        return new IncreasePeriodSummaryResponse(
+                increasePeriodResult.increasePeriod(),
+                increasePeriodResult.increasePercent()
+        );
     }
 }

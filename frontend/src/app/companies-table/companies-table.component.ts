@@ -63,7 +63,9 @@ export class CompaniesTableComponent implements OnInit, AfterViewInit {
   protected readonly getColorForValue = getColorForValue;
 
   manageCompanyClicked(element: CompanySummaryResponse) {
-    this.router.navigate([`company-details/${element.stockCompanyExternalId}`])
+    const newRelativeUrl = this.router.createUrlTree([`company-details/${element.stockCompanyExternalId}`]);
+    const baseUrl = window.location.href.replace(this.router.url, '');
+    window.open(baseUrl + newRelativeUrl, '_blank');
   }
 
   companyNameKeyUpEvent(event: KeyboardEvent) {

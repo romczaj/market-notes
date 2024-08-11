@@ -1,7 +1,11 @@
-<mat-dialog-content>
-  <mat-form-field>
+<mat-dialog-content style="width: 70vw;">
+  <mat-form-field style="width: 35vw" class="align-content-center">
     <mat-label>Add your comment</mat-label>
-    <input matInput [(ngModel)]="data.noteContent" />
+    <textarea
+      matInput
+      [(ngModel)]="data.noteContent"
+      rows="8" style="width: 100%; box-sizing: border-box;"
+    ></textarea>
   </mat-form-field>
 </mat-dialog-content>
 <mat-dialog-actions>

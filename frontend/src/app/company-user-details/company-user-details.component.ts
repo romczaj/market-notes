@@ -91,7 +91,7 @@ export class CompanyUserDetailsComponent implements OnInit {
   protected readonly console = console;
 
   addCompanyComment() {
-    const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
+    const dialogRef = this.dialog.open(DialogCommentComponent, {
       data: {stockCompanyExternalId: this.companyDetails?.basicSummary.stockCompanyExternalId},
     });
 
@@ -109,7 +109,7 @@ export class CompanyUserDetailsComponent implements OnInit {
 
 @Component({
   selector: 'dialog-overview-example-dialog',
-  templateUrl: 'dialog-overview-example-dialog.html',
+  templateUrl: 'dialog-comment.html',
   standalone: true,
   imports: [
     MatFormFieldModule,
@@ -122,8 +122,8 @@ export class CompanyUserDetailsComponent implements OnInit {
     MatDialogClose,
   ],
 })
-export class DialogOverviewExampleDialog {
-  readonly dialogRef = inject(MatDialogRef<DialogOverviewExampleDialog>);
+export class DialogCommentComponent {
+  readonly dialogRef = inject(MatDialogRef<DialogCommentComponent>);
   readonly data = inject<NoteCompanyComment>(MAT_DIALOG_DATA);
 
   readonly noteContent = model(this.data);
